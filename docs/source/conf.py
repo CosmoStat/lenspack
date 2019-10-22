@@ -69,9 +69,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'configure_package_name'
-copyright = u'configure_year, configure_author'
-author = u'configure_author'
+project = u'lenspack'
+copyright = u'2019, Austin Peel'
+author = u'Austin Peel'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -254,8 +254,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'configure_package_name.tex', u'configure_package_name Documentation',
-     u'configure_author', 'manual'),
+    (master_doc, 'lenspack.tex', u'lenspack Documentation',
+     u'Austin Peel', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -284,7 +284,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'configure_package_name', u'configure_package_name Documentation',
+    (master_doc, 'lenspack', u'lenspack Documentation',
      [author], 1)
 ]
 
@@ -298,8 +298,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'configure_package_name', u'configure_package_name Documentation',
-     author, 'configure_package_name', 'One line description of project.',
+    (master_doc, 'lenspack', u'lenspack Documentation',
+     author, 'lenspack', 'One line description of project.',
      'Miscellaneous'),
 ]
 

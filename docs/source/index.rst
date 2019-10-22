@@ -11,4 +11,4 @@ Package Contents
    :maxdepth: 3
 
    examples
-   configure_package_name
+   lenspack

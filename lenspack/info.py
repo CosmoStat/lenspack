@@ -11,11 +11,11 @@ version_info = (0, 0, 0)
 __version__ = '.'.join(str(c) for c in version_info)
 
 # Set the package details
-__author__ = 'configure_author'
-__email__ = 'configure_email'
-__year__ = 'configure_year'
-__url__ = 'configure_url'
-__description__ = 'configure_description'
+__author__ = 'Austin Peel'
+__email__ = 'austin.peel@cea.fr'
+__year__ = '2019'
+__url__ = 'https://github.com/austinpeel/lenspack'
+__description__ = 'A collection of weak lensing tools in Python'
 __requires__ = []  # Your package dependencies
 
 # Default package properties

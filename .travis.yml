@@ -21,7 +21,7 @@ install:
 # run unit tests
 script:
   - python setup.py test
-  - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then sphinx-apidoc -feo docs/source configure_package_name/; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then sphinx-apidoc -feo docs/source lenspack/; fi
   - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then travis-sphinx -v -o docs/build build -n -s docs/source; fi
 
 # run coverage tests
