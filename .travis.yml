@@ -1,0 +1,34 @@
+language: python
+
+matrix:
+    include:
+        - python: 3.5
+        - python: 3.6
+        - python: 3.7
+          dist: xenial
+          sudo: true
+
+# GitHub branch
+branches:
+  only:
+    - master
+
+# install package and dependencies
+install:
+  - pip install coverage nose pytest pytest-cov pytest-pep8
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then pip install sphinx sphinx-rtd-theme numpydoc travis-sphinx coveralls; fi
+
+# run unit tests
+script:
+  - python setup.py test
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then sphinx-apidoc -feo docs/source configure_package_name/; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then travis-sphinx -v -o docs/build build -n -s docs/source; fi
+
+# run coverage tests
+after_success:
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then coveralls; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then travis-sphinx -o docs/build deploy; fi
+
+# notification settings
+notification:
+  email: false

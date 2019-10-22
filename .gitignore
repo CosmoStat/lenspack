@@ -1,0 +1,17 @@
+# Ignore Python compilation
+*.pyc
+
+# Ignore cache
+*.cache/
+
+# Ignore coverage tests
+.coverage
+.pytest_cache/
+
+# Ignore installation
+.eggs/
+dist/
+build/
+
+# Ignore pypi config
+.pypirc
