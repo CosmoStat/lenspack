@@ -29,3 +29,33 @@ def add_int(x, y):
         raise TypeError('Inputs must be integers.')
 
     return x + y
+
+
+def add_float(x, y):
+    """Add Floats
+
+    Add two float values.
+
+    Parameters
+    ----------
+    x : float
+        First value
+    y : float
+        Second value
+
+    Returns
+    -------
+    float
+        Result of addition
+
+    Raises
+    ------
+    TypeError
+        For invalid input types.
+
+    """
+
+    if not isinstance(x, float) or not isinstance(y, float):
+        raise TypeError('Inputs must be floats.')
+
+    return x + y
