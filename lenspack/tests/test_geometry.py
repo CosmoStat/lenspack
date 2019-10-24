@@ -55,3 +55,26 @@ class MeasuresTestCase(TestCase):
                          err_msg="Incorrect solid angle.")
 
         npt.assert_raises(Exception, solid_angle, self.extent[:3])
+
+
+class ProjectionsTestCase(TestCase):
+
+    def setUp(self):
+
+        self.ra0 = 10.0
+        self.dec0 = 35.0
+        self.proj = projections.gnom.projector(self.ra0, self.dec0)
+
+    def tearDown(self):
+
+        self.ra0 = None
+        self.dec0 = None
+        self.proj = None
+
+    def test_projector(self):
+
+        npt.assert_array_equal(self.proj.radec2xy(self.ra0, self.dec0),
+                               [0, 0], err_msg="Center projection failed.")
+
+        npt.assert_array_equal(self.proj.xy2radec(0, 0), [self.ra0, self.dec0],
+                               err_msg="Center de-projection failed.")
