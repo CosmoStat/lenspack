@@ -133,7 +133,7 @@ def xy2radec(ra0, dec0, x, y):
 
 
 class projector(object):
-    """A convenient class for projecting many sky points to a tangent plane."""
+    """A convenient class for many gnomonic projections to a tangent plane."""
     def __init__(self, ra0, dec0):
         """Project spherical coordinates to a tangent plane.
 
@@ -141,8 +141,8 @@ class projector(object):
         Inputs should be in degrees.
 
         """
-        self.ra0 = ra0
-        self.dec0 = dec0
+        self.ra0 = float(ra0)
+        self.dec0 = float(dec0)
 
     def radec2xy(self, ra, dec):
         """Projection of spherical coordinates to the tangent plane.

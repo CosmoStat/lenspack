@@ -63,7 +63,7 @@ class ProjectionsTestCase(TestCase):
 
         self.ra0 = 10.0
         self.dec0 = 35.0
-        self.proj = projections.gnom.projector(self.ra0, self.dec0)
+        self.proj = gnom.projector(self.ra0, self.dec0)
 
     def tearDown(self):
 
