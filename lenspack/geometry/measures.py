@@ -4,7 +4,7 @@ import numpy as np
 
 
 def angular_distance(ra1, dec1, ra2, dec2):
-    """Determine the angular (geodesic) distance between points on a sphere.
+    """Determine the angular distance between points on the unit sphere.
 
     This function is vectorized, so the inputs can be given as arrays (of
     the same length), and the distances between each pair of corresponding
@@ -14,22 +14,38 @@ def angular_distance(ra1, dec1, ra2, dec2):
     ----------
     ra[i], dec[i] : float or array_like
         Coordinates of point [i] on the sphere, where ra[i] is the
-        longitudinal angle, and dec[i] is the latitudinal angle [degrees].
+        longitudinal angle, and dec[i] is the latitudinal angle in degrees.
 
     Returns
     -------
     float or numpy array
         Central angle(s) between points [1] and [2] in degrees.
 
+    Raises
+    ------
+    Exception
+        For inputs of different length.
+
+    Notes
+    -----
+    The geodesic distance between points on a sphere of radius R can be
+    obtained by multiplying the result of `angular_distance` by R.
+
     Examples
     --------
     TODO
 
     """
+    # Work in radians
     phi1 = np.deg2rad(ra1)
     theta1 = np.deg2rad(dec1)
     phi2 = np.deg2rad(ra2)
     theta2 = np.deg2rad(dec2)
+
+    # Check input lengths
+    if not (len(phi1) == len(theta1) == len(phi2) == len(theta2)):
+        raise Exception("Input lengths must be the same.")
+
     numerator = np.sqrt((np.cos(theta2) * np.sin(phi2 - phi1))**2 +
                         (np.cos(theta1) * np.sin(theta2) -
                          np.sin(theta1) * np.cos(theta2) *
@@ -41,58 +57,49 @@ def angular_distance(ra1, dec1, ra2, dec2):
     return central_angle
 
 
-def solidangle(extent):
-    """Compute the solid angle defined by a rectangle in RA/Dec space.
+def solid_angle(extent):
+    """Compute the solid angle subtended by a rectangle in RA/Dec space.
 
     Parameters
     ----------
     extent : array_like
-        Field extent of the form [ra_min, ra_max, dec_min, dec_max].
+        Field extent as [ra_min, ra_max, dec_min, dec_max] in degrees, where
+        ra_min <= ra_max and dec_min <= dec_max.
 
     Returns
     -------
     float
         Solid angle in square degrees.
 
+    Raises
+    ------
+    Exception
+        For inputs not in the correct format.
+
     Examples
     --------
     TODO
 
     """
+    # Must have four input values
     if len(np.atleast_1d(extent)) != 4:
-        print("ERROR: extent must be of the form " +
-              "[ra_min, ra_max, dec_min, dec_max].")
-        return
+        raise Exception("Input extent must be of the form " +
+                        "[ra_min, ra_max, dec_min, dec_max].")
 
     # Unpack
     ramin, ramax, decmin, decmax = extent
 
+    # Check validity of bounds
     if ramax <= ramin:
-        print("ERROR: ra_max <= ra_min.")
-        return
+        raise Exception("Must have ra_max >= ra_min.")
     if decmax <= decmin:
-        print("ERROR: dec_max <= dec_min.")
-        return
+        raise Exception("Must have dec_max >= dec_min.")
 
-    # TODO could use wltools.conversions.to_rad here?
-    def convert_to_rad(x):
-        try:
-            converted = x.to(u.radian)
-        except AttributeError:
-            if debug:
-                print("No units for {}. Assuming degrees.".format(x))
-            return convert_to_rad(x * u.degree)
-        except u.UnitConversionError:
-            if debug:
-                print("Bad units for {}. Assuming degrees instead.".format(x))
-            return convert_to_rad(x.value * u.degree)
-        return converted.value
-
-    # Convert inputs to radians
-    alpha0 = convert_to_rad(ramin)
-    alpha1 = convert_to_rad(ramax)
-    delta0 = convert_to_rad(decmin)
-    delta1 = convert_to_rad(decmax)
+    # Work in radians
+    alpha0 = np.deg2rad(ramin)
+    alpha1 = np.deg2rad(ramax)
+    delta0 = np.deg2rad(decmin)
+    delta1 = np.deg2rad(decmax)
 
     # Truncate if values are out of bounds
     # alpha0 = max(0, alpha0)
@@ -101,6 +108,6 @@ def solidangle(extent):
     # delta1 = min(np.pi / 2, delta1)
 
     # Compute solid angle
-    sa = (alpha1 - alpha0) * (np.sin(delta1) - np.sin(delta0)) * u.radian**2
+    sa = (alpha1 - alpha0) * (np.sin(delta1) - np.sin(delta0))
 
-    return sa.to(u.degree**2)
+    return sa * np.power(180 / np.pi, 2)
