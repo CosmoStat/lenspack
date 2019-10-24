@@ -37,10 +37,10 @@ def angular_distance(ra1, dec1, ra2, dec2):
 
     """
     # Work in radians
-    phi1 = np.deg2rad(ra1)
-    theta1 = np.deg2rad(dec1)
-    phi2 = np.deg2rad(ra2)
-    theta2 = np.deg2rad(dec2)
+    phi1 = np.deg2rad(np.atleast_1d(ra1))
+    theta1 = np.deg2rad(np.atleast_1d(dec1))
+    phi2 = np.deg2rad(np.atleast_1d(ra2))
+    theta2 = np.deg2rad(np.atleast_1d(dec2))
 
     # Check input lengths
     if not (len(phi1) == len(theta1) == len(phi2) == len(theta2)):
@@ -53,6 +53,10 @@ def angular_distance(ra1, dec1, ra2, dec2):
     denominator = (np.sin(theta1) * np.sin(theta2) +
                    np.cos(theta1) * np.cos(theta2) * np.cos(phi2 - phi1))
     central_angle = np.rad2deg(np.arctan2(numerator, denominator))
+
+    # Potentially remove unnecessary array layers
+    if len(central_angle) == 1:
+        central_angle = central_angle[0]
 
     return central_angle
 
