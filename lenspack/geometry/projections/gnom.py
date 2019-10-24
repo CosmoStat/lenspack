@@ -101,14 +101,14 @@ def xy2radec(ra0, dec0, x, y):
     x = np.atleast_1d(x)
     y = np.atleast_1d(y)
 
-    if len(ra) != len(dec):
+    if len(x) != len(y):
         raise Exception("Input x and y must have the same length.")
 
     # Convert projection center to radians
     x0 = np.deg2rad(ra0)
     y0 = np.deg2rad(dec0)
 
-    # Compute deprojected coordinates
+    # Compute de-projected coordinates
     z = np.sqrt(x * x + y * y)
     c = np.arctan(z)
 
@@ -163,10 +163,10 @@ class projector(object):
         Parameters
         ----------
         x, y : float or array_like
-            Coordinates of points in the tangent plane to deproject relative
+            Coordinates of points in the tangent plane to de-project relative
             to (0, 0) corresponding to (ra0, dec0) on the sphere.
 
-        Returns deprojected ra, dec coordinates.
+        Returns de-projected ra, dec coordinates.
 
         """
         return xy2radec(self.ra0, self.dec0, x, y)
