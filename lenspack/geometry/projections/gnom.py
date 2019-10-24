@@ -58,7 +58,8 @@ def radec2xy(ra0, dec0, ra, dec):
           np.sin(delta0) * np.cos(delta) * np.cos(alpha - alpha0)) / denom)
 
     # Potentially remove unnecessary array layers
-    if len(x) == 1: x, y = x[0], y[0]
+    if len(x) == 1:
+        x, y = x[0], y[0]
 
     return x, y
 
@@ -125,7 +126,8 @@ def xy2radec(ra0, dec0, x, y):
     dec = np.rad2deg(delta)
 
     # Potentially remove unnecessary array layers
-    if len(ra) == 1: ra, dec = ra[0], dec[0]
+    if len(ra) == 1:
+        ra, dec = ra[0], dec[0]
 
     return ra, dec
 
