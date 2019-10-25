@@ -1,5 +1,5 @@
 # lenspack
-[![Build Status](https://travis-ci.org/austinpeel/lenspack.svg?branch=master)](https://travis-ci.org/austinpeel/lenspack)
+[![Build Status](https://travis-ci.org/austinpeel/lenspack.svg?branch=master)](https://travis-ci.org/austinpeel/lenspack) [![Coverage Status](https://coveralls.io/repos/github/austinpeel/lenspack/badge.svg?branch=master)](https://coveralls.io/github/austinpeel/lenspack?branch=master)
 
 ---
 > Author: <a href="http://www.cosmostat.org/people/austin-peel" target="_blank" style="text-decoration:none; color: #F08080">Austin Peel</a>  
