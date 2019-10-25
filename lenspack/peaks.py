@@ -88,16 +88,16 @@ def find_peaks2d(image, threshold=None, ordered=True, mask=None,
     # Extract shifted maps
     map1 = image[0:-2, 0:-2]
     map2 = image[1:-1, 0:-2]
-    map3 = image[2:,   0:-2]
+    map3 = image[2:, 0:-2]
     map4 = image[0:-2, 1:-1]
-    map5 = image[2:,   1:-1]
-    map6 = image[0:-2, 2:  ]
-    map7 = image[1:-1, 2:  ]
-    map8 = image[2:,   2:  ]
+    map5 = image[2:, 1:-1]
+    map6 = image[0:-2, 2:]
+    map7 = image[1:-1, 2:]
+    map8 = image[2:, 2:]
 
     # Compare center map with shifted maps
-    merge = ( (map0 > map1) & (map0 > map2) & (map0 > map3) & (map0 > map4)
-            & (map0 > map5) & (map0 > map6) & (map0 > map7) & (map0 > map8) )
+    merge = ((map0 > map1) & (map0 > map2) & (map0 > map3) & (map0 > map4) &
+             (map0 > map5) & (map0 > map6) & (map0 > map7) & (map0 > map8))
 
     bordered = np.lib.pad(merge, (1, 1), 'constant', constant_values=(0, 0))
     peaksmap = image * bordered * mask
