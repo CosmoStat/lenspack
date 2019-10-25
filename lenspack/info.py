@@ -16,7 +16,7 @@ __email__ = 'austin.peel@cea.fr'
 __year__ = '2019'
 __url__ = 'https://github.com/austinpeel/lenspack'
 __description__ = 'A collection of weak lensing tools in Python'
-__requires__ = []  # Your package dependencies
+__requires__ = ['numpy', 'astropy']  # Your package dependencies
 
 # Default package properties
 __license__ = 'MIT'
