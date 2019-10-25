@@ -97,7 +97,7 @@ class nfw_profile(object):
 
         Parameters
         ----------
-        zs : float or array
+        zs : float or array_like
             Redshift(s) of the source galaxies.
         """
         return sigma_critical(self.z, zs, self.cosmo)
@@ -107,7 +107,7 @@ class nfw_profile(object):
 
         Parameters
         ----------
-        r : float or array
+        r : float or array_like
             Projected radial distance from the halo center.
         r_off : float, optional
             Projected radial offset of the halo center. If provided, the
@@ -158,7 +158,7 @@ class nfw_profile(object):
 
         Parameters
         ----------
-        r : float or array
+        r : float or array_like
             Projected radial distance from the halo center.
         r_off : float, optional
             Projected radial offset of the halo center. If provided, the
@@ -209,7 +209,7 @@ class nfw_profile(object):
 
         Parameters
         ----------
-        r : float or array
+        r : float or array_like
             Projected radial distance from the halo center.
         r_off : float, optional
             Projected radial offset of the halo center.
@@ -228,9 +228,9 @@ class nfw_profile(object):
 
         Parameters
         ----------
-        r : float or array
+        r : float or array_like
             Projected radial distance of the source from the halo center.
-        zs : float or array
+        zs : float or array_like
             Redshift of the source.
         r_off : float, optional
             Projected radial offset of the halo center.
@@ -247,9 +247,9 @@ class nfw_profile(object):
 
         Parameters
         ----------
-        r : float or array
+        r : float or array_like
             Projected radial distance of the source from the halo center.
-        zs : float or array
+        zs : float or array_like
             Redshift of the source.
         r_off : float, optional
             Projected radial offset of the halo center.
@@ -269,7 +269,7 @@ class nfw_profile(object):
 
         Parameters
         ----------
-        x : float or array
+        x : float or array_like
             Dimensionless projected radial distance from the halo center.
 
         Notes
@@ -311,7 +311,7 @@ class nfw_profile(object):
 
         Parameters
         ----------
-        x : float or array
+        x : float or array_like
             Dimensionless projected radial distance from the halo center.
 
         Notes

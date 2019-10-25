@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""LENSPACK UTILS
+"""UTILS MODULE
 
 This module contains some utility functions globally available to lenspack.
 
