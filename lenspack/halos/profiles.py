@@ -142,13 +142,14 @@ class nfw_profile(object):
         else:
             # Average over all azimuthal angles
             r_off = conv(r_off, self.rs.unit.to_string())
-            a, b = (0, 2 * np.pi) # Integration limits
+            a, b = (0, 2 * np.pi)  # Integration limits
             integrals = [quad(_sigma_of_theta, a, b / 2,
                          args=(rr, r_off))[0] for rr in r]
             result = 2 * np.array(integrals) / (b - a)
 
         # Clean up as necessary
-        if len(result) == 1: result = result[0]
+        if len(result) == 1:
+            result = result[0]
 
         return prefactor * result
 
@@ -192,13 +193,14 @@ class nfw_profile(object):
         else:
             # Average over all azimuthal angles
             r_off = conv(r_off, self.rs.unit.to_string())
-            a, b = (0, 2 * np.pi) # Integration limits
+            a, b = (0, 2 * np.pi)  # Integration limits
             integrals = [quad(_delta_sigma_of_theta, a, b / 2,
                          args=(rr, r_off))[0] for rr in r]
             result = 2 * np.array(integrals) / (b - a)
 
         # Clean up as necessary
-        if len(result) == 1: result = result[0]
+        if len(result) == 1:
+            result = result[0]
 
         return prefactor * result
 
