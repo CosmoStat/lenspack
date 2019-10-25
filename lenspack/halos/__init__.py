@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""Halos Module
+"""HALOS MODULE
 
 This module contains codes for describing the radial mass density profile of
 dark matter halos and for predicting their weak-lensing signal. Currently,

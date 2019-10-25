@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""Geometry Module
+"""GEOMETRY MODULE
 
 This module contains many operations commonly necessary for dealing with data
 on the celestial sphere, such as projections to a tangent plane and measuring
