@@ -6,7 +6,8 @@ Provide some basic description of what your package module contains.
 
 """
 
-__all__ = ['geometry', 'halos', 'peaks', 'utils']  # List of submodules
+# List of submodules
+__all__ = ['geometry', 'halos', 'image', 'peaks', 'utils']
 
 from . import *
 from .info import __version__, __about__

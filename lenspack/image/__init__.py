@@ -7,7 +7,7 @@ of shear and convergence.
 
 """
 
-__all__ = ['filters', 'inversion']
+__all__ = ['filters', 'inversion', 'transforms']
 # __all__ = ['filters', 'inpainting', 'inversion', 'transforms']
 
 from . import *

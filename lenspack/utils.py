@@ -14,7 +14,7 @@ from astropy.constants import c as c_light
 
 def round_up_to_odd(x):
     """Round up to the nearest odd integer."""
-    return np.ceil(x) // 2 * 2 + 1
+    return (np.ceil(x) // 2 * 2 + 1).astype(int)
 
 
 def convert_units(x, target):
