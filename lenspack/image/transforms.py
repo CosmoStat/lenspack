@@ -237,7 +237,8 @@ def blockdct2d(image, norm='ortho', blocksize=None, overlap=False):
                 i2 = i1 + blocksize
                 j1 = jj * blocksize
                 j2 = j1 + blocksize
-                imsub = image[i1/2:i1/2+blocksize, j1/2:j1/2+blocksize]
+                imsub = image[i1 / 2: i1 / 2 + blocksize,
+                              j1 / 2: j1 / 2 + blocksize]
                 result[i1:i2, j1:j2] = dct2d(imsub, norm=norm)
     else:
         for ii in range(0, n, blocksize):
@@ -396,7 +397,7 @@ def mr_transform(image, nscales=4, type=2, verbose=False):
             print("        {}".format(tmpdir))
 
     if (os.path.exists(tmpdir) or os.path.exists(image_path) or
-        os.path.exists(mr_path)):
+            os.path.exists(mr_path)):
         print("Warning : not all files or directories were removed in")
         print(mr_path)
 
