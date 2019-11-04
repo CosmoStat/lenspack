@@ -210,7 +210,7 @@ def u_function(x, xs, filter, l=1):
         term3 = 0.5 * (abs(2 - y)**3 + abs(2 + y)**3)
         result = A * (term1 + term2 - term3)
     elif filter == 'gauss':
-        # Secret option, since it's not really an aperture mass filter...
+        # Secret option, since it's not really an aperture mass filter but is
         # useful in debugging
         result = np.exp(-0.5 * y**2) / (2 * np.pi * xs**2)
 
