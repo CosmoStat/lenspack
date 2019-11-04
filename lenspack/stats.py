@@ -291,3 +291,61 @@ def fdr(x, tail, alpha=0.05, kde=False, n_samples=10000, debug=False):
         tval = x[inds][lastindex]
 
     return tval
+
+
+def hc(x, kind=1):
+    """Compute a higher criticism statistic of a distribution.
+
+    Parameters
+    ----------
+    x : array_like
+        Samples of the distribution. If `x` is multidimentional, it will
+        first be flattened.
+    kind : int, optional
+        Either 1 (HC^*) or 2 (HC^+). Default is 1.
+
+    Returns
+    -------
+    float
+        Higher criticism of the first (*) or second (+) kind.
+
+    References
+    ----------
+    * Donoho & Jin, The Annals of Statistics 32, 962 (2004)
+    * Pires, Starck, Amara, et al., A&A 505, 969 (2009)
+
+    Examples
+    --------
+    ...
+
+    """
+    # Check inputs
+    assert kind in (1, 2), "Invalid kind. Must be either 1 or 2."
+
+    # Basic measures
+    x = np.atleast_1d(x).flatten()
+    mean = x.mean()
+    sigma = x.std(ddof=1)
+
+    # Normalize values
+    z = (x - mean) / sigma
+
+    # Compute and sort p-values
+    pvals = 1 - norm.cdf(z)
+    pvals = np.sort(pvals)
+
+    # Compute HC value
+    denom2 = pvals - np.power(pvals, 2)
+    good_inds = denom2 > 0  # Avoid division by zero and complex numbers
+    pvals = pvals[good_inds]
+    n = len(pvals)
+    numer = np.sqrt(n) * (np.arange(1, n + 1) / float(n) - pvals)
+    denom = np.sqrt(denom2[good_inds])
+    ratio = numer / denom
+
+    if kind == 2:
+        ninv = 1. / n
+        sel = (pvals >= ninv) & (pvals <= (1. - ninv))
+        ratio = ratio[sel]
+
+    return np.abs(ratio).max()
