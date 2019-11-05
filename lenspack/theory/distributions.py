@@ -64,7 +64,7 @@ class zdist(object):
         else:
             # Use numerical integration
             integrand = (lambda z: ((z / self.z0)**self.alpha) *
-                                    np.exp(-((z / self.z0)**self.beta)))
+                         np.exp(-((z / self.z0)**self.beta)))
             norm = 1. / quad(integrand, 0, zmax)[0]
 
         return norm

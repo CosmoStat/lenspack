@@ -112,7 +112,7 @@ class nicaea(object):
                     else:
                         for j, val in enumerate(split[1:-2]):
                             if not val == '':
-                                split[j+1] = str(value)
+                                split[j + 1] = str(value)
                     data[i] = '\t'.join(split)
                     break
             with open(os.path.join(self.tmpdir, parfile), 'w') as f:
