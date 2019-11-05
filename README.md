@@ -7,10 +7,19 @@
 > Year: 2019  
 ---
 
-This repository is a collection of python modules useful for carrying out
-weak-lensing analyses on galaxy catalogs.
+This repository is a collection of python codes useful for the weak-lensing
+analysis of galaxy catalogs and shear/convergence maps.
 
 ## Contents
 ---
 
 In progress.
+
+## Required packages
+---
+
+## Installation
+---
+
+## Examples
+---
