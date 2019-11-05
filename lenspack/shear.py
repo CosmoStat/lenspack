@@ -31,13 +31,13 @@ def gamma_tx(x, y, gamma1, gamma2, center=(0, 0)):
 
     Notes
     -----
-    The equations are from Schneider's 2005 weak-lensing review.
+    The equations are from Schneider's 2005 weak-lensing review [Eq. (17)].
 
         gamma_t = -Re[gamma * exp(-2i * phi)],
         gamma_x = -Im[gamma * exp(-2i * phi)],
 
     where gamma is the complex shear and phi is the polar angle relative
-    to the center position.
+    to the center point.
 
     """
     # Standardize inputs
