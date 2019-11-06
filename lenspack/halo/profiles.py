@@ -41,6 +41,7 @@ class nfw_profile(object):
         (2) The reference background density implicitly used in the definition
             of `c200`, `m200`, and `r200` is the critical density at the
             redshift of the halo.
+
         """
         self.z = z
         self.c200 = c200
@@ -99,6 +100,7 @@ class nfw_profile(object):
         ----------
         zs : float or array_like
             Redshift(s) of the source galaxies.
+
         """
         return sigma_critical(self.z, zs, self.cosmo)
 
@@ -119,7 +121,8 @@ class nfw_profile(object):
         The calculation is much slower when r_off is given due to the
         numerical integration necessary.
 
-        Value(s) returned in units of solar mass per square parsec.
+        Value(s) are returned in units of solar mass per square parsec.
+
         """
         prefactor = conv(2 * self.rs * self.rho0, "solMass / pc2")
         r = np.atleast_1d(r)
@@ -170,7 +173,8 @@ class nfw_profile(object):
         The calculation is much slower when r_off is given due to the
         numerical integration necessary.
 
-        Value(s) returned in units of solar mass per square parsec.
+        Value(s) are returned in units of solar mass per square parsec.
+
         """
         prefactor = conv(2 * self.rs * self.rho0, "solMass / pc2")
         r = np.atleast_1d(r)
@@ -219,7 +223,8 @@ class nfw_profile(object):
         The calculation is much slower when r_off is given due to the
         numerical integration necessary.
 
-        Value(s) returned in units of solar mass per square parsec.
+        Value(s) are returned in units of solar mass per square parsec.
+
         """
         return self.delta_sigma(r, r_off) + self.sigma(r, r_off)
 
@@ -229,14 +234,20 @@ class nfw_profile(object):
         Parameters
         ----------
         r : float or array_like
-            Projected radial distance of the source from the halo center.
+            Projected radial (proper) distance from the source to the halo
+            center. Units of Mpc are assumed if `r` is not given an astropy
+            quantity.
         zs : float or array_like
-            Redshift of the source.
+            Redshift of the source. If a single float is given, this value is
+            used for each `r`.
         r_off : float, optional
             Projected radial offset of the halo center.
+
         """
         r = np.atleast_1d(r)
         zs = np.atleast_1d(zs)
+        if len(zs) == 1:
+            zs = zs.repeat(len(r))  # Use the same zs for all r
         assert len(r) == len(zs), "Inputs must have the same length."
 
         ratio = self.delta_sigma(r, r_off) / self.sigma_crit(zs)
@@ -248,14 +259,20 @@ class nfw_profile(object):
         Parameters
         ----------
         r : float or array_like
-            Projected radial distance of the source from the halo center.
+            Projected radial (proper) distance from the source to the halo
+            center. Units of Mpc are assumed if `r` is not given an astropy
+            quantity.
         zs : float or array_like
-            Redshift of the source.
+            Redshift of the source. If a single float is given, this value is
+            used for each `r`.
         r_off : float, optional
             Projected radial offset of the halo center.
+
         """
         r = np.atleast_1d(r)
         zs = np.atleast_1d(zs)
+        if len(zs) == 1:
+            zs = zs.repeat(len(r))  # Use the same zs for all r
         assert len(r) == len(zs), "Inputs must have the same length."
 
         ratio = self.sigma(r, r_off) / self.sigma_crit(zs)
@@ -275,6 +292,7 @@ class nfw_profile(object):
         Notes
         -----
         The function diverges as x -> 0, and so we set it to np.inf by hand.
+
         """
         x = np.atleast_1d(x).astype(float)
         assert (x >= 0).all(), "x must be positive."
@@ -318,6 +336,7 @@ class nfw_profile(object):
         -----
         The function approaches 0.5 as x -> 0, which we set by hand due to
         numerical instability.
+
         """
         x = np.atleast_1d(x).astype(float)
         assert (x >= 0).all(), "x must be positive."
