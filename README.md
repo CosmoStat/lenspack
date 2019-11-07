@@ -9,7 +9,7 @@
 
 This repository is a collection of python codes useful for the weak-lensing
 analysis of galaxy catalogs and shear/convergence maps. The full documentation
-can be found [here](https://austinpeel.github.io/lenspack/index.html "lenspack documentation")
+can be found [here](https://austinpeel.github.io/lenspack/index.html "lenspack documentation").
 
 ## Contents
 
@@ -50,5 +50,10 @@ ax.scatter(y, x, s=5, c='orange', alpha=0.7) # reverse x and y due to array inde
 ax.set_axis_off()
 plt.show()
 ```
+
+<p align="left">
+<img src="https://github.com/austinpeel/lenspack/blob/master/examples/figures/peaks.png" alt="peaks" width="400"/>
+</p>
+
 
 ### Wavelet transform
