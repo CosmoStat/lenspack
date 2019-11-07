@@ -8,18 +8,47 @@
 ---
 
 This repository is a collection of python codes useful for the weak-lensing
-analysis of galaxy catalogs and shear/convergence maps.
+analysis of galaxy catalogs and shear/convergence maps. The full documentation
+can be found [here](https://austinpeel.github.io/lenspack/index.html "lenspack documentation")
 
 ## Contents
----
 
 In progress.
 
-## Required packages
----
+## Dependencies
 
-## Installation
----
+* numpy
+* scipy
+* astropy
+* emcee (optional)
 
 ## Examples
----
+
+### Peak detection
+
+Suppose you have a galaxy catalog `cat` containing sky position columns `ra` and `dec`, along with ellipticity components `e1` and `e2`. You can bin the galaxies into pixels, invert the shear to obtain convergence (Kaiser & Squires, 1993), detect peaks above a given threshold, and plot the result as follows.
+
+```python
+import matplotlib.pyplot as plt
+from lenspack.utils import bin2d
+from lenspack.image.inversion import ks93
+from lenspack.peaks import find_peaks2d
+
+# Bin ellipticity values according to galaxy position into a 256 x 256 map
+e1map, e2map = bin2d(cat['ra'], cat['dec'], v=(cat['e1'], cat['e2']), npix=256)
+
+# Kaiser-Squires inversion
+kappaE, kappaB = ks93(e1map, e2map)
+
+# Detect peaks on the convergence E-mode map
+x, y, h = find_peaks2d(kappaE, threshold=0.05, include_border=True)
+
+# Plot peak positions over the convergence
+fig, ax = plt.subplots(1, 1, figsize=(6, 5.5))
+plot2d(kappaE, cmap='bone', fig=fig, ax=ax)
+ax.scatter(y, x, s=5, c='orange', alpha=0.7) # reverse x and y due to array indexing
+ax.set_axis_off()
+plt.show()
+```
+
+### Wavelet transform
