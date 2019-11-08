@@ -112,7 +112,8 @@ def dct2d(image, norm='ortho'):
 
     See Also
     --------
-    idct2d : Inverse 2D DCT.
+    idct2d
+        Inverse 2D DCT.
 
     """
     # Check inputs
@@ -148,7 +149,8 @@ def idct2d(image, norm='ortho'):
 
     See Also
     --------
-    dct2d : Forward 2D DCT.
+    dct2d
+        Forward 2D DCT.
 
     """
     # Check inputs
@@ -199,7 +201,8 @@ def blockdct2d(image, norm='ortho', blocksize=None, overlap=False):
 
     See Also
     --------
-    iblockdct2d : Inverse local 2D DCT.
+    iblockdct2d
+        Inverse local 2D DCT.
 
     """
     # Check inputs

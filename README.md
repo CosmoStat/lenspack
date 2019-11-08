@@ -20,8 +20,26 @@ In progress.
 * numpy
 * scipy
 * astropy
-* emcee (optional)
-* nicaea (M. Kilbinger)
+* [emcee](https://emcee.readthedocs.io/en/stable/ "emcee") (optional)
+* [nicaea](https://github.com/CosmoStat/nicaea "nicaea") (optional)
+* [iSAP](http://www.cosmostat.org/software/isap "iSAP") (optional)
+
+## Installation
+
+Clone this repository to your local machine. You might find it helpful to do this in a virtual environment in order to keep a clean workspace.
+```
+$ git clone https://github.com/austinpeel/lenspack.git
+```
+A new directory `lenspack` will be generated. Navigate into it.
+```
+$ cd lenspack
+```
+Run the setup script to install lenspack and its necessary dependencies.
+```
+$ pip install .
+```
+
+The package will also soon be available to install directly using pip.
 
 ## Examples
 
@@ -88,5 +106,5 @@ for ax in (ax1, ax2, ax3):
 ```
 
 <p align="left">
-<img src="https://github.com/austinpeel/lenspack/blob/master/examples/figures/wavelet_transform.png" alt="wavelet_transform" width="400"/>
+<img src="https://github.com/austinpeel/lenspack/blob/master/examples/figures/wavelet_transform.png" alt="wavelet_transform" width="900"/>
 </p>
