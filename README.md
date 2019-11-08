@@ -75,6 +75,18 @@ img = np.random.randn(256, 256)
 st = starlet2d(img, nscales=5)
 mrt = mr_transform(img, nscales=5)
 
-# Compute the aperture mass map at scale 3 using the starlet filter
+# Compute the aperture mass map at scale 4 using the starlet filter
 apm = aperture_mass(img, theta=2**4, filter='starlet')
+
+# Plot
+fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(12, 5))
+ax1.imshow(st[3], cmap='magma')
+ax2.imshow(mrt[3], cmap='magma')
+ax3.imshow(apm, cmap='magma')
+for ax in (ax1, ax2, ax3):
+    ax.set_axis_off()
 ```
+
+<p align="left">
+<img src="https://github.com/austinpeel/lenspack/blob/master/examples/figures/wavelet_transform.png" alt="wavelet_transform" width="400"/>
+</p>
