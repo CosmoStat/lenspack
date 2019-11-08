@@ -4,9 +4,9 @@ import numpy as np
 from scipy.optimize import curve_fit
 try:
     import emcee
+    HAS_EMCEE = True
 except ImportError:
-    print("Warning: could not import emcee package.")
-    print("         mcmcfit class cannot be used.")
+    HAS_EMCEE = False
 from multiprocessing import Pool
 
 from lenspack.halo.profiles import nfw_profile

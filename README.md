@@ -17,6 +17,7 @@ In progress.
 
 ## Dependencies
 
+* python (version 3.5 or later)
 * numpy
 * scipy
 * astropy
