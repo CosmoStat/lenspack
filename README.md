@@ -45,11 +45,11 @@ kappaE, kappaB = ks93(e1map, e2map)
 x, y, h = find_peaks2d(kappaE, threshold=0.05, include_border=True)
 
 # Plot peak positions over the convergence
-fig, ax = plt.subplots(1, 1, figsize=(6, 5.5))
-ax.imshow(kappaE, origin='lower', cmap='bone')
+fig, ax = plt.subplots(1, 1, figsize=(7, 5.5))
+mappable = ax.imshow(kappaE, origin='lower', cmap='bone')
 ax.scatter(y, x, s=5, c='orange', alpha=0.7)  # reverse x and y due to array indexing
 ax.set_axis_off()
-ax.set_aspect('equal')
+fig.colorbar(mappable)
 plt.show()
 ```
 
