@@ -20,8 +20,9 @@ In progress.
 * numpy
 * scipy
 * astropy
-* emcee (optional)
-* nicaea (M. Kilbinger)
+* [emcee](https://emcee.readthedocs.io/en/stable/ "emcee") (optional)
+* [nicaea](https://github.com/CosmoStat/nicaea "nicaea") (optional)
+* [iSAP](http://www.cosmostat.org/software/isap "iSAP") (optional)
 
 ## Examples
 
@@ -88,5 +89,5 @@ for ax in (ax1, ax2, ax3):
 ```
 
 <p align="left">
-<img src="https://github.com/austinpeel/lenspack/blob/master/examples/figures/wavelet_transform.png" alt="wavelet_transform" width="400"/>
+<img src="https://github.com/austinpeel/lenspack/blob/master/examples/figures/wavelet_transform.png" alt="wavelet_transform" width="800"/>
 </p>
