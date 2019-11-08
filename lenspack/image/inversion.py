@@ -30,7 +30,8 @@ def ks93(g1, g2):
 
     See Also
     --------
-    bin2d for binning a galaxy shear catalog.
+    bin2d
+        For binning a galaxy shear catalog.
 
     Examples
     --------
@@ -94,7 +95,8 @@ def ks93inv(kE, kB):
 
     See Also
     --------
-    ks93 for the forward operation (shear to convergence).
+    ks93
+        For the forward operation (shear to convergence).
 
     """
     # Check consistency of input maps

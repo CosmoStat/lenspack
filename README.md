@@ -26,11 +26,20 @@ In progress.
 
 ## Installation
 
+Clone this repository to your local machine. You might find it helpful to do this in a virtual environment in order to keep a clean workspace.
 ```
 $ git clone https://github.com/austinpeel/lenspack.git
 ```
+A new directory `lenspack` will be generated. Navigate into it.
+```
+$ cd lenspack
+```
+Run the setup script to install lenspack and its necessary dependencies.
+```
+$ pip install .
+```
 
-The package will also soon be available to install using pip.
+The package will also soon be available to install directly using pip.
 
 ## Examples
 
