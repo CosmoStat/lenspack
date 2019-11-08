@@ -3,6 +3,7 @@
 import os
 import tempfile
 import numpy as np
+from shutil import which
 from subprocess import call
 from astropy.io import fits
 from scipy.ndimage import convolve1d
@@ -355,6 +356,9 @@ def mr_transform(image, nscales=4, type=2, verbose=False):
     * http://www.cosmostat.org/software/isap
 
     """
+    # Verify that mr_transform is installed
+    assert which('mr_transform'), "Cannot find mr_transform. Is it installed?"
+
     # Create a temporary directory to hold the image and its transform
     tmpdir = tempfile.mkdtemp()
     saved_umask = os.umask(0o077)
