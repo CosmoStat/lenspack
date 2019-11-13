@@ -171,8 +171,9 @@ def u_function(x, xs, filter, l=1):
         * vw98 : Van Waerbeke (1998), A&A 334, 1
         * jbj04 : Jarvis, Bernstein, Jain (2004), MNRAS 352, 338
         * starlet : Leonard, Pires, Starck (2012), MNRAS 423, 3045
-        * See also : Zhang, Pen, Zhang et al. (2003), ApJ 598, 818,
-                     Schirmer et al. (2007), A&A 462, 875.
+
+        See also Zhang, Pen, Zhang et al. (2003), ApJ 598, 818, and
+        Schirmer et al. (2007), A&A 462, 875.
 
     l : int, optional
         Parameter of the 's98' filter. Default is 1.
