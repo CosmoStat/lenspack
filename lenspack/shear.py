@@ -16,10 +16,10 @@ def gamma_tx(x, y, gamma1, gamma2, center=(0, 0)):
 
     Parameters
     ----------
-    x, y : array_like (1D)
+    x, y : array_like, 1D
         Cartesian positions of points/galaxies on the sky. A Euclidean metric
         is assumed for calculating distances between the points.
-    gamma1, gamma2 : array_like (1D)
+    gamma1, gamma2 : array_like, 1D
         Two components of shear/ellipticity at the (`x`, `y`) locations.
     center : tuple of floats, optional
         Reference position. Default is (0, 0).
@@ -87,7 +87,8 @@ def apply_shear(e1, e2, g1, g2):
 
     Warnings
     --------
-    A warning will be printed if applying a non-weak shear, i.e. if |g| >= 1.
+    A warning will be printed if applying a non-weak shear,
+    i.e. if abs(g) >= 1.
 
     """
     # Standardize inputs

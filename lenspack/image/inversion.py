@@ -35,7 +35,7 @@ def ks93(g1, g2):
 
     Examples
     --------
-    # (g1, g2) should in practice be measurements from a real galaxy survey
+    >>> # (g1, g2) should in practice be measurements from a real galaxy survey
     >>> g1, g2 = 0.1 * np.random.randn(2, 32, 32) + 0.1 * np.ones((2, 32, 32))
     >>> kE, kB = ks93(g1, g2)
     >>> kE.shape

@@ -33,7 +33,7 @@ def angular_distance(ra1, dec1, ra2, dec2):
 
     Examples
     --------
-    TODO
+    ...
 
     """
     # Work in radians
@@ -82,7 +82,7 @@ def solid_angle(extent):
 
     Examples
     --------
-    TODO
+    ...
 
     """
     # Must have four input values

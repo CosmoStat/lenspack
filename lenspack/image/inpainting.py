@@ -21,8 +21,8 @@ def inpaint(image, mask, niter=100, thresholding='hard'):
     thresholding : {'soft', 'hard'}, optional
         Type of thresholding. Default is 'hard'.
 
-    Return
-    ------
+    Returns
+    -------
     2D numpy array
         Inpainted image.
 

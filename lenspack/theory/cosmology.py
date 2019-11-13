@@ -45,7 +45,7 @@ class nicaea(object):
 
         Examples
         --------
-        # Plot two-point correlation functions
+        >>> # Plot two-point correlation functions
         >>> nic = nicaea('.../nicaea_2.7', Om0=0.3, Ode0=0.7)
         >>> nic.compute()
         >>> theta, xi_p = nic.xi_p.T
@@ -168,14 +168,18 @@ class nicaea(object):
         nl : int, optional
             Number of ell bins. Default is 128.
 
+        Notes
+        -----
         Four new attributes are generated as follows.
 
-        name         description
-        ----         -----------
-        xi_p         Two-point correlation function xi+
-        xi_m         Two-point correlation function xi-
-        P_kappa      Convergence power spectrum (continuous ell)
-        P_kappa_d    Convergence power spectrum (discrete ell)
+        xi_p
+            Two-point correlation function xi+.
+        xi_m
+            Two-point correlation function xi-.
+        P_kappa
+            Convergence power spectrum (continuous ell).
+        P_kappa_d
+            Convergence power spectrum (discrete ell).
 
         More outputs could be harvested in the future, such as gammasqr etc.
 

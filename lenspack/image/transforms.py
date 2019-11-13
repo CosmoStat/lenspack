@@ -43,12 +43,13 @@ def starlet2d(image, nscales=5):
 
     Examples
     --------
-    # Transform a random image of standard deviation 10.
+    >>> # Transform a Gaussian random field of standard deviation 10.
     >>> img = 10 * np.random.randn(64, 64)
     >>> wt = starlet2d(img, 5)
     >>> wt.shape
     (6, 64, 64)
-    # Reconstruction
+
+    >>> # Reconstruction
     >>> rec = np.sum(wt, axis=0)
     >>> rec.shape == img.shape
     True
@@ -91,7 +92,7 @@ def dct2d(image, norm='ortho'):
 
     Parameters
     ----------
-    image : array_like (2D)
+    image : array_like, 2D
         Input image.
     norm : {None, 'ortho', 'isap'}, optional
         Normalization option. See scipy.fftpack.dct documentation (Type II)
@@ -107,7 +108,7 @@ def dct2d(image, norm='ortho'):
 
     Notes
     -----
-    Using no normalization (i.e. `norm`=None) will not automatically
+    Using no normalization (i.e. norm=None) will not automatically
     recover the original image after performing the inverse transformation.
     Each transform brings an overall scaling factor of 2N.
 
@@ -115,6 +116,10 @@ def dct2d(image, norm='ortho'):
     --------
     idct2d
         Inverse 2D DCT.
+
+    Examples
+    --------
+    ...
 
     """
     # Check inputs
@@ -153,6 +158,10 @@ def idct2d(image, norm='ortho'):
     dct2d
         Forward 2D DCT.
 
+    Examples
+    --------
+    ...
+
     """
     # Check inputs
     image = np.array(image)
@@ -173,16 +182,12 @@ def idct2d(image, norm='ortho'):
 def blockdct2d(image, norm='ortho', blocksize=None, overlap=False):
     """Compute a block (local) discrete cosine transform of an image.
 
-    -----------------------------------------------
-    | This needs MORE TESTING before deployment ! |
-    -----------------------------------------------
-
     This is an extension of dct2d to perform the transform on sub-blocks
     of the image.
 
     Parameters
     ----------
-    image : array_like (2D)
+    image : array_like, 2D
         Input image.
     norm : {None, 'ortho', 'isap'}, optional
         Normalization option. See scipy.fftpack.dct documentation (Type II)
@@ -191,7 +196,7 @@ def blockdct2d(image, norm='ortho', blocksize=None, overlap=False):
         involves an additional scaling of the zero-frequency elements.
         Default is 'ortho'.
     blocksize : int, optional
-        Size of sub-blocks for a local DCT. Must be ...
+        Size of sub-blocks for a local DCT.
     overlap : bool, optional
         Whether to overlap sub-blocks.
 
@@ -204,6 +209,14 @@ def blockdct2d(image, norm='ortho', blocksize=None, overlap=False):
     --------
     iblockdct2d
         Inverse local 2D DCT.
+
+    Examples
+    --------
+    ...
+
+    TODO
+    -----
+    This needs MORE TESTING before deployment !
 
     """
     # Check inputs
@@ -260,9 +273,36 @@ def blockdct2d(image, norm='ortho', blocksize=None, overlap=False):
 def iblockdct2d(image, norm='ortho', blocksize=None, overlap=False):
     """Compute the inverse block (local) discrete cosine transform of an image.
 
-    -----------------------------------------------
-    | This needs MORE TESTING before deployment ! |
-    -----------------------------------------------
+    This is an extension of idct2d to perform the transform on sub-blocks
+    of the image.
+
+    Parameters
+    ----------
+    image : array_like, 2D
+        Input image.
+    norm : {None, 'ortho', 'isap'}, optional
+        Normalization option. See scipy.fftpack.dct documentation (Type II)
+        for a description of the None and 'ortho' options. The 'isap' option
+        is available to match the output from the im_dct iSAP binary, which
+        involves an additional scaling of the zero-frequency elements.
+        Default is 'ortho'.
+    blocksize : int, optional
+        Size of sub-blocks for a local inverse DCT.
+    overlap : bool, optional
+        Whether to overlap sub-blocks.
+
+    Returns
+    -------
+    2D numpy array
+        Local type 2 inverse DCT.
+
+    Examples
+    --------
+    ...
+
+    TODO
+    -----
+        This needs MORE TESTING before deployment !
 
     """
     if norm not in [None, 'ortho', 'isap']:
@@ -326,7 +366,7 @@ def mr_transform(image, nscales=4, type=2, verbose=False):
 
     Parameters
     ----------
-    image : array_like (2D)
+    image : array_like, 2D
         Input image.
     nscales : int, optional
         Number of wavelet scales to compute. Default is 4.
@@ -354,6 +394,10 @@ def mr_transform(image, nscales=4, type=2, verbose=False):
       and Related Geometric Multiscale Analysis', Cambridge University Press,
       Cambridge (GB), 2016.
     * http://www.cosmostat.org/software/isap
+
+    Examples
+    --------
+    ...
 
     """
     # Verify that mr_transform is installed

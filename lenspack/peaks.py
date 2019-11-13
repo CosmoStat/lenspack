@@ -47,7 +47,7 @@ def find_peaks2d(image, threshold=None, ordered=True, mask=None,
 
     Examples
     --------
-    TODO
+    ...
 
     """
     image = np.atleast_2d(image)
@@ -148,7 +148,7 @@ def peaks_histogram(image, bins=None, mask=None):
 
     Examples
     --------
-    TODO
+    ...
 
     """
     # Define bin edges

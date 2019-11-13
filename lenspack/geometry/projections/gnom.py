@@ -34,7 +34,7 @@ def radec2xy(ra0, dec0, ra, dec):
 
     Examples
     --------
-    TODO
+    ...
 
     """
     # Standardize inputs
@@ -94,7 +94,7 @@ def xy2radec(ra0, dec0, x, y):
 
     Examples
     --------
-    TODO
+    ...
 
     """
     # Standardize inputs
