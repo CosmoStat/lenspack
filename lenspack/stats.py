@@ -21,7 +21,10 @@ def mad(x):
     x : array_like
         Input array.
 
-    Returns the MAD of `x` as a float.
+    Returns
+    -------
+    float
+        The MAD of `x`.
 
     """
     return np.median(np.abs(x - np.median(x)))

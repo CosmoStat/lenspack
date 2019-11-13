@@ -33,13 +33,15 @@ def aperture_mass(image, theta, filter='s98', method='fourier',
         Radial filter function. Default is 's98'.
     method : str, optional
         Computation technique. Options are
+
         (1) 'direct' for angular-space convolution using
             `scipy.ndimage.convolve` with an approximate (truncated) kernel
-        (2) 'fourier' for fourier-space convolution using
+        (2) 'fourier' for Fourier-space convolution using
             `scipy.signal.fftconvolve`
         (3) 'brute' for brute force pixel-by-pixel computation in direct
             space. Gives exactly the same result as (1) when 'constant'
             is used in convolve function.
+
         Default is 'fourier'.
     border : str, optional
         If `method` is 'direct', `border` determines how the border is treated
@@ -163,13 +165,15 @@ def u_function(x, xs, filter, l=1):
         Scale radius.
     filter : str
         Functional form - one of {'s98', 'vw98', 'jbj04', 'starlet'}
-        from the following references :
-        s98 - Schneider, van Waerbeke, Jain, Kruse (1998), MNRAS 296, 873
-        vw98 - Van Waerbeke (1998), A&A 334, 1
-        jbj04 - Jarvis, Bernstein, Jain (2004), MNRAS 352, 338
-        starlet - Leonard, Pires, Starck (2012), MNRAS 423, 3045
-        * See also - Zhang, Pen, Zhang et al. (2003), ApJ 598, 818,
+        from the following references.
+
+        * s98 : Schneider, van Waerbeke, Jain, Kruse (1998), MNRAS 296, 873
+        * vw98 : Van Waerbeke (1998), A&A 334, 1
+        * jbj04 : Jarvis, Bernstein, Jain (2004), MNRAS 352, 338
+        * starlet : Leonard, Pires, Starck (2012), MNRAS 423, 3045
+        * See also : Zhang, Pen, Zhang et al. (2003), ApJ 598, 818,
                      Schirmer et al. (2007), A&A 462, 875.
+
     l : int, optional
         Parameter of the 's98' filter. Default is 1.
 
@@ -180,7 +184,7 @@ def u_function(x, xs, filter, l=1):
 
     Notes
     -----
-    For the starlet, a factor of 1 / xs**2 was added to the normalization
+    For the starlet, a factor of 1 / xs^2 was added to the normalization
     in order to give consistent results with mr_transform (ISAP binary).
 
     """

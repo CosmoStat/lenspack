@@ -12,7 +12,9 @@ class zdist(object):
         """Continuous model of a redshift probability distribution.
 
         The parameterized distribution is given by
+
             n(z) = A * [(z / z0)^alpha] * exp[-(z / z0)^beta],
+
         where A is the normalization factor.
 
         Parameters
@@ -133,6 +135,8 @@ class zdist(object):
         zmax : float, optional
             Maximum redshift cutoff of the distribution. Default is None.
 
+        Notes
+        -----
         The current parameters (alpha, beta, z0) will be replaced by those
         of the fit.
 

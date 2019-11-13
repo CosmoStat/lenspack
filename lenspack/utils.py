@@ -27,7 +27,10 @@ def convert_units(x, target):
     target : str
         Target units given as an acceptable astropy.units string (e.g. 'km').
 
-    An error will be raised if the conversion fails.
+    Raises
+    ------
+    Exception
+        If the conversion fails.
 
     Examples
     --------
@@ -147,8 +150,8 @@ def bin2d(x, y, npix=10, v=None, w=None, extent=None, verbose=False):
 
     Examples
     --------
-    # 100 values at random positions within the ranges -0.5 < x, y < 0.5
-    # and binned within -1 < x, y < 1 to a (5, 5) grid.
+    >>> # 100 values at random positions within the ranges -0.5 < x, y < 0.5
+    >>> # and binned within -1 < x, y < 1 to a (5, 5) grid.
     >>> x = np.random.random(100) - 0.5
     >>> y = np.random.random(100) - 0.5
     >>> v = np.random.randn(100) * 5

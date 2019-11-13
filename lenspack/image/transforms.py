@@ -43,13 +43,13 @@ def starlet2d(image, nscales=5):
 
     Examples
     --------
-    Transform a random image of standard deviation 10.
+    >>> # Transform a Gaussian random field of standard deviation 10.
     >>> img = 10 * np.random.randn(64, 64)
     >>> wt = starlet2d(img, 5)
     >>> wt.shape
     (6, 64, 64)
 
-    Reconstruction
+    >>> # Reconstruction
     >>> rec = np.sum(wt, axis=0)
     >>> rec.shape == img.shape
     True
@@ -92,7 +92,7 @@ def dct2d(image, norm='ortho'):
 
     Parameters
     ----------
-    image : array_like (2D)
+    image : array_like, 2D
         Input image.
     norm : {None, 'ortho', 'isap'}, optional
         Normalization option. See scipy.fftpack.dct documentation (Type II)
@@ -108,7 +108,7 @@ def dct2d(image, norm='ortho'):
 
     Notes
     -----
-    Using no normalization (i.e. `norm`=None) will not automatically
+    Using no normalization (i.e. norm=None) will not automatically
     recover the original image after performing the inverse transformation.
     Each transform brings an overall scaling factor of 2N.
 
@@ -119,7 +119,7 @@ def dct2d(image, norm='ortho'):
 
     Examples
     --------
-    TODO
+    ...
 
     """
     # Check inputs
@@ -160,7 +160,7 @@ def idct2d(image, norm='ortho'):
 
     Examples
     --------
-    TODO
+    ...
 
     """
     # Check inputs
@@ -210,13 +210,13 @@ def blockdct2d(image, norm='ortho', blocksize=None, overlap=False):
     iblockdct2d
         Inverse local 2D DCT.
 
-    Notes
-    -----
-        This needs MORE TESTING before deployment !
-
     Examples
     --------
+    ...
+
     TODO
+    -----
+    This needs MORE TESTING before deployment !
 
     """
     # Check inputs
@@ -296,13 +296,13 @@ def iblockdct2d(image, norm='ortho', blocksize=None, overlap=False):
     2D numpy array
         Local type 2 inverse DCT.
 
-    Notes
-    -----
-        This needs MORE TESTING before deployment !
-
     Examples
     --------
+    ...
+
     TODO
+    -----
+        This needs MORE TESTING before deployment !
 
     """
     if norm not in [None, 'ortho', 'isap']:
@@ -397,7 +397,7 @@ def mr_transform(image, nscales=4, type=2, verbose=False):
 
     Examples
     --------
-    TODO
+    ...
 
     """
     # Verify that mr_transform is installed
