@@ -32,14 +32,14 @@ def starlet2d(image, nscales=5):
     Notes
     -----
     This function produces the same output as the mr_transform binary of the
-    iSAP C++ code package (see References) to high precision.
+    Sparse2D C++ code package (see References) to high precision.
 
     References
     ----------
     * Starck, Murtagh, Fadili, 'Sparse Image and Signal Processing: Wavelets
       and Related Geometric Multiscale Analysis', Cambridge University Press,
       Cambridge (GB), 2016.
-    * http://www.cosmostat.org/software/isap
+    * https://github.com/cosmostat/sparse2d
 
     Examples
     --------
@@ -94,12 +94,12 @@ def dct2d(image, norm='ortho'):
     ----------
     image : array_like, 2D
         Input image.
-    norm : {None, 'ortho', 'isap'}, optional
+    norm : {None, 'ortho', 'sparse2d'}, optional
         Normalization option. See scipy.fftpack.dct documentation (Type II)
-        for a description of the None and 'ortho' options. The 'isap' option
-        is available to match the output from the im_dct iSAP binary, which
-        involves an additional scaling of the zero-frequency elements.
-        Default is 'ortho'.
+        for a description of the None and 'ortho' options. The 'sparse2d'
+        option is available to match the output from the im_dct Sparse2D
+        binary, which involves an additional scaling of the zero-frequency
+        elements. Default is 'ortho'.
 
     Returns
     -------
@@ -125,10 +125,10 @@ def dct2d(image, norm='ortho'):
     # Check inputs
     image = np.array(image)
     assert len(image.shape) == 2, "Input image must be 2D."
-    assert norm in (None, 'ortho', 'isap'), "Invalid norm."
+    assert norm in (None, 'ortho', 'sparse2d'), "Invalid norm."
 
     # Compute DCT along each axis
-    if norm == 'isap':
+    if norm == 'sparse2d':
         result = dct(dct(image, norm='ortho', axis=0), norm='ortho', axis=1)
         result[:, 0] *= np.sqrt(2)
         result[0, :] *= np.sqrt(2)
@@ -145,7 +145,7 @@ def idct2d(image, norm='ortho'):
     ----------
     image : array_like (2D)
         Input image.
-    norm : {None, 'ortho', 'isap'}, optional
+    norm : {None, 'ortho', 'sparse2d'}, optional
         Normalization option. Default is 'ortho'.
 
     Returns
@@ -166,10 +166,10 @@ def idct2d(image, norm='ortho'):
     # Check inputs
     image = np.array(image)
     assert len(image.shape) == 2, "Input image must be 2D."
-    assert norm in (None, 'ortho', 'isap'), "Invalid norm."
+    assert norm in (None, 'ortho', 'sparse2d'), "Invalid norm."
 
     # Compute inverse DCT along each axis
-    if norm == 'isap':
+    if norm == 'sparse2d':
         image[:, 0] /= np.sqrt(2)
         image[0, :] /= np.sqrt(2)
         result = idct(idct(image, norm='ortho', axis=0), norm='ortho', axis=1)
@@ -189,12 +189,12 @@ def blockdct2d(image, norm='ortho', blocksize=None, overlap=False):
     ----------
     image : array_like, 2D
         Input image.
-    norm : {None, 'ortho', 'isap'}, optional
+    norm : {None, 'ortho', 'sparse2d'}, optional
         Normalization option. See scipy.fftpack.dct documentation (Type II)
-        for a description of the None and 'ortho' options. The 'isap' option
-        is available to match the output from the im_dct iSAP binary, which
-        involves an additional scaling of the zero-frequency elements.
-        Default is 'ortho'.
+        for a description of the None and 'ortho' options. The 'sparse2d'
+        option is available to match the output from the im_dct Sparse2D
+        binary, which involves an additional scaling of the zero-frequency
+        elements. Default is 'ortho'.
     blocksize : int, optional
         Size of sub-blocks for a local DCT.
     overlap : bool, optional
@@ -223,7 +223,7 @@ def blockdct2d(image, norm='ortho', blocksize=None, overlap=False):
     image = np.array(image)
     assert len(image.shape) == 2, "Input image must be 2D."
     assert image.shape[0] == image.shape[1], "Input image must be square."
-    assert norm in (None, 'ortho', 'isap'), "Invalid norm."
+    assert norm in (None, 'ortho', 'sparse2d'), "Invalid norm."
 
     # Determine output shape based on blocksize
     n = image.shape[0]
@@ -280,12 +280,12 @@ def iblockdct2d(image, norm='ortho', blocksize=None, overlap=False):
     ----------
     image : array_like, 2D
         Input image.
-    norm : {None, 'ortho', 'isap'}, optional
+    norm : {None, 'ortho', 'sparse2d'}, optional
         Normalization option. See scipy.fftpack.dct documentation (Type II)
-        for a description of the None and 'ortho' options. The 'isap' option
-        is available to match the output from the im_dct iSAP binary, which
-        involves an additional scaling of the zero-frequency elements.
-        Default is 'ortho'.
+        for a description of the None and 'ortho' options. The 'sparse2d'
+        option is available to match the output from the im_dct Sparse2D
+        binary, which involves an additional scaling of the zero-frequency
+        elements. Default is 'ortho'.
     blocksize : int, optional
         Size of sub-blocks for a local inverse DCT.
     overlap : bool, optional
@@ -305,9 +305,9 @@ def iblockdct2d(image, norm='ortho', blocksize=None, overlap=False):
         This needs MORE TESTING before deployment !
 
     """
-    if norm not in [None, 'ortho', 'isap']:
-        print("Warning: invalid norm --> using isap")
-        norm = 'isap'
+    if norm not in [None, 'ortho', 'sparse2d']:
+        print("Warning: invalid norm --> using sparse2d")
+        norm = 'sparse2d'
 
     # Determine output shape
     n = image.shape[0]
@@ -384,7 +384,7 @@ def mr_transform(image, nscales=4, type=2, verbose=False):
 
     Notes
     -----
-    This function is a wrapper for the mr_transform C++ binary of the iSAP
+    This function is a wrapper for the mr_transform C++ binary of the Sparse2D
     code package (see References). The astropy package is necessary to write
     out `image` as a temporary fits file on which mr_transform can act.
 
@@ -393,7 +393,7 @@ def mr_transform(image, nscales=4, type=2, verbose=False):
     * Starck, Murtagh, Fadili, 'Sparse Image and Signal Processing: Wavelets
       and Related Geometric Multiscale Analysis', Cambridge University Press,
       Cambridge (GB), 2016.
-    * http://www.cosmostat.org/software/isap
+    * https://github.com/cosmostat/sparse2d
 
     Examples
     --------
