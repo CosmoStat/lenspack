@@ -9,9 +9,10 @@ the observed ellipticity of a galaxy that has been sheared by weak lensing.
 """
 
 import numpy as np
+from lenspack.geometry.measures import spherical_polar_angle
 
 
-def gamma_tx(x, y, gamma1, gamma2, center=(0, 0)):
+def gamma_tx(ra, dec, gamma1, gamma2, center=(0, 0), coordinates='spherical'):
     """Compute the tangential/cross components of shear about a point.
 
     Parameters
@@ -23,6 +24,9 @@ def gamma_tx(x, y, gamma1, gamma2, center=(0, 0)):
         Two components of shear/ellipticity at the (`x`, `y`) locations.
     center : tuple of floats, optional
         Reference position. Default is (0, 0).
+    coordinates : {'spherical', 'cartesian'}
+        Whether to treat (ra, dec) positions as points on the sphere
+        ('spherical') or the plane ('cartesian').
 
     Returns
     -------
@@ -41,21 +45,23 @@ def gamma_tx(x, y, gamma1, gamma2, center=(0, 0)):
 
     """
     # Standardize inputs
-    x = np.atleast_1d(x).flatten()
-    y = np.atleast_1d(y).flatten()
+    ra = np.atleast_1d(ra).flatten()
+    dec = np.atleast_1d(dec).flatten()
     gamma1 = np.atleast_1d(gamma1).flatten()
     gamma2 = np.atleast_1d(gamma2).flatten()
 
-    if not len(x) == len(y) == len(gamma1) == len(gamma2):
+    if not len(ra) == len(dec) == len(gamma1) == len(gamma2):
         raise Exception("Input array lengths must be equal.")
 
-    # Compute distances from center
-    delta_x = x - center[0]
-    delta_y = y - center[1]
-    radii = np.hypot(delta_x, delta_y)
+    coordinates = coordinates.lower()
+    coord_error = "Coordinates must be either 'spherical' or 'cartesian'."
+    assert coordinates in ('spherical', 'cartesian'), coord_error
 
     # Determine polar angles
-    phi = np.arctan2(delta_y, delta_x)  # Range is [-pi, pi]
+    if coordinates == 'spherical':
+        phi = spherical_polar_angle(center[0], center[1], ra, dec)  # [0, 2pi]
+    else:
+        phi = np.arctan2(dec - center[1], ra - center[0])  # [-pi, pi]
     angle = 2 * phi
 
     # Compute tangential shear/ellipticity components

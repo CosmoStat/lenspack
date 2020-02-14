@@ -87,7 +87,9 @@ def spherical_polar_angle(ra1, dec1, ra2, dec2):
 
     Notes
     -----
-    The output angle lies within [0, 2 * pi).
+    The output angle lies within [0, 2 * pi). Multiple second points specified
+    by ra2 and dec2 arrays can be given. In that case, the angle of each
+    point 2 relative to the single reference point 1 is returned.
 
     Examples
     --------
@@ -113,8 +115,15 @@ def spherical_polar_angle(ra1, dec1, ra2, dec2):
     theta2 = np.deg2rad(np.atleast_1d(dec2))
 
     # Check input lengths
-    if not (len(phi1) == len(theta1) == len(phi2) == len(theta2)):
-        raise Exception("Input lengths must be the same.")
+    if not (len(phi1) == len(theta1)):
+        raise Exception("Point 1 array lengths must be the same.")
+
+    if not (len(phi2) == len(theta2)):
+        raise Exception("Point 2 array lengths must be the same.")
+
+    if len(phi1) == 1 and len(phi2) > 1:
+        phi1 = phi1.repeat(len(phi2))
+        theta1 = theta1.repeat(len(theta2))
 
     # Compute angle
     numerator = np.tan(theta2 - theta1)
@@ -122,8 +131,8 @@ def spherical_polar_angle(ra1, dec1, ra2, dec2):
     polar_angle = np.arctan2(numerator, denominator)
 
     # Ensure output range
-    if polar_angle < 0:
-        polar_angle = 2 * np.pi + polar_angle
+    negative = polar_angle < 0
+    polar_angle[negative] = 2 * np.pi + polar_angle[negative]
 
     # Clean up
     if len(polar_angle) == 1:
