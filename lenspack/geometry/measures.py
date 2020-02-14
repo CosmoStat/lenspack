@@ -61,6 +61,86 @@ def angular_distance(ra1, dec1, ra2, dec2):
     return central_angle
 
 
+def spherical_polar_angle(ra1, dec1, ra2, dec2):
+    """Determine the polar angle between two points on the sphere.
+
+    The angle returned is the one subtended between the great circle arc
+    joining the two points and the local 'horizontal' axis through the first
+    point (ra1, dec1), i.e. dec = dec1.
+
+    Parameters
+    ----------
+    ra[i], dec[i] : float or array_like
+        Coordinates of point [i] on the sphere, where ra[i] is the
+        longitudinal angle, and dec[i] is the latitudinal angle in degrees.
+
+    Returns
+    -------
+    float or numpy array
+        Polar angle measured in radians between the dec = dec1 axis and the
+        great circle arc joining points [1] and [2].
+
+    Raises
+    ------
+    Exception
+        For inputs of different length.
+
+    Notes
+    -----
+    The output angle lies within [0, 2 * pi). Multiple second points specified
+    by ra2 and dec2 arrays can be given. In that case, the angle of each
+    point 2 relative to the single reference point 1 is returned.
+
+    Examples
+    --------
+    >>> ra1, dec1 = 0, 0  # [deg]
+    >>> ra2, dec2 = -1, -1
+    >>> angle = spherical_polar_angle(ra1, dec1, ra2, dec2)
+    >>> print(np.rad2deg(angle))
+    225.00436354465515
+
+    # Deviations from the flat geometric result increase as the points move
+    # farther from the equator and their separation gets larger
+    >>> ra1, dec1 = 0, 0  # [deg]
+    >>> ra2, dec2 = -30, -30
+    >>> angle = spherical_polar_angle(ra1, dec1, ra2, dec2)
+    >>> print(np.rad2deg(angle))
+    229.10660535086907
+
+    """
+    # Work in radians
+    phi1 = np.deg2rad(np.atleast_1d(ra1))
+    theta1 = np.deg2rad(np.atleast_1d(dec1))
+    phi2 = np.deg2rad(np.atleast_1d(ra2))
+    theta2 = np.deg2rad(np.atleast_1d(dec2))
+
+    # Check input lengths
+    if not (len(phi1) == len(theta1)):
+        raise Exception("Point 1 array lengths must be the same.")
+
+    if not (len(phi2) == len(theta2)):
+        raise Exception("Point 2 array lengths must be the same.")
+
+    if len(phi1) == 1 and len(phi2) > 1:
+        phi1 = phi1.repeat(len(phi2))
+        theta1 = theta1.repeat(len(theta2))
+
+    # Compute angle
+    numerator = np.tan(theta2 - theta1)
+    denominator = np.sin((phi2 - phi1) * np.cos(theta1))
+    polar_angle = np.arctan2(numerator, denominator)
+
+    # Ensure output range
+    negative = polar_angle < 0
+    polar_angle[negative] = 2 * np.pi + polar_angle[negative]
+
+    # Clean up
+    if len(polar_angle) == 1:
+        polar_angle = polar_angle[0]
+
+    return polar_angle
+
+
 def solid_angle(extent):
     """Compute the solid angle subtended by a rectangle in RA/Dec space.
 
