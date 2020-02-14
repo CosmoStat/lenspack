@@ -17,16 +17,17 @@ def gamma_tx(ra, dec, gamma1, gamma2, center=(0, 0), coordinates='spherical'):
 
     Parameters
     ----------
-    x, y : array_like, 1D
-        Cartesian positions of points/galaxies on the sky. A Euclidean metric
-        is assumed for calculating distances between the points.
+    ra, dec : array_like, 1D
+        Positions of points/galaxies on the sky. The metric used for
+        calculating the polar angle between (ra, dec) and the reference point
+        `center` is determined by the `coordinates` argument.
     gamma1, gamma2 : array_like, 1D
-        Two components of shear/ellipticity at the (`x`, `y`) locations.
+        Two components of shear/ellipticity at the (`ra`, `dec`) locations.
     center : tuple of floats, optional
         Reference position. Default is (0, 0).
     coordinates : {'spherical', 'cartesian'}
         Whether to treat (ra, dec) positions as points on the sphere
-        ('spherical') or the plane ('cartesian').
+        ('spherical') or the plane ('cartesian'). Default is 'spherical'.
 
     Returns
     -------
@@ -41,7 +42,7 @@ def gamma_tx(ra, dec, gamma1, gamma2, center=(0, 0), coordinates='spherical'):
         gamma_x = -Im[gamma * exp(-2i * phi)],
 
     where gamma is the complex shear and phi is the polar angle relative
-    to the center point.
+    to the reference point `center`.
 
     """
     # Standardize inputs
