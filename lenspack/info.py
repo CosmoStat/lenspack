@@ -7,13 +7,13 @@ This module provides some basic information about the package.
 """
 
 # Set the package release version
-version_info = (1, 0, 0)
+version_info = (0, 1, 0)
 __version__ = '.'.join(str(c) for c in version_info)
 
 # Set the package details
 __author__ = 'Austin Peel'
-__email__ = 'austin.peel@cea.fr'
-__year__ = '2019'
+__email__ = 'austinpeel@gmail.com'
+__year__ = '2020'
 __url__ = 'https://github.com/austinpeel/lenspack'
 __description__ = 'A collection of weak lensing tools in Python'
 __requires__ = ['numpy', 'scipy', 'astropy']  # Package dependencies
