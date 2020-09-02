@@ -29,7 +29,7 @@ In progress.
 
 Clone this repository to your local machine. You might find it helpful to do this in a virtual environment in order to keep a clean workspace.
 ```
-$ git clone https://github.com/austinpeel/lenspack.git
+$ git clone https://github.com/cosmostat/lenspack.git
 ```
 A new directory `lenspack` will be generated. Navigate into it.
 ```
