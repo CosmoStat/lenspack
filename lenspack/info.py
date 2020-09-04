@@ -24,4 +24,4 @@ __about__ = ('{} Author: {}, Email: {}, Year: {}, {}'
              ''.format(__name__, __author__, __email__, __year__,
                        __description__))
 __setup_requires__ = ['pytest-runner', ]
-__tests_require__ = ['pytest', 'pytest-cov', 'pytest-pep8']
+__tests_require__ = ['pytest==5.4.3', 'pytest-cov', 'pytest-pep8']
