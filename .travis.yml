@@ -16,7 +16,7 @@ branches:
 # install package and dependencies
 install:
   - pip install scipy astropy
-  - pip install coverage nose pytest pytest-cov pytest-pep8
+  - pip install coverage nose pytest pytest-cov pytest-codestyle
   - if [[ $TRAVIS_PYTHON_VERSION == '3.8' ]]; then pip install sphinx sphinx-rtd-theme numpydoc travis-sphinx coveralls; fi
 
 # run unit tests
