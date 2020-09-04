@@ -2,10 +2,10 @@ language: python
 
 matrix:
     include:
-        - python: 3.5
         - python: 3.6
         - python: 3.7
-          dist: xenial
+        - python: 3.8
+          dist: focal
           sudo: true
 
 # GitHub branch
@@ -17,18 +17,18 @@ branches:
 install:
   - pip install scipy astropy
   - pip install coverage nose pytest pytest-cov pytest-pep8
-  - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then pip install sphinx sphinx-rtd-theme numpydoc travis-sphinx coveralls; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.8' ]]; then pip install sphinx sphinx-rtd-theme numpydoc travis-sphinx coveralls; fi
 
 # run unit tests
 script:
   - python setup.py test
-  - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then sphinx-apidoc -feo docs/source lenspack/; fi
-  - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then travis-sphinx -v -o docs/build build -n -s docs/source; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.8' ]]; then sphinx-apidoc -feo docs/source lenspack/; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.8' ]]; then travis-sphinx -v -o docs/build build -n -s docs/source; fi
 
 # run coverage tests
 after_success:
-  - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then coveralls; fi
-  - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then travis-sphinx -o docs/build deploy; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.8' ]]; then coveralls; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.8' ]]; then travis-sphinx -o docs/build deploy; fi
 
 # notification settings
 notification:
