@@ -20,7 +20,7 @@ __requires__ = ['numpy', 'scipy', 'astropy']  # Package dependencies
 
 # Default package properties
 __license__ = 'MIT'
-__about__ = ('{} \n\n Author: {} \n Email: {} \n Year: {} \n {} \n\n'
+__about__ = ('{} Author: {}, Email: {}, Year: {}, {}'
              ''.format(__name__, __author__, __email__, __year__,
                        __description__))
 __setup_requires__ = ['pytest-runner', ]
