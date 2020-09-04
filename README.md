@@ -25,6 +25,15 @@ In progress.
 
 ## Installation
 
+### PyPi
+
+Install the latest release from PyPi.
+```
+$ pip install lenspack
+```
+
+### Local
+
 Clone this repository to your local machine. You might find it helpful to do this in a virtual environment in order to keep a clean workspace.
 ```
 $ git clone https://github.com/cosmostat/lenspack.git
