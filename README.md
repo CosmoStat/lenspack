@@ -7,9 +7,7 @@
 > Year: 2019  
 ---
 
-This repository is a collection of python codes useful for the weak-lensing
-analysis of galaxy catalogs and shear/convergence maps. The full documentation
-can be found [here](https://austinpeel.github.io/lenspack/index.html "lenspack documentation").
+This repository is a collection of python codes useful for the weak-lensing analysis of galaxy catalogs and shear/convergence maps. The full documentation can be found [here](https://austinpeel.github.io/lenspack/index.html "lenspack documentation").
 
 ## Contents
 
@@ -26,6 +24,15 @@ In progress.
 * [iSAP](http://www.cosmostat.org/software/isap "iSAP") (optional)
 
 ## Installation
+
+### PyPi
+
+Install the latest release from PyPi.
+```
+$ pip install lenspack
+```
+
+### Local
 
 Clone this repository to your local machine. You might find it helpful to do this in a virtual environment in order to keep a clean workspace.
 ```
@@ -72,10 +79,7 @@ fig.colorbar(mappable)
 plt.show()
 ```
 
-<p align="left">
-<img src="https://github.com/austinpeel/lenspack/blob/master/examples/figures/peaks.png" alt="peaks" width="400"/>
-</p>
-
+![peaks](./examples/figures/peaks.png)
 
 ### Wavelet transform
 
@@ -106,6 +110,4 @@ for ax in (ax1, ax2, ax3):
     ax.set_axis_off()
 ```
 
-<p align="left">
-<img src="https://github.com/austinpeel/lenspack/blob/master/examples/figures/wavelet_transform.png" alt="wavelet_transform" width="900"/>
-</p>
+![wavelet transfrom](./examples/figures/wavelet_transform.png)
