@@ -39,6 +39,7 @@ from pycs.misc.stats import *
 from pycs.sparsity.sparse2d.dct import dct2d, idct2d
 from pycs.sparsity.sparse2d.dct_inpainting import dct_inpainting
 import pycs.sparsity.sparse2d.starlet
+from pycs.misc.im_isospec import *
 
 
 def get_ima_spectrum_map(Px,nx,ny):
