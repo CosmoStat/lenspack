@@ -1,0 +1,21 @@
+lenspack.image package
+======================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   lenspack.image.filters
+   lenspack.image.inpainting
+   lenspack.image.inversion
+   lenspack.image.transforms
+
+Module contents
+---------------
+
+.. automodule:: lenspack.image
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+lenspack.tests.test\_geometry module
+====================================
+
+.. automodule:: lenspack.tests.test_geometry
+   :members:
+   :undoc-members:
+   :show-inheritance:

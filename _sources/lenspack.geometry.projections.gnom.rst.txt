@@ -1,0 +1,7 @@
+lenspack.geometry.projections.gnom module
+=========================================
+
+.. automodule:: lenspack.geometry.projections.gnom
+   :members:
+   :undoc-members:
+   :show-inheritance:

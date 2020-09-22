@@ -1,0 +1,7 @@
+lenspack.halo.fitting module
+============================
+
+.. automodule:: lenspack.halo.fitting
+   :members:
+   :undoc-members:
+   :show-inheritance:

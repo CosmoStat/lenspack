@@ -1,0 +1,7 @@
+lenspack.theory.distributions module
+====================================
+
+.. automodule:: lenspack.theory.distributions
+   :members:
+   :undoc-members:
+   :show-inheritance:

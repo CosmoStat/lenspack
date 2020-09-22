@@ -1,0 +1,7 @@
+lenspack.info module
+====================
+
+.. automodule:: lenspack.info
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+lenspack.geometry.measures module
+=================================
+
+.. automodule:: lenspack.geometry.measures
+   :members:
+   :undoc-members:
+   :show-inheritance:

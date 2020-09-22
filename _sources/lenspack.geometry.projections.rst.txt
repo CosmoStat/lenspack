@@ -1,0 +1,18 @@
+lenspack.geometry.projections package
+=====================================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   lenspack.geometry.projections.gnom
+
+Module contents
+---------------
+
+.. automodule:: lenspack.geometry.projections
+   :members:
+   :undoc-members:
+   :show-inheritance:

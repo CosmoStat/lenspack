@@ -1,0 +1,7 @@
+lenspack.shear module
+=====================
+
+.. automodule:: lenspack.shear
+   :members:
+   :undoc-members:
+   :show-inheritance:

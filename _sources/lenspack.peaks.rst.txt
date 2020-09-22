@@ -1,0 +1,7 @@
+lenspack.peaks module
+=====================
+
+.. automodule:: lenspack.peaks
+   :members:
+   :undoc-members:
+   :show-inheritance:

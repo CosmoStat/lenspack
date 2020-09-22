@@ -1,0 +1,7 @@
+lenspack.stats module
+=====================
+
+.. automodule:: lenspack.stats
+   :members:
+   :undoc-members:
+   :show-inheritance:

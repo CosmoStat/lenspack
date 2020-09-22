@@ -1,0 +1,19 @@
+lenspack.theory package
+=======================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   lenspack.theory.cosmology
+   lenspack.theory.distributions
+
+Module contents
+---------------
+
+.. automodule:: lenspack.theory
+   :members:
+   :undoc-members:
+   :show-inheritance:
