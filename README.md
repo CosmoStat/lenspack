@@ -9,10 +9,6 @@
 
 This repository is a collection of python codes useful for the weak-lensing analysis of galaxy catalogs and shear/convergence maps. The full documentation can be found [here](https://austinpeel.github.io/lenspack/index.html "lenspack documentation").
 
-## Contents
-
-In progress.
-
 ## Dependencies
 
 * python (version 3.5 or later)
@@ -21,7 +17,7 @@ In progress.
 * astropy
 * [emcee](https://emcee.readthedocs.io/en/stable/ "emcee") (optional)
 * [nicaea](https://github.com/CosmoStat/nicaea "nicaea") (optional)
-* [iSAP](http://www.cosmostat.org/software/isap "iSAP") (optional)
+* [Sparse2D](https://github.com/cosmostat/sparse2d "Sparse2D") (optional)
 
 ## Installation
 
@@ -96,7 +92,8 @@ img = np.random.randn(256, 256)
 
 # Take the starlet transform with 5 wavelet scales
 st = starlet2d(img, nscales=5)
-mrt = mr_transform(img, nscales=5)  # The iSAP mr_transform binary is required for this wrapper function to work
+mrt = mr_transform(img, nscales=5)  # The Sparse2D mr_transform binary is required for this
+                                    # wrapper function to work
 
 # Compute the aperture mass map at scale 4 using the starlet filter
 apm = aperture_mass(img, theta=2**4, filter='starlet')
