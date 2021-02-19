@@ -18,7 +18,7 @@ class TransformsTestCase(TestCase):
 
         self.nscales = 5
         self.npix = 64
-        self.image = img = 10 * np.random.normal(size=(64, 64))
+        self.image = img = 10 * np.random.normal(size=(self.npix, self.npix))
         spike = np.zeros_like(self.image)
         spike[self.npix // 2, self.npix // 2] = 1
         self.spike = spike
@@ -41,7 +41,7 @@ class TransformsTestCase(TestCase):
         # Test reconstruction
         rec = np.sum(wt, axis=0)
         npt.assert_allclose(rec, self.image,
-                            err_msg="Incorrect reconstruction.")
+                            err_msg="Incorrect starlet reconstruction.")
 
         # Test wavelet filter norms
         wt_spike = starlet2d(self.spike, self.nscales)
@@ -52,4 +52,15 @@ class TransformsTestCase(TestCase):
                                 err_msg="Incorrect filter norms.")
 
     def test_dct2d(self):
-        pass
+
+        # Test reconstruction
+        dct = dct2d(self.image)
+        rec = idct2d(dct)
+        npt.assert_allclose(rec, self.image,
+                            err_msg="Incorrect DCT reconstruction.")
+
+        # Test exceptions
+        npt.assert_raises(Exception, dct2d, self.image[0])
+        npt.assert_raises(Exception, dct2d, self.image, 'symmetric')
+        npt.assert_raises(Exception, idct2d, self.image[0])
+        npt.assert_raises(Exception, idct2d, self.image, 'symmetric')
