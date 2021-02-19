@@ -12,6 +12,7 @@ matrix:
 branches:
   only:
     - master
+    - tests
 
 # install package and dependencies
 install:
