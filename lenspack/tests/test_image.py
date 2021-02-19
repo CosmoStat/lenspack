@@ -2,7 +2,7 @@
 
 """UNIT TESTS FOR IMAGE
 
-This module contains unit tests for the iamge module.
+This module contains unit tests for the image module.
 
 """
 
