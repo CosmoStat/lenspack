@@ -13,7 +13,7 @@ from lenspack.image.transforms import starlet2d
 
 
 def noise_coeff(image, nscales):
-    """Compute the noise coefficients :math:`\sigma_j`
+    """Compute the noise coefficients :math:`\sigma^{e}_{j}`
        to get the estimate of the noise at the scale j
        following Starck and Murtagh (1998).
     Parameters
@@ -25,17 +25,17 @@ def noise_coeff(image, nscales):
         N is the smaller of the two input dimensions.
     Returns
     -------
-    sigma_j : numpy.ndarray
+    coeff_j : numpy.ndarray
         Values of the standard deviation of the noise at scale j
     """
     noise_sigma = np.random.randn(image.shape[0], image.shape[0])
     noise_wavelet = starlet2d(noise_sigma, nscales)
-    sigma_j = np.array([np.std(scale) for scale in noise_wavelet])
-    return sigma_j
+    coeff_j = np.array([np.std(scale) for scale in noise_wavelet])
+    return coeff_j
 
 
 def get_l1norm_noisy(image, noise, nscales, nbins):
-    """Compute the starlet $\ell_1$-norm of a noisy image
+    """Compute the starlet :math:`\ell_1`-norm of a noisy image
        following Eq. (1) of https://arxiv.org/abs/2101.01542.
     Parameters
     ----------
@@ -51,7 +51,7 @@ def get_l1norm_noisy(image, noise, nscales, nbins):
     Returns
     -------
         bins_snr, starlet_l1norm : tuple of 1D numpy arrays
-        Bin centers in S/N and Starlet $\ell_1$-norm of the noisy image
+        Bin centers in S/N and Starlet :math:`\ell_1`-norm of the noisy image
     """
 
     # add noise to noiseless image
@@ -60,15 +60,15 @@ def get_l1norm_noisy(image, noise, nscales, nbins):
     image_starlet = starlet2d(image_noisy, nscales)
     # estimate of the noise
     noise_estimate = mad_std(image_noisy)
-    std_coeff = noise_coeff(image, nscales)
+    coeff_j = noise_coeff(image, nscales)
 
     l1_coll = []
     bins_coll = []
-    for image_temp, std_co in zip(image_starlet, std_coeff):
+    for image_j, std_co in zip(image_starlet, coeff_j):
 
-        std_scalej = std_co * noise_estimate
+        sigma_j = std_co * noise_estimate
 
-        snr = image_temp / std_scalej
+        snr = image_j / sigma_j
         thresholds_snr = np.linspace(np.min(snr), np.max(snr), nbins + 1)
         bins_snr = 0.5 * (thresholds_snr[:-1] + thresholds_snr[1:])
         digitized = np.digitize(snr, thresholds_snr)
