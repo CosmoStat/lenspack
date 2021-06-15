@@ -1,0 +1,583 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>lenspack.stats &mdash; lenspack 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> lenspack
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lenspack.html">lenspack package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../lenspack.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.geometry.html">lenspack.geometry package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.halo.html">lenspack.halo package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.image.html">lenspack.image package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.tests.html">lenspack.tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.theory.html">lenspack.theory package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../lenspack.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.info.html">lenspack.info module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.peaks.html">lenspack.peaks module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.shear.html">lenspack.shear module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.starlet_l1norm.html">lenspack.starlet_l1norm module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.stats.html">lenspack.stats module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.utils.html">lenspack.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../lenspack.html#module-lenspack">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.html#id1">Subpackages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.html#id2">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">lenspack</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>lenspack.stats</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for lenspack.stats</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="sd">&quot;&quot;&quot;STATS MODULE</span>
+
+<span class="sd">This module contains some common statistical measures useful in weak-lensing</span>
+<span class="sd">studies. For example, the higher-order moments of filtered convergence maps</span>
+<span class="sd">can be used to constrain cosmological parameters.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">brentq</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span><span class="p">,</span> <span class="n">gaussian_kde</span>
+
+
+<div class="viewcode-block" id="mad"><a class="viewcode-back" href="../../lenspack.stats.html#lenspack.stats.mad">[docs]</a><span class="k">def</span> <span class="nf">mad</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Compute median absolute deviation (MAD) of an array.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x : array_like</span>
+<span class="sd">        Input array.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    float</span>
+<span class="sd">        The MAD of `x`.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span></div>
+
+
+<div class="viewcode-block" id="skew"><a class="viewcode-back" href="../../lenspack.stats.html#lenspack.stats.skew">[docs]</a><span class="k">def</span> <span class="nf">skew</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Compute the skewness of an array as the third standardized moment.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x : array_like</span>
+<span class="sd">        Input array. If `x` is multidimensional, skewness is automatically</span>
+<span class="sd">        computed over all elements in the array, not just along one axis.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    float</span>
+<span class="sd">        Skewness of `x`.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    For array x, the calculation is carried out as E[((x - mu) / sigma)^3],</span>
+<span class="sd">    where E() is the expectation value, mu is the mean of x, and sigma is the</span>
+<span class="sd">    uncorrected sample standard deviation.</span>
+
+<span class="sd">    This is equivalent to</span>
+<span class="sd">        &gt;&gt;&gt; n = len(x)</span>
+<span class="sd">        &gt;&gt;&gt; numer = np.power(x - mu, 3).sum() / n</span>
+<span class="sd">        &gt;&gt;&gt; denom = np.power(np.power(x - mu, 2).sum() / (n - 1), 3 / 2)</span>
+<span class="sd">        &gt;&gt;&gt; skew = numer / denom</span>
+<span class="sd">    and to the normalized 3rd-order central moment</span>
+<span class="sd">        &gt;&gt;&gt; mu_n(x, 3, normed=True)</span>
+
+<span class="sd">    This function&#39;s output matches that of scipy.stats.skew exactly, but</span>
+<span class="sd">    the latter is typically faster.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">mean</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">sigma</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">sigma</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">sigma</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">sigma</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">mean</span><span class="p">)</span> <span class="o">/</span> <span class="n">sigma</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="kurt"><a class="viewcode-back" href="../../lenspack.stats.html#lenspack.stats.kurt">[docs]</a><span class="k">def</span> <span class="nf">kurt</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fisher</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Compute the kurtosis of an array as the fourth standardized moment.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x : array_like</span>
+<span class="sd">        Input array. If `x` is multidimensional, kurtosis is automatically</span>
+<span class="sd">        computed over all elements in the array, not just along one axis.</span>
+<span class="sd">    fisher : bool, optional</span>
+<span class="sd">        If True, use Fisher&#39;s normalization, i.e. subtract 3 from the result.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    float</span>
+<span class="sd">        Kurtosis of `x`.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    For array x, the calculation is carried out as E[((x - mu) / sigma)^4],</span>
+<span class="sd">    where E() is the expectation value, mu is the mean of x, and sigma is the</span>
+<span class="sd">    uncorrected sample standard deviation.</span>
+
+<span class="sd">    This is equivalent to the normalized 4th-order central moment</span>
+<span class="sd">        &gt;&gt;&gt; mu_n(x, 4, normed=True) - 3</span>
+
+<span class="sd">    This function&#39;s output matches that of scipy.stats.kurtosis very well, but</span>
+<span class="sd">    the latter is typically faster.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">mean</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">sigma</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">sigma</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">sigma</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">sigma</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">mean</span><span class="p">)</span> <span class="o">/</span> <span class="n">sigma</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">][</span><span class="n">fisher</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="mu_n"><a class="viewcode-back" href="../../lenspack.stats.html#lenspack.stats.mu_n">[docs]</a><span class="k">def</span> <span class="nf">mu_n</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Compute the (normalized) nth-order central moment of a distribution.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x : array_like</span>
+<span class="sd">        Input array. If `x` is multidimensional, the moment is automatically</span>
+<span class="sd">        computed over all elements in the array, not just along one axis.</span>
+<span class="sd">    order : int (positive)</span>
+<span class="sd">        Order of the moment.</span>
+<span class="sd">    normed : bool, optional</span>
+<span class="sd">        If True, normalize the result by sigma^order, where sigma is the</span>
+<span class="sd">        corrected sample standard deviation of `x`. Default is False.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    float</span>
+<span class="sd">        Nth-order moment of `x`.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This function&#39;s output matches that of scipy.stats.moment very well, but</span>
+<span class="sd">    the latter is typically faster.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Check order</span>
+    <span class="n">order</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">order</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">order</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Only n &gt; 0 supported.&quot;</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+    <span class="n">mean</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">normed</span> <span class="ow">and</span> <span class="n">order</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">sigma</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">mean</span><span class="p">)</span> <span class="o">/</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">order</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">mean</span><span class="p">,</span> <span class="n">order</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="kappa_n"><a class="viewcode-back" href="../../lenspack.stats.html#lenspack.stats.kappa_n">[docs]</a><span class="k">def</span> <span class="nf">kappa_n</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">order</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Compute the nth-order cumulant of a distribution.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x : array_like</span>
+<span class="sd">        Input array. If `x` is multidimensional, the cumulant is automatically</span>
+<span class="sd">        computed over all elements in the array, not just along one axis.</span>
+<span class="sd">    order : int between 2 and 6, inclusive</span>
+<span class="sd">        Order of the cumulant.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    float</span>
+<span class="sd">        Nth-order cumulant of `x`.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This function&#39;s output matches that of scipy.stats.kstat very well, but</span>
+<span class="sd">    the latter is typically faster.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Check order</span>
+    <span class="n">order</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">order</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">order</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="s2">&quot;Order </span><span class="si">{}</span><span class="s2"> not supported.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">order</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">order</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">kappa</span> <span class="o">=</span> <span class="n">mu_n</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">order</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">kappa</span> <span class="o">=</span> <span class="n">mu_n</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">order</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">mu2</span> <span class="o">=</span> <span class="n">mu_n</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">mu4</span> <span class="o">=</span> <span class="n">mu_n</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">kappa</span> <span class="o">=</span> <span class="n">mu4</span> <span class="o">-</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">mu2</span><span class="o">**</span><span class="mi">2</span>
+    <span class="k">if</span> <span class="n">order</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">mu2</span> <span class="o">=</span> <span class="n">mu_n</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">mu3</span> <span class="o">=</span> <span class="n">mu_n</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">mu5</span> <span class="o">=</span> <span class="n">mu_n</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">kappa</span> <span class="o">=</span> <span class="n">mu5</span> <span class="o">-</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">mu3</span> <span class="o">*</span> <span class="n">mu2</span>
+    <span class="k">if</span> <span class="n">order</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+        <span class="n">mu2</span> <span class="o">=</span> <span class="n">mu_n</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">mu3</span> <span class="o">=</span> <span class="n">mu_n</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">mu4</span> <span class="o">=</span> <span class="n">mu_n</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">mu6</span> <span class="o">=</span> <span class="n">mu_n</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">kappa</span> <span class="o">=</span> <span class="n">mu6</span> <span class="o">-</span> <span class="mi">15</span> <span class="o">*</span> <span class="n">mu4</span> <span class="o">*</span> <span class="n">mu2</span> <span class="o">-</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">mu3</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">30</span> <span class="o">*</span> <span class="n">mu2</span><span class="o">**</span><span class="mi">3</span>
+
+    <span class="k">return</span> <span class="n">kappa</span></div>
+
+
+<div class="viewcode-block" id="fdr"><a class="viewcode-back" href="../../lenspack.stats.html#lenspack.stats.fdr">[docs]</a><span class="k">def</span> <span class="nf">fdr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tail</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">n_samples</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Compute the false discovery rate (FDR) threshold of a distribution.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x : array_like</span>
+<span class="sd">        Samples of the distribution. If `x` is multidimentional, it will</span>
+<span class="sd">        first be flattened.</span>
+<span class="sd">    tail : {&#39;left&#39;, &#39;right&#39;}</span>
+<span class="sd">        Side of the distribution for which to compute the threshold.</span>
+<span class="sd">    alpha : float, optional</span>
+<span class="sd">        Maximum average false discovery rate. Default is 0.05.</span>
+<span class="sd">    kde : bool, optional</span>
+<span class="sd">        If True, compute p-values from the distribution smoothed by kernel</span>
+<span class="sd">        density estimation. Not recommended for large `x`. Default is False.</span>
+<span class="sd">    n_samples : int, optional</span>
+<span class="sd">        Number of samples to draw if using KDE. Default is 10000.</span>
+<span class="sd">    debug : bool, optional</span>
+<span class="sd">        If True, print the number of detections and the final p-value.</span>
+<span class="sd">        Default is False.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    float</span>
+<span class="sd">        FDR threshold.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    ...</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Check inputs</span>
+    <span class="k">assert</span> <span class="n">tail</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">),</span> <span class="s2">&quot;Invalid tail.&quot;</span>
+
+    <span class="c1"># Basic measures</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">mean</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">sigma</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">kde</span><span class="p">:</span>
+        <span class="c1"># Approximate the distribution by kernel density estimation</span>
+        <span class="n">pdf</span> <span class="o">=</span> <span class="n">gaussian_kde</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">bw_method</span><span class="o">=</span><span class="s1">&#39;silverman&#39;</span><span class="p">)</span>
+        <span class="n">amin</span><span class="p">,</span> <span class="n">amax</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">x</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+        <span class="n">vmax</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">amax</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">amax</span> <span class="o">+</span> <span class="n">sigma</span><span class="p">)</span>
+        <span class="n">vmin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">amin</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">amin</span> <span class="o">-</span> <span class="n">sigma</span><span class="p">)</span>
+
+        <span class="c1"># Cumulative distribution function</span>
+        <span class="k">def</span> <span class="nf">cdf</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">tail</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">tail</span> <span class="o">==</span> <span class="s1">&#39;right&#39;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">pdf</span><span class="o">.</span><span class="n">integrate_box</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">pdf</span><span class="o">.</span><span class="n">integrate_box</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">)</span>
+
+        <span class="c1"># Inverse cumulative distribution function</span>
+        <span class="k">def</span> <span class="nf">cdfinv</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">tail</span><span class="p">):</span>
+            <span class="k">assert</span> <span class="n">t</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Input to cdfinv must be in (0, 1).&quot;</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">brentq</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">cdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tail</span><span class="p">)</span> <span class="o">-</span> <span class="n">t</span><span class="p">,</span> <span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warning: bad value. Returning 0.&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;threshold = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;vmin = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">vmin</span><span class="p">))</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;vmax = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">vmax</span><span class="p">))</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">return</span> <span class="n">result</span>
+
+        <span class="c1"># Compute p-values</span>
+        <span class="k">if</span> <span class="n">tail</span> <span class="o">==</span> <span class="s1">&#39;right&#39;</span><span class="p">:</span>
+            <span class="n">smin</span> <span class="o">=</span> <span class="n">mean</span> <span class="o">+</span> <span class="n">sigma</span>
+            <span class="n">smax</span> <span class="o">=</span> <span class="n">vmax</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">smax</span> <span class="o">=</span> <span class="n">mean</span> <span class="o">-</span> <span class="n">sigma</span>
+            <span class="n">smin</span> <span class="o">=</span> <span class="n">vmin</span>
+        <span class="n">samples</span> <span class="o">=</span> <span class="p">(</span><span class="n">smax</span> <span class="o">-</span> <span class="n">smin</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">n_samples</span><span class="p">)</span> <span class="o">+</span> <span class="n">smin</span>
+        <span class="n">pvals</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">cdf</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">tail</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">samples</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Compute p-values assuming Gaussian null hypothesis</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">mean</span><span class="p">)</span> <span class="o">/</span> <span class="n">sigma</span>
+        <span class="k">if</span> <span class="n">tail</span> <span class="o">==</span> <span class="s1">&#39;right&#39;</span><span class="p">:</span>
+            <span class="n">pvals</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">pvals</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+
+    <span class="c1"># Sort p-values and find the last one</span>
+    <span class="n">inds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">pvals</span><span class="p">)</span>
+    <span class="n">ialpha</span> <span class="o">=</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">pvals</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pvals</span><span class="p">))</span>
+    <span class="n">diff</span> <span class="o">=</span> <span class="n">pvals</span><span class="p">[</span><span class="n">inds</span><span class="p">]</span> <span class="o">-</span> <span class="n">ialpha</span>
+    <span class="n">lastindex</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">((</span><span class="n">diff</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">cumsum</span><span class="p">())</span>
+    <span class="n">pval</span> <span class="o">=</span> <span class="n">pvals</span><span class="p">[</span><span class="n">inds</span><span class="p">][</span><span class="n">lastindex</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">debug</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> detection(s) / </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lastindex</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">pvals</span><span class="p">)))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;last pval = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pval</span><span class="p">))</span>
+
+    <span class="c1"># Invert pval to get threshold</span>
+    <span class="k">if</span> <span class="n">kde</span><span class="p">:</span>
+        <span class="n">tval</span> <span class="o">=</span> <span class="n">cdfinv</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">pval</span><span class="p">,</span> <span class="n">tail</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">tval</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">inds</span><span class="p">][</span><span class="n">lastindex</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">tval</span></div>
+
+
+<div class="viewcode-block" id="hc"><a class="viewcode-back" href="../../lenspack.stats.html#lenspack.stats.hc">[docs]</a><span class="k">def</span> <span class="nf">hc</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Compute a higher criticism statistic of a distribution.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x : array_like</span>
+<span class="sd">        Samples of the distribution. If `x` is multidimentional, it will</span>
+<span class="sd">        first be flattened.</span>
+<span class="sd">    kind : int, optional</span>
+<span class="sd">        Either 1 (HC^*) or 2 (HC^+). Default is 1.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    float</span>
+<span class="sd">        Higher criticism of the first (*) or second (+) kind.</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    * Donoho &amp; Jin, The Annals of Statistics 32, 962 (2004)</span>
+<span class="sd">    * Pires, Starck, Amara, et al., A&amp;A 505, 969 (2009)</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    ...</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Check inputs</span>
+    <span class="k">assert</span> <span class="n">kind</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="s2">&quot;Invalid kind. Must be either 1 or 2.&quot;</span>
+
+    <span class="c1"># Basic measures</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+    <span class="n">mean</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">sigma</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># Normalize values</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">mean</span><span class="p">)</span> <span class="o">/</span> <span class="n">sigma</span>
+
+    <span class="c1"># Compute and sort p-values</span>
+    <span class="n">pvals</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+    <span class="n">pvals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">pvals</span><span class="p">)</span>
+
+    <span class="c1"># Compute HC value</span>
+    <span class="n">denom2</span> <span class="o">=</span> <span class="n">pvals</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">pvals</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">good_inds</span> <span class="o">=</span> <span class="n">denom2</span> <span class="o">&gt;</span> <span class="mi">0</span>  <span class="c1"># Avoid division by zero and complex numbers</span>
+    <span class="n">pvals</span> <span class="o">=</span> <span class="n">pvals</span><span class="p">[</span><span class="n">good_inds</span><span class="p">]</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">pvals</span><span class="p">)</span>
+    <span class="n">numer</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">-</span> <span class="n">pvals</span><span class="p">)</span>
+    <span class="n">denom</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">denom2</span><span class="p">[</span><span class="n">good_inds</span><span class="p">])</span>
+    <span class="n">ratio</span> <span class="o">=</span> <span class="n">numer</span> <span class="o">/</span> <span class="n">denom</span>
+
+    <span class="k">if</span> <span class="n">kind</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">ninv</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">/</span> <span class="n">n</span>
+        <span class="n">sel</span> <span class="o">=</span> <span class="p">(</span><span class="n">pvals</span> <span class="o">&gt;=</span> <span class="n">ninv</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">pvals</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="mf">1.</span> <span class="o">-</span> <span class="n">ninv</span><span class="p">))</span>
+        <span class="n">ratio</span> <span class="o">=</span> <span class="n">ratio</span><span class="p">[</span><span class="n">sel</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">ratio</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Austin Peel.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+lenspack.starlet\_l1norm module
+===============================
+
+.. automodule:: lenspack.starlet_l1norm
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,354 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>lenspack.image.filters module &mdash; lenspack 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="lenspack.image.inpainting module" href="lenspack.image.inpainting.html" />
+    <link rel="prev" title="lenspack.image package" href="lenspack.image.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> lenspack
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="lenspack.html">lenspack package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="lenspack.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="lenspack.geometry.html">lenspack.geometry package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.halo.html">lenspack.halo package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="lenspack.image.html">lenspack.image package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.tests.html">lenspack.tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.theory.html">lenspack.theory package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lenspack.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.info.html">lenspack.info module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.peaks.html">lenspack.peaks module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.shear.html">lenspack.shear module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.starlet_l1norm.html">lenspack.starlet_l1norm module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.stats.html">lenspack.stats module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.utils.html">lenspack.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lenspack.html#module-lenspack">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.html#id1">Subpackages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.html#id2">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">lenspack</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="lenspack.html">lenspack package</a> &raquo;</li>
+        
+          <li><a href="lenspack.image.html">lenspack.image package</a> &raquo;</li>
+        
+      <li>lenspack.image.filters module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/lenspack.image.filters.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="module-lenspack.image.filters">
+<span id="lenspack-image-filters-module"></span><h1>lenspack.image.filters module<a class="headerlink" href="#module-lenspack.image.filters" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="lenspack.image.filters.aperture_mass">
+<span class="sig-prename descclassname"><span class="pre">lenspack.image.filters.</span></span><span class="sig-name descname"><span class="pre">aperture_mass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'s98'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fourier'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">border</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'constant'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/image/filters.html#aperture_mass"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.image.filters.aperture_mass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter an image (convergence map) using an aperture mass kernel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>array_like</em>) – 2D convergence map.</p></li>
+<li><p><strong>theta</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – Aperture radial size in pixels.</p></li>
+<li><p><strong>filter</strong> (<em>{'s98'</em><em>, </em><em>'vw98'</em><em>, </em><em>'jbj04'</em><em>, </em><em>'starlet'}</em>) – Radial filter function. Default is ‘s98’.</p></li>
+<li><p><strong>method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>, </em><em>optional</em>) – <p>Computation technique. Options are</p>
+<ol class="arabic simple">
+<li><p>’direct’ for angular-space convolution using
+<cite>scipy.ndimage.convolve</cite> with an approximate (truncated) kernel</p></li>
+<li><p>’fourier’ for Fourier-space convolution using
+<cite>scipy.signal.fftconvolve</cite></p></li>
+<li><p>’brute’ for brute force pixel-by-pixel computation in direct
+space. Gives exactly the same result as (1) when ‘constant’
+is used in convolve function.</p></li>
+</ol>
+<p>Default is ‘fourier’.</p>
+</p></li>
+<li><p><strong>border</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>, </em><em>optional</em>) – If <cite>method</cite> is ‘direct’, <cite>border</cite> determines how the border is treated
+via the scipy.ndimage.convolve option. Options are
+{‘reflect’, ‘constant’, ‘nearest’, ‘mirror’, ‘wrap’}. Defaults is
+‘constant’ with zero-filling.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>aperture_mass</strong> – Aperture mass map, i.e. a filtered version of <cite>image</cite>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>2D numpy array</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.9)"><strong>ValueError</strong></a> – For invalid input options.</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The different methods have vastly different computation times.
+Fourier-space convolution is by far the fastest and the only usable
+option for large images and large apertures. It gives very nearly the same
+results as direct-space convolution when the convolution <cite>border</cite> is
+‘constant’ with zero-padding. The latter also gives the same result as
+the brute-force approach.</p>
+<p>When using the starlet filter, the result is closest to the mr_transform
+(ISAP binary) output when the border is ‘constant’.</p>
+<p class="rubric">Examples</p>
+<p>…</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lenspack.image.filters.gen_apmass_kernel">
+<span class="sig-prename descclassname"><span class="pre">lenspack.image.filters.</span></span><span class="sig-name descname"><span class="pre">gen_apmass_kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/image/filters.html#gen_apmass_kernel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.image.filters.gen_apmass_kernel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a convolution kernel for aperture mass filtering.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – Aperture radial size in pixels.</p></li>
+<li><p><strong>filter</strong> (<em>{'s98'</em><em>, </em><em>'vw98'</em><em>, </em><em>'jbj04'</em><em>, </em><em>'starlet'}</em>) – Radial filter function.</p></li>
+<li><p><strong>size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – Side length N of the output (N, N) kernel matrix. If not given, the
+output shape is determined by the minimum radius at which the filter
+function becomes effectively negligible.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Aperture mass kernel matrix of shape (N, N). N is always odd when
+<cite>size</cite> is not specified.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>2D numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lenspack.image.filters.u_function">
+<span class="sig-prename descclassname"><span class="pre">lenspack.image.filters.</span></span><span class="sig-name descname"><span class="pre">u_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/image/filters.html#u_function"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.image.filters.u_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aperture mass isotropic filter function U(theta).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array_like</em>) – Radial distances.</p></li>
+<li><p><strong>xs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – Scale radius.</p></li>
+<li><p><strong>filter</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – <p>Functional form - one of {‘s98’, ‘vw98’, ‘jbj04’, ‘starlet’}
+from the following references.</p>
+<ul>
+<li><p>s98 : Schneider, van Waerbeke, Jain, Kruse (1998), MNRAS 296, 873</p></li>
+<li><p>vw98 : Van Waerbeke (1998), A&amp;A 334, 1</p></li>
+<li><p>jbj04 : Jarvis, Bernstein, Jain (2004), MNRAS 352, 338</p></li>
+<li><p>starlet : Leonard, Pires, Starck (2012), MNRAS 423, 3045</p></li>
+</ul>
+<p>See also Zhang, Pen, Zhang et al. (2003), ApJ 598, 818, and
+Schirmer et al. (2007), A&amp;A 462, 875.</p>
+</p></li>
+<li><p><strong>l</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – Parameter of the ‘s98’ filter. Default is 1.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Function value at each <cite>x</cite>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>For the starlet, a factor of 1 / xs^2 was added to the normalization
+in order to give consistent results with mr_transform (ISAP binary).</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="lenspack.image.inpainting.html" class="btn btn-neutral float-right" title="lenspack.image.inpainting module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="lenspack.image.html" class="btn btn-neutral float-left" title="lenspack.image package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Austin Peel.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

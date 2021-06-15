@@ -1,0 +1,26 @@
+lenspack.geometry package
+=========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   lenspack.geometry.projections
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   lenspack.geometry.measures
+
+Module contents
+---------------
+
+.. automodule:: lenspack.geometry
+   :members:
+   :undoc-members:
+   :show-inheritance:

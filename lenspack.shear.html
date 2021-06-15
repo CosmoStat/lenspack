@@ -1,0 +1,330 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>lenspack.shear module &mdash; lenspack 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="lenspack.starlet_l1norm module" href="lenspack.starlet_l1norm.html" />
+    <link rel="prev" title="lenspack.peaks module" href="lenspack.peaks.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> lenspack
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="lenspack.html">lenspack package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="lenspack.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.geometry.html">lenspack.geometry package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.halo.html">lenspack.halo package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.image.html">lenspack.image package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.tests.html">lenspack.tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.theory.html">lenspack.theory package</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="lenspack.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="lenspack.info.html">lenspack.info module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.peaks.html">lenspack.peaks module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">lenspack.shear module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.starlet_l1norm.html">lenspack.starlet_l1norm module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.stats.html">lenspack.stats module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.utils.html">lenspack.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lenspack.html#module-lenspack">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.html#id1">Subpackages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.html#id2">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">lenspack</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="lenspack.html">lenspack package</a> &raquo;</li>
+        
+      <li>lenspack.shear module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/lenspack.shear.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="module-lenspack.shear">
+<span id="lenspack-shear-module"></span><h1>lenspack.shear module<a class="headerlink" href="#module-lenspack.shear" title="Permalink to this headline">¶</a></h1>
+<p>SHEAR MODULE</p>
+<p>This module contains functions related to weak-lensing shear, for example
+measuring the tangential/cross components of shear about a point and computing
+the observed ellipticity of a galaxy that has been sheared by weak lensing.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="lenspack.shear.gamma_tx">
+<span class="sig-prename descclassname"><span class="pre">lenspack.shear.</span></span><span class="sig-name descname"><span class="pre">gamma_tx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ra</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'spherical'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/shear.html#gamma_tx"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.shear.gamma_tx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the tangential/cross components of shear about a point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ra</strong> (<em>array_like</em><em>, </em><em>1D</em>) – Positions of points/galaxies on the sky. The metric used for
+calculating the polar angle between (ra, dec) and the reference point
+<cite>center</cite> is determined by the <cite>coordinates</cite> argument.</p></li>
+<li><p><strong>dec</strong> (<em>array_like</em><em>, </em><em>1D</em>) – Positions of points/galaxies on the sky. The metric used for
+calculating the polar angle between (ra, dec) and the reference point
+<cite>center</cite> is determined by the <cite>coordinates</cite> argument.</p></li>
+<li><p><strong>gamma1</strong> (<em>array_like</em><em>, </em><em>1D</em>) – Two components of shear/ellipticity at the (<cite>ra</cite>, <cite>dec</cite>) locations.</p></li>
+<li><p><strong>gamma2</strong> (<em>array_like</em><em>, </em><em>1D</em>) – Two components of shear/ellipticity at the (<cite>ra</cite>, <cite>dec</cite>) locations.</p></li>
+<li><p><strong>center</strong> (<em>tuple of floats</em><em>, </em><em>optional</em>) – Reference position. Default is (0, 0).</p></li>
+<li><p><strong>coordinates</strong> (<em>{'spherical'</em><em>, </em><em>'cartesian'}</em>) – Whether to treat (ra, dec) positions as points on the sphere
+(‘spherical’) or the plane (‘cartesian’). Default is ‘spherical’.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>gamma_t, gamma_x</strong> – Tangential and cross shear/ellipticity component for each input.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple of floats or 1D numpy arrays</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The equations are from Schneider’s 2005 weak-lensing review [Eq. (17)].</p>
+<blockquote>
+<div><p>gamma_t = -Re[gamma * exp(-2i * phi)],
+gamma_x = -Im[gamma * exp(-2i * phi)],</p>
+</div></blockquote>
+<p>where gamma is the complex shear and phi is the polar angle relative
+to the reference point <cite>center</cite>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lenspack.shear.apply_shear">
+<span class="sig-prename descclassname"><span class="pre">lenspack.shear.</span></span><span class="sig-name descname"><span class="pre">apply_shear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/shear.html#apply_shear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.shear.apply_shear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shear galaxies with intrinsic ellipticity by a (reduced) shear.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>e1</strong> (<em>array_like</em><em> (</em><em>1D</em><em>)</em>) – Intrinsic ellipticity components of galaxies.</p></li>
+<li><p><strong>e2</strong> (<em>array_like</em><em> (</em><em>1D</em><em>)</em>) – Intrinsic ellipticity components of galaxies.</p></li>
+<li><p><strong>g1</strong> (<em>array_like</em><em> (</em><em>1D</em><em>)</em>) – Weak-lensing reduced shear components to apply to e = e1 + ie2.</p></li>
+<li><p><strong>g2</strong> (<em>array_like</em><em> (</em><em>1D</em><em>)</em>) – Weak-lensing reduced shear components to apply to e = e1 + ie2.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>e1_obs, e2_obs</strong> – Two components of observed ellipticity.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple of floats or (1D) numpy arrays</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A warning will be printed if applying a non-weak shear,
+i.e. if abs(g) &gt;= 1.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lenspack.shear.random_rotation">
+<span class="sig-prename descclassname"><span class="pre">lenspack.shear.</span></span><span class="sig-name descname"><span class="pre">random_rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gamma1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/shear.html#random_rotation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.shear.random_rotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Randomly rotate a spin-2 quantity, such as galaxy ellipticity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gamma1</strong> (<em>array_like</em><em> (</em><em>1D</em><em>)</em>) – First and second components of the spin-2 quantity.</p></li>
+<li><p><strong>gamma2</strong> (<em>array_like</em><em> (</em><em>1D</em><em>)</em>) – First and second components of the spin-2 quantity.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>First and second components of the rotated quantity.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple of floats or 1D numpy arrays</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="lenspack.starlet_l1norm.html" class="btn btn-neutral float-right" title="lenspack.starlet_l1norm module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="lenspack.peaks.html" class="btn btn-neutral float-left" title="lenspack.peaks module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Austin Peel.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

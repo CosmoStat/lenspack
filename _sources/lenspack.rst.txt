@@ -1,0 +1,35 @@
+lenspack package
+================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   lenspack.geometry
+   lenspack.halo
+   lenspack.image
+   lenspack.tests
+   lenspack.theory
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   lenspack.info
+   lenspack.peaks
+   lenspack.shear
+   lenspack.starlet_l1norm
+   lenspack.stats
+   lenspack.utils
+
+Module contents
+---------------
+
+.. automodule:: lenspack
+   :members:
+   :undoc-members:
+   :show-inheritance:

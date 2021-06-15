@@ -1,0 +1,394 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>lenspack.halo.profiles module &mdash; lenspack 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="lenspack.image package" href="lenspack.image.html" />
+    <link rel="prev" title="lenspack.halo.fitting module" href="lenspack.halo.fitting.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> lenspack
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="lenspack.html">lenspack package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="lenspack.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="lenspack.geometry.html">lenspack.geometry package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="lenspack.halo.html">lenspack.halo package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.image.html">lenspack.image package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.tests.html">lenspack.tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.theory.html">lenspack.theory package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lenspack.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.info.html">lenspack.info module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.peaks.html">lenspack.peaks module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.shear.html">lenspack.shear module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.starlet_l1norm.html">lenspack.starlet_l1norm module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.stats.html">lenspack.stats module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.utils.html">lenspack.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lenspack.html#module-lenspack">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.html#id1">Subpackages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.html#id2">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">lenspack</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="lenspack.html">lenspack package</a> &raquo;</li>
+        
+          <li><a href="lenspack.halo.html">lenspack.halo package</a> &raquo;</li>
+        
+      <li>lenspack.halo.profiles module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/lenspack.halo.profiles.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="module-lenspack.halo.profiles">
+<span id="lenspack-halo-profiles-module"></span><h1>lenspack.halo.profiles module<a class="headerlink" href="#module-lenspack.halo.profiles" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="lenspack.halo.profiles.nfw_profile">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">lenspack.halo.profiles.</span></span><span class="sig-name descname"><span class="pre">nfw_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m200</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r200</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cosmology</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/halo/profiles.html#nfw_profile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.halo.profiles.nfw_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Navarro, Frenk, &amp; White (1997) radial halo density profile.</p>
+<p>rho(r; rho0, rs) = rho0 / [(r / rs) * (1 + r / rs)^2],</p>
+<p>where rho0 can be written as the product delta_c * rho_crit. The more
+common (and useful) parameterization is (c200, m200) instead of
+(rho0, rs).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>z</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – Halo redshift. [dimensionless]</p></li>
+<li><p><strong>c200</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – Halo concentration. [dimensionless]</p></li>
+<li><p><strong>m200</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – Spherical mass contained within a radius <cite>r200</cite>. [solar mass]</p></li>
+<li><p><strong>r200</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – Characteristic halo radius. [Mpc]</p></li>
+<li><p><strong>cosmology</strong> ({‘default’, instance of <cite>astropy.cosmology</cite>}) – Cosmological model in which to calculate distances. The default
+is a <cite>FlatLambdaCDM</cite> object with parameters H0=70, Om0=0.3,
+Ob0=0.044, and Tcmb0=2.725. Alternatively, a custom cosmology can
+be provided as an instance of <cite>astropy.cosmology</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ol class="arabic simple">
+<li><p>Either <cite>m200</cite> or <cite>r200</cite> must be given to fully define the profile,
+and <cite>m200</cite> takes precedence over <cite>r200</cite> if both are given.</p></li>
+<li><p>The reference background density implicitly used in the definition
+of <cite>c200</cite>, <cite>m200</cite>, and <cite>r200</cite> is the critical density at the
+redshift of the halo.</p></li>
+</ol>
+<dl class="py method">
+<dt class="sig sig-object py" id="lenspack.halo.profiles.nfw_profile.rho">
+<span class="sig-name descname"><span class="pre">rho</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/halo/profiles.html#nfw_profile.rho"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.halo.profiles.nfw_profile.rho" title="Permalink to this definition">¶</a></dt>
+<dd><p>Density at a given distance from the halo center.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lenspack.halo.profiles.nfw_profile.mass_enclosed">
+<span class="sig-name descname"><span class="pre">mass_enclosed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/halo/profiles.html#nfw_profile.mass_enclosed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.halo.profiles.nfw_profile.mass_enclosed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mass (3D) inside a sphere of a given radius.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lenspack.halo.profiles.nfw_profile.sigma_crit">
+<span class="sig-name descname"><span class="pre">sigma_crit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/halo/profiles.html#nfw_profile.sigma_crit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.halo.profiles.nfw_profile.sigma_crit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Critical surface mass density for a given source redshift.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>zs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em> or </em><em>array_like</em>) – Redshift(s) of the source galaxies.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lenspack.halo.profiles.nfw_profile.sigma">
+<span class="sig-name descname"><span class="pre">sigma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_off</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/halo/profiles.html#nfw_profile.sigma"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.halo.profiles.nfw_profile.sigma" title="Permalink to this definition">¶</a></dt>
+<dd><p>Surface mass density (Sigma) at a given radial distance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em> or </em><em>array_like</em>) – Projected radial distance from the halo center.</p></li>
+<li><p><strong>r_off</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – Projected radial offset of the halo center. If provided, the
+computed Sigma is the mean over all azimuthal angles, i.e.,
+averaged over the circle of radius r_off centered on the halo.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The calculation is much slower when r_off is given due to the
+numerical integration necessary.</p>
+<p>Value(s) are returned in units of solar mass per square parsec.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lenspack.halo.profiles.nfw_profile.delta_sigma">
+<span class="sig-name descname"><span class="pre">delta_sigma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_off</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/halo/profiles.html#nfw_profile.delta_sigma"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.halo.profiles.nfw_profile.delta_sigma" title="Permalink to this definition">¶</a></dt>
+<dd><p>Difference between the mean Sigma within a disk and its boundary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em> or </em><em>array_like</em>) – Projected radial distance from the halo center.</p></li>
+<li><p><strong>r_off</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – Projected radial offset of the halo center. If provided, the
+computed Delta Sigma is the mean over all azimuthal angles, i.e.,
+averaged over the circle of radius r_off centered on the halo.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The calculation is much slower when r_off is given due to the
+numerical integration necessary.</p>
+<p>Value(s) are returned in units of solar mass per square parsec.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lenspack.halo.profiles.nfw_profile.mean_sigma_enclosed">
+<span class="sig-name descname"><span class="pre">mean_sigma_enclosed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_off</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/halo/profiles.html#nfw_profile.mean_sigma_enclosed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.halo.profiles.nfw_profile.mean_sigma_enclosed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mean surface mass density (Sigma) enclosed within a disk.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em> or </em><em>array_like</em>) – Projected radial distance from the halo center.</p></li>
+<li><p><strong>r_off</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – Projected radial offset of the halo center.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The calculation is much slower when r_off is given due to the
+numerical integration necessary.</p>
+<p>Value(s) are returned in units of solar mass per square parsec.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lenspack.halo.profiles.nfw_profile.gamma_t">
+<span class="sig-name descname"><span class="pre">gamma_t</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_off</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/halo/profiles.html#nfw_profile.gamma_t"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.halo.profiles.nfw_profile.gamma_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tangential shear magnitude experienced by a source object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em> or </em><em>array_like</em>) – Projected radial (proper) distance from the source to the halo
+center. Units of Mpc are assumed if <cite>r</cite> is not given an astropy
+quantity.</p></li>
+<li><p><strong>zs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em> or </em><em>array_like</em>) – Redshift of the source. If a single float is given, this value is
+used for each <cite>r</cite>.</p></li>
+<li><p><strong>r_off</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – Projected radial offset of the halo center.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lenspack.halo.profiles.nfw_profile.kappa">
+<span class="sig-name descname"><span class="pre">kappa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_off</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/halo/profiles.html#nfw_profile.kappa"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.halo.profiles.nfw_profile.kappa" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convergence experienced by a source object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em> or </em><em>array_like</em>) – Projected radial (proper) distance from the source to the halo
+center. Units of Mpc are assumed if <cite>r</cite> is not given an astropy
+quantity.</p></li>
+<li><p><strong>zs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em> or </em><em>array_like</em>) – Redshift of the source. If a single float is given, this value is
+used for each <cite>r</cite>.</p></li>
+<li><p><strong>r_off</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – Projected radial offset of the halo center.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="lenspack.image.html" class="btn btn-neutral float-right" title="lenspack.image package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="lenspack.halo.fitting.html" class="btn btn-neutral float-left" title="lenspack.halo.fitting module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Austin Peel.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+lenspack.image.inpainting module
+================================
+
+.. automodule:: lenspack.image.inpainting
+   :members:
+   :undoc-members:
+   :show-inheritance:

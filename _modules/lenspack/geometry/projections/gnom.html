@@ -1,0 +1,401 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>lenspack.geometry.projections.gnom &mdash; lenspack 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> lenspack
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../lenspack.html">lenspack package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../lenspack.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../lenspack.geometry.html">lenspack.geometry package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../lenspack.halo.html">lenspack.halo package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../lenspack.image.html">lenspack.image package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../lenspack.tests.html">lenspack.tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../lenspack.theory.html">lenspack.theory package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../lenspack.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../lenspack.info.html">lenspack.info module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../lenspack.peaks.html">lenspack.peaks module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../lenspack.shear.html">lenspack.shear module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../lenspack.starlet_l1norm.html">lenspack.starlet_l1norm module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../lenspack.stats.html">lenspack.stats module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../lenspack.utils.html">lenspack.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../lenspack.html#module-lenspack">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../lenspack.html#id1">Subpackages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../lenspack.html#id2">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">lenspack</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>lenspack.geometry.projections.gnom</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for lenspack.geometry.projections.gnom</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+
+<div class="viewcode-block" id="radec2xy"><a class="viewcode-back" href="../../../../lenspack.geometry.projections.gnom.html#lenspack.geometry.projections.gnom.radec2xy">[docs]</a><span class="k">def</span> <span class="nf">radec2xy</span><span class="p">(</span><span class="n">ra0</span><span class="p">,</span> <span class="n">dec0</span><span class="p">,</span> <span class="n">ra</span><span class="p">,</span> <span class="n">dec</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Project spherical sky coordinates to a tangent plane.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    ra0 : float</span>
+<span class="sd">        Right ascension of the projection origin.</span>
+<span class="sd">    dec0 : float</span>
+<span class="sd">        Declination of the projection origin.</span>
+<span class="sd">    ra : float or array_like</span>
+<span class="sd">        Right ascension of point(s) to project.</span>
+<span class="sd">    dec : float or array_like</span>
+<span class="sd">        Declination of point(s) to project.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    All input units are assumed to be degrees.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    x, y : tuple of floats or numpy arrays</span>
+<span class="sd">        Projected coordinate(s) in the tangent plane relative to (0, 0), i.e.</span>
+<span class="sd">        the origin in the projected space.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    Exception</span>
+<span class="sd">        For input arrays of different sizes.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    ...</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Standardize inputs</span>
+    <span class="n">ra</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">ra</span><span class="p">)</span>
+    <span class="n">dec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ra</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dec</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Input ra and dec must have the same length.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Convert input coordinates to radians</span>
+    <span class="n">alpha0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">ra0</span><span class="p">)</span>
+    <span class="n">delta0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">dec0</span><span class="p">)</span>
+    <span class="n">alpha</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">ra</span><span class="p">)</span>
+    <span class="n">delta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span>
+
+    <span class="c1"># Project points</span>
+    <span class="n">denom</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">delta0</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">alpha</span> <span class="o">-</span> <span class="n">alpha0</span><span class="p">)</span> <span class="o">+</span>
+             <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">delta0</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">delta</span><span class="p">))</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">alpha</span> <span class="o">-</span> <span class="n">alpha0</span><span class="p">)</span> <span class="o">/</span> <span class="n">denom</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">delta0</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span> <span class="o">-</span>
+          <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">delta0</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">alpha</span> <span class="o">-</span> <span class="n">alpha0</span><span class="p">))</span> <span class="o">/</span> <span class="n">denom</span><span class="p">)</span>
+
+    <span class="c1"># Potentially remove unnecessary array layers</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span></div>
+
+
+<div class="viewcode-block" id="xy2radec"><a class="viewcode-back" href="../../../../lenspack.geometry.projections.gnom.html#lenspack.geometry.projections.gnom.xy2radec">[docs]</a><span class="k">def</span> <span class="nf">xy2radec</span><span class="p">(</span><span class="n">ra0</span><span class="p">,</span> <span class="n">dec0</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Project tangent plane coordinates back to the spherical sky.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    ra0 : float</span>
+<span class="sd">        Right ascension of the projection origin.</span>
+<span class="sd">    dec0 : float</span>
+<span class="sd">        Declination of the projection origin.</span>
+<span class="sd">    x : float or array_like</span>
+<span class="sd">        X coordinate of point(s) in the tangent plane to de-project.</span>
+<span class="sd">    y : float or array_like</span>
+<span class="sd">        Y coordinate of point(s) in the tangent plane to de-project.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Projection origin (ra0, dec0) units are assumed to be degrees.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    ra, dec : tuple of floats or numpy arrays</span>
+<span class="sd">        De-projected (RA, Dec) value(s) on the sphere in degrees.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    Exception</span>
+<span class="sd">        For input arrays of different sizes.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    ...</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Standardize inputs</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Input x and y must have the same length.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Convert projection center to radians</span>
+    <span class="n">x0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">ra0</span><span class="p">)</span>
+    <span class="n">y0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">dec0</span><span class="p">)</span>
+
+    <span class="c1"># Compute de-projected coordinates</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+
+    <span class="c1"># Prevent division by zero</span>
+    <span class="n">factor</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
+    <span class="n">inds</span> <span class="o">=</span> <span class="p">(</span><span class="n">z</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">factor</span><span class="p">[</span><span class="n">inds</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">inds</span><span class="p">]</span> <span class="o">/</span> <span class="n">z</span><span class="p">[</span><span class="n">inds</span><span class="p">]</span>
+
+    <span class="n">delta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">y0</span><span class="p">)</span> <span class="o">+</span> <span class="n">factor</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">y0</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
+    <span class="n">denom</span> <span class="o">=</span> <span class="n">z</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">y0</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">-</span> <span class="n">y</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">y0</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+    <span class="n">alpha</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">c</span><span class="p">),</span> <span class="n">denom</span><span class="p">)</span>
+
+    <span class="c1"># Convert output coordinates to degrees</span>
+    <span class="n">ra</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span>
+    <span class="n">dec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span>
+
+    <span class="c1"># Potentially remove unnecessary array layers</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ra</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">ra</span><span class="p">,</span> <span class="n">dec</span> <span class="o">=</span> <span class="n">ra</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dec</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">ra</span><span class="p">,</span> <span class="n">dec</span></div>
+
+
+<div class="viewcode-block" id="projector"><a class="viewcode-back" href="../../../../lenspack.geometry.projections.gnom.html#lenspack.geometry.projections.gnom.projector">[docs]</a><span class="k">class</span> <span class="nc">projector</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A convenient class for many gnomonic projections to a tangent plane.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ra0</span><span class="p">,</span> <span class="n">dec0</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Project spherical coordinates to a tangent plane.</span>
+
+<span class="sd">        The fixed center of the (gnomonic) projection is at (ra0, dec0).</span>
+<span class="sd">        Inputs should be in degrees.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ra0</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">ra0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dec0</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">dec0</span><span class="p">)</span>
+
+<div class="viewcode-block" id="projector.radec2xy"><a class="viewcode-back" href="../../../../lenspack.geometry.projections.gnom.html#lenspack.geometry.projections.gnom.projector.radec2xy">[docs]</a>    <span class="k">def</span> <span class="nf">radec2xy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ra</span><span class="p">,</span> <span class="n">dec</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Projection of spherical coordinates to the tangent plane.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        ra, dec : float or array_like</span>
+<span class="sd">            RA and Dec coordinates to project.</span>
+
+<span class="sd">        Returns projected x, y coordinates.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">radec2xy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ra0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dec0</span><span class="p">,</span> <span class="n">ra</span><span class="p">,</span> <span class="n">dec</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="projector.xy2radec"><a class="viewcode-back" href="../../../../lenspack.geometry.projections.gnom.html#lenspack.geometry.projections.gnom.projector.xy2radec">[docs]</a>    <span class="k">def</span> <span class="nf">xy2radec</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Inverse projection of tangent plane points back to the sphere.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        x, y : float or array_like</span>
+<span class="sd">            Coordinates of points in the tangent plane to de-project relative</span>
+<span class="sd">            to (0, 0) corresponding to (ra0, dec0) on the sphere.</span>
+
+<span class="sd">        Returns de-projected ra, dec coordinates.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">xy2radec</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ra0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dec0</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Austin Peel.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

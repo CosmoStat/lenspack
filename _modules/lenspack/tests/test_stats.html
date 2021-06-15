@@ -1,0 +1,335 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>lenspack.tests.test_stats &mdash; lenspack 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> lenspack
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../lenspack.html">lenspack package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../lenspack.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.geometry.html">lenspack.geometry package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.halo.html">lenspack.halo package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.image.html">lenspack.image package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.tests.html">lenspack.tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.theory.html">lenspack.theory package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lenspack.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.info.html">lenspack.info module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.peaks.html">lenspack.peaks module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.shear.html">lenspack.shear module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.starlet_l1norm.html">lenspack.starlet_l1norm module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.stats.html">lenspack.stats module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.utils.html">lenspack.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lenspack.html#module-lenspack">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.html#id1">Subpackages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.html#id2">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">lenspack</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>lenspack.tests.test_stats</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for lenspack.tests.test_stats</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="sd">&quot;&quot;&quot;UNIT TESTS FOR IMAGE</span>
+
+<span class="sd">This module contains unit tests for the iamge module.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">unittest</span> <span class="kn">import</span> <span class="n">TestCase</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">numpy.testing</span> <span class="k">as</span> <span class="nn">npt</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="kn">from</span> <span class="nn">lenspack.stats</span> <span class="kn">import</span> <span class="n">mad</span><span class="p">,</span> <span class="n">skew</span><span class="p">,</span> <span class="n">kurt</span><span class="p">,</span> <span class="n">mu_n</span><span class="p">,</span> <span class="n">kappa_n</span><span class="p">,</span> <span class="n">fdr</span><span class="p">,</span> <span class="n">hc</span>
+
+
+<div class="viewcode-block" id="StatsTestCase"><a class="viewcode-back" href="../../../lenspack.tests.test_stats.html#lenspack.tests.test_stats.StatsTestCase">[docs]</a><span class="k">class</span> <span class="nc">StatsTestCase</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
+
+<div class="viewcode-block" id="StatsTestCase.setUp"><a class="viewcode-back" href="../../../lenspack.tests.test_stats.html#lenspack.tests.test_stats.StatsTestCase.setUp">[docs]</a>    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="c1"># [-5., -4., -3., ... 3., 4., 5.]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">11.</span><span class="p">)</span> <span class="o">-</span> <span class="mi">5</span></div>
+
+<div class="viewcode-block" id="StatsTestCase.tearDown"><a class="viewcode-back" href="../../../lenspack.tests.test_stats.html#lenspack.tests.test_stats.StatsTestCase.tearDown">[docs]</a>    <span class="k">def</span> <span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">array</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="StatsTestCase.test_mad"><a class="viewcode-back" href="../../../lenspack.tests.test_stats.html#lenspack.tests.test_stats.StatsTestCase.test_mad">[docs]</a>    <span class="k">def</span> <span class="nf">test_mad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="c1"># Test output value</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_equal</span><span class="p">(</span><span class="n">mad</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">),</span> <span class="mf">3.0</span><span class="p">,</span> <span class="n">err_msg</span><span class="o">=</span><span class="s2">&quot;Incorrect MAD value.&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="StatsTestCase.test_skew"><a class="viewcode-back" href="../../../lenspack.tests.test_stats.html#lenspack.tests.test_stats.StatsTestCase.test_skew">[docs]</a>    <span class="k">def</span> <span class="nf">test_skew</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="c1"># Test output value and agreement with scipy</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_equal</span><span class="p">(</span><span class="n">skew</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">err_msg</span><span class="o">=</span><span class="s2">&quot;Incorrect skew value.&quot;</span><span class="p">)</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_equal</span><span class="p">(</span><span class="n">skew</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span> <span class="mf">0.5661385170722978</span><span class="p">,</span>
+                         <span class="n">err_msg</span><span class="o">=</span><span class="s2">&quot;Incorrect skew value.&quot;</span><span class="p">)</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_almost_equal</span><span class="p">(</span><span class="n">skew</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span> <span class="n">stats</span><span class="o">.</span><span class="n">skew</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span>
+                                <span class="n">decimal</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span>
+                                <span class="n">err_msg</span><span class="o">=</span><span class="s2">&quot;Does not match scipy.skew.&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="StatsTestCase.test_kurt"><a class="viewcode-back" href="../../../lenspack.tests.test_stats.html#lenspack.tests.test_stats.StatsTestCase.test_kurt">[docs]</a>    <span class="k">def</span> <span class="nf">test_kurt</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="c1"># Test output value and agreement with scipy</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_almost_equal</span><span class="p">(</span><span class="n">kurt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">),</span> <span class="o">-</span><span class="mf">1.22</span><span class="p">,</span>
+                                <span class="n">decimal</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span>
+                                <span class="n">err_msg</span><span class="o">=</span><span class="s2">&quot;Incorrect kurt value.&quot;</span><span class="p">)</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_almost_equal</span><span class="p">(</span><span class="n">kurt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">),</span> <span class="n">stats</span><span class="o">.</span><span class="n">kurtosis</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">),</span>
+                                <span class="n">decimal</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span>
+                                <span class="n">err_msg</span><span class="o">=</span><span class="s2">&quot;Does not match scipy.kurtosis.&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="StatsTestCase.test_mu_n"><a class="viewcode-back" href="../../../lenspack.tests.test_stats.html#lenspack.tests.test_stats.StatsTestCase.test_mu_n">[docs]</a>    <span class="k">def</span> <span class="nf">test_mu_n</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="c1"># Test output value</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_equal</span><span class="p">(</span><span class="n">mu_n</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span>
+                         <span class="n">err_msg</span><span class="o">=</span><span class="s2">&quot;Incorrect mu_n for order 1.&quot;</span><span class="p">)</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_equal</span><span class="p">(</span><span class="n">mu_n</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">2</span><span class="p">),</span> <span class="mi">10</span><span class="p">,</span>
+                         <span class="n">err_msg</span><span class="o">=</span><span class="s2">&quot;Incorrect mu_n for order 2.&quot;</span><span class="p">)</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_equal</span><span class="p">(</span><span class="n">mu_n</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span>
+                         <span class="n">err_msg</span><span class="o">=</span><span class="s2">&quot;Incorrect mu_n for order 3.&quot;</span><span class="p">)</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_equal</span><span class="p">(</span><span class="n">mu_n</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span> <span class="mi">178</span><span class="p">,</span>
+                         <span class="n">err_msg</span><span class="o">=</span><span class="s2">&quot;Incorrect mu_n for order 4.&quot;</span><span class="p">)</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_equal</span><span class="p">(</span><span class="n">mu_n</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span>
+                         <span class="n">err_msg</span><span class="o">=</span><span class="s2">&quot;Incorrect mu_n for order 5.&quot;</span><span class="p">)</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_equal</span><span class="p">(</span><span class="n">mu_n</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">6</span><span class="p">),</span> <span class="mi">3730</span><span class="p">,</span>
+                         <span class="n">err_msg</span><span class="o">=</span><span class="s2">&quot;Incorrect mu_n for order 6.&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Test agreement with scipy</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_equal</span><span class="p">(</span><span class="n">mu_n</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+                         <span class="n">stats</span><span class="o">.</span><span class="n">moment</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">moment</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+                         <span class="n">err_msg</span><span class="o">=</span><span class="s2">&quot;Does not match scipy.moment for order 1.&quot;</span><span class="p">)</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_equal</span><span class="p">(</span><span class="n">mu_n</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">2</span><span class="p">),</span>
+                         <span class="n">stats</span><span class="o">.</span><span class="n">moment</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">moment</span><span class="o">=</span><span class="mi">2</span><span class="p">),</span>
+                         <span class="n">err_msg</span><span class="o">=</span><span class="s2">&quot;Does not match scipy.moment for order 2.&quot;</span><span class="p">)</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_equal</span><span class="p">(</span><span class="n">mu_n</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span>
+                         <span class="n">stats</span><span class="o">.</span><span class="n">moment</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">moment</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span>
+                         <span class="n">err_msg</span><span class="o">=</span><span class="s2">&quot;Does not match scipy.moment for order 3.&quot;</span><span class="p">)</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_equal</span><span class="p">(</span><span class="n">mu_n</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
+                         <span class="n">stats</span><span class="o">.</span><span class="n">moment</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">moment</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
+                         <span class="n">err_msg</span><span class="o">=</span><span class="s2">&quot;Does not match scipy.moment for order 4.&quot;</span><span class="p">)</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_equal</span><span class="p">(</span><span class="n">mu_n</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+                         <span class="n">stats</span><span class="o">.</span><span class="n">moment</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">moment</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+                         <span class="n">err_msg</span><span class="o">=</span><span class="s2">&quot;Does not match scipy.moment for order 5.&quot;</span><span class="p">)</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_equal</span><span class="p">(</span><span class="n">mu_n</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">6</span><span class="p">),</span>
+                         <span class="n">stats</span><span class="o">.</span><span class="n">moment</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">moment</span><span class="o">=</span><span class="mi">6</span><span class="p">),</span>
+                         <span class="n">err_msg</span><span class="o">=</span><span class="s2">&quot;Does not match scipy.moment for order 6.&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Test exceptions</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_raises</span><span class="p">(</span><span class="ne">Exception</span><span class="p">,</span> <span class="n">mu_n</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="StatsTestCase.test_kappa_n"><a class="viewcode-back" href="../../../lenspack.tests.test_stats.html#lenspack.tests.test_stats.StatsTestCase.test_kappa_n">[docs]</a>    <span class="k">def</span> <span class="nf">test_kappa_n</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="c1"># Test output value</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_equal</span><span class="p">(</span><span class="n">kappa_n</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">2</span><span class="p">),</span> <span class="mi">10</span><span class="p">,</span>
+                         <span class="n">err_msg</span><span class="o">=</span><span class="s2">&quot;Incorrect mu_n for order 2.&quot;</span><span class="p">)</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_equal</span><span class="p">(</span><span class="n">kappa_n</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span>
+                         <span class="n">err_msg</span><span class="o">=</span><span class="s2">&quot;Incorrect mu_n for order 3.&quot;</span><span class="p">)</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_equal</span><span class="p">(</span><span class="n">kappa_n</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span> <span class="o">-</span><span class="mi">122</span><span class="p">,</span>
+                         <span class="n">err_msg</span><span class="o">=</span><span class="s2">&quot;Incorrect mu_n for order 4.&quot;</span><span class="p">)</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_equal</span><span class="p">(</span><span class="n">kappa_n</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span>
+                         <span class="n">err_msg</span><span class="o">=</span><span class="s2">&quot;Incorrect mu_n for order 5.&quot;</span><span class="p">)</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_equal</span><span class="p">(</span><span class="n">kappa_n</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">6</span><span class="p">),</span> <span class="mi">7030</span><span class="p">,</span>
+                         <span class="n">err_msg</span><span class="o">=</span><span class="s2">&quot;Incorrect mu_n for order 6.&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Test exceptions</span>
+        <span class="n">npt</span><span class="o">.</span><span class="n">assert_raises</span><span class="p">(</span><span class="ne">Exception</span><span class="p">,</span> <span class="n">kappa_n</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Austin Peel.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

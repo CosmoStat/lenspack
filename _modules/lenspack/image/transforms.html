@@ -1,0 +1,684 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>lenspack.image.transforms &mdash; lenspack 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> lenspack
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../lenspack.html">lenspack package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../lenspack.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.geometry.html">lenspack.geometry package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.halo.html">lenspack.halo package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.image.html">lenspack.image package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.tests.html">lenspack.tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.theory.html">lenspack.theory package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lenspack.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.info.html">lenspack.info module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.peaks.html">lenspack.peaks module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.shear.html">lenspack.shear module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.starlet_l1norm.html">lenspack.starlet_l1norm module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.stats.html">lenspack.stats module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.utils.html">lenspack.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lenspack.html#module-lenspack">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.html#id1">Subpackages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.html#id2">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">lenspack</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>lenspack.image.transforms</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for lenspack.image.transforms</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">tempfile</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">shutil</span> <span class="kn">import</span> <span class="n">which</span>
+<span class="kn">from</span> <span class="nn">subprocess</span> <span class="kn">import</span> <span class="n">call</span>
+<span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span>
+<span class="kn">from</span> <span class="nn">scipy.ndimage</span> <span class="kn">import</span> <span class="n">convolve1d</span>
+<span class="kn">from</span> <span class="nn">scipy.fftpack</span> <span class="kn">import</span> <span class="n">dct</span><span class="p">,</span> <span class="n">idct</span>
+
+
+<div class="viewcode-block" id="starlet2d"><a class="viewcode-back" href="../../../lenspack.image.transforms.html#lenspack.image.transforms.starlet2d">[docs]</a><span class="k">def</span> <span class="nf">starlet2d</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">nscales</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Compute the multiscale 2D starlet transform of an image.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    image : array_like (2D)</span>
+<span class="sd">        Input image.</span>
+<span class="sd">    nscales : int</span>
+<span class="sd">        Number of wavelet scales to compute. Should not exceed log2(N), where</span>
+<span class="sd">        N is the smaller of the two input dimensions.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    3D numpy array</span>
+<span class="sd">        Wavelet coefficients. An input `image` of shape (N, M) and `nscales`</span>
+<span class="sd">        equal to n will produce an output of shape (n + 1, N, M). The first</span>
+<span class="sd">        n maps are wavelet coefficients, while the final map is the coarse</span>
+<span class="sd">        scale map.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This function produces the same output as the mr_transform binary of the</span>
+<span class="sd">    Sparse2D C++ code package (see References) to high precision.</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    * Starck, Murtagh, Fadili, &#39;Sparse Image and Signal Processing: Wavelets</span>
+<span class="sd">      and Related Geometric Multiscale Analysis&#39;, Cambridge University Press,</span>
+<span class="sd">      Cambridge (GB), 2016.</span>
+<span class="sd">    * https://github.com/cosmostat/sparse2d</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; # Transform a Gaussian random field of standard deviation 10.</span>
+<span class="sd">    &gt;&gt;&gt; img = 10 * np.random.randn(64, 64)</span>
+<span class="sd">    &gt;&gt;&gt; wt = starlet2d(img, 5)</span>
+<span class="sd">    &gt;&gt;&gt; wt.shape</span>
+<span class="sd">    (6, 64, 64)</span>
+
+<span class="sd">    &gt;&gt;&gt; # Reconstruction</span>
+<span class="sd">    &gt;&gt;&gt; rec = np.sum(wt, axis=0)</span>
+<span class="sd">    &gt;&gt;&gt; rec.shape == img.shape</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; np.sum(np.abs(rec - img))</span>
+<span class="sd">    2.4814638191483773e-12</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Filter banks</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mf">16.</span>
+    <span class="c1"># g = np.array([0, 0, 1, 0, 0]) - h</span>
+
+    <span class="c1"># Setting for convolve1d in order to match output of mr_transform</span>
+    <span class="n">mode</span> <span class="o">=</span> <span class="s1">&#39;nearest&#39;</span>
+
+    <span class="c1"># Initialize output</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">nscales</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+    <span class="n">cj</span> <span class="o">=</span> <span class="n">image</span>
+
+    <span class="c1"># Compute multiscale starlet transform</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nscales</span><span class="p">):</span>
+        <span class="c1"># Create j-level version of h for à trous algorithm</span>
+        <span class="k">if</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">hj</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">x</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">h</span><span class="p">])</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+            <span class="n">hj</span> <span class="o">=</span> <span class="n">hj</span><span class="p">[:</span><span class="o">-</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">hj</span> <span class="o">=</span> <span class="n">h</span>
+        <span class="c1"># Smooth coefficients at scale j+1</span>
+        <span class="n">cjplus1</span> <span class="o">=</span> <span class="n">convolve1d</span><span class="p">(</span><span class="n">convolve1d</span><span class="p">(</span><span class="n">cj</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">hj</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
+                             <span class="n">weights</span><span class="o">=</span><span class="n">hj</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="c1"># Wavelet coefficients at scale j</span>
+        <span class="n">result</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">cj</span> <span class="o">-</span> <span class="n">cjplus1</span>
+        <span class="n">cj</span> <span class="o">=</span> <span class="n">cjplus1</span>
+    <span class="n">result</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">cj</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="dct2d"><a class="viewcode-back" href="../../../lenspack.image.transforms.html#lenspack.image.transforms.dct2d">[docs]</a><span class="k">def</span> <span class="nf">dct2d</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="s1">&#39;ortho&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Compute the discrete cosine transform (type 2) of an image.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    image : array_like, 2D</span>
+<span class="sd">        Input image.</span>
+<span class="sd">    norm : {None, &#39;ortho&#39;, &#39;sparse2d&#39;}, optional</span>
+<span class="sd">        Normalization option. See scipy.fftpack.dct documentation (Type II)</span>
+<span class="sd">        for a description of the None and &#39;ortho&#39; options. The &#39;sparse2d&#39;</span>
+<span class="sd">        option is available to match the output from the im_dct Sparse2D</span>
+<span class="sd">        binary, which involves an additional scaling of the zero-frequency</span>
+<span class="sd">        elements. Default is &#39;ortho&#39;.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    2D numpy array</span>
+<span class="sd">        Type 2 DCT.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Using no normalization (i.e. norm=None) will not automatically</span>
+<span class="sd">    recover the original image after performing the inverse transformation.</span>
+<span class="sd">    Each transform brings an overall scaling factor of 2N.</span>
+
+<span class="sd">    See Also</span>
+<span class="sd">    --------</span>
+<span class="sd">    idct2d</span>
+<span class="sd">        Inverse 2D DCT.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    ...</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Check inputs</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Input image must be 2D.&quot;</span>
+    <span class="k">assert</span> <span class="n">norm</span> <span class="ow">in</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;ortho&#39;</span><span class="p">,</span> <span class="s1">&#39;sparse2d&#39;</span><span class="p">),</span> <span class="s2">&quot;Invalid norm.&quot;</span>
+
+    <span class="c1"># Compute DCT along each axis</span>
+    <span class="k">if</span> <span class="n">norm</span> <span class="o">==</span> <span class="s1">&#39;sparse2d&#39;</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">dct</span><span class="p">(</span><span class="n">dct</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="s1">&#39;ortho&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">norm</span><span class="o">=</span><span class="s1">&#39;ortho&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">result</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">*=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">*=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">dct</span><span class="p">(</span><span class="n">dct</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="idct2d"><a class="viewcode-back" href="../../../lenspack.image.transforms.html#lenspack.image.transforms.idct2d">[docs]</a><span class="k">def</span> <span class="nf">idct2d</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="s1">&#39;ortho&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Compute the inverse discrete cosine transform (type 2) of an image.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    image : array_like (2D)</span>
+<span class="sd">        Input image.</span>
+<span class="sd">    norm : {None, &#39;ortho&#39;, &#39;sparse2d&#39;}, optional</span>
+<span class="sd">        Normalization option. Default is &#39;ortho&#39;.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    2D numpy array</span>
+<span class="sd">        Inverse type 2 DCT.</span>
+
+<span class="sd">    See Also</span>
+<span class="sd">    --------</span>
+<span class="sd">    dct2d</span>
+<span class="sd">        Forward 2D DCT.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    ...</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Check inputs</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Input image must be 2D.&quot;</span>
+    <span class="k">assert</span> <span class="n">norm</span> <span class="ow">in</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;ortho&#39;</span><span class="p">,</span> <span class="s1">&#39;sparse2d&#39;</span><span class="p">),</span> <span class="s2">&quot;Invalid norm.&quot;</span>
+
+    <span class="c1"># Compute inverse DCT along each axis</span>
+    <span class="k">if</span> <span class="n">norm</span> <span class="o">==</span> <span class="s1">&#39;sparse2d&#39;</span><span class="p">:</span>
+        <span class="n">image</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">/=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">image</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">/=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">idct</span><span class="p">(</span><span class="n">idct</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="s1">&#39;ortho&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">norm</span><span class="o">=</span><span class="s1">&#39;ortho&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">idct</span><span class="p">(</span><span class="n">idct</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="blockdct2d"><a class="viewcode-back" href="../../../lenspack.image.transforms.html#lenspack.image.transforms.blockdct2d">[docs]</a><span class="k">def</span> <span class="nf">blockdct2d</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="s1">&#39;ortho&#39;</span><span class="p">,</span> <span class="n">blocksize</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overlap</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Compute a block (local) discrete cosine transform of an image.</span>
+
+<span class="sd">    This is an extension of dct2d to perform the transform on sub-blocks</span>
+<span class="sd">    of the image.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    image : array_like, 2D</span>
+<span class="sd">        Input image.</span>
+<span class="sd">    norm : {None, &#39;ortho&#39;, &#39;sparse2d&#39;}, optional</span>
+<span class="sd">        Normalization option. See scipy.fftpack.dct documentation (Type II)</span>
+<span class="sd">        for a description of the None and &#39;ortho&#39; options. The &#39;sparse2d&#39;</span>
+<span class="sd">        option is available to match the output from the im_dct Sparse2D</span>
+<span class="sd">        binary, which involves an additional scaling of the zero-frequency</span>
+<span class="sd">        elements. Default is &#39;ortho&#39;.</span>
+<span class="sd">    blocksize : int, optional</span>
+<span class="sd">        Size of sub-blocks for a local DCT.</span>
+<span class="sd">    overlap : bool, optional</span>
+<span class="sd">        Whether to overlap sub-blocks.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    2D numpy array</span>
+<span class="sd">        Local type 2 DCT.</span>
+
+<span class="sd">    See Also</span>
+<span class="sd">    --------</span>
+<span class="sd">    iblockdct2d</span>
+<span class="sd">        Inverse local 2D DCT.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    ...</span>
+
+<span class="sd">    TODO</span>
+<span class="sd">    -----</span>
+<span class="sd">    This needs MORE TESTING before deployment !</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Check inputs</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Input image must be 2D.&quot;</span>
+    <span class="k">assert</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot;Input image must be square.&quot;</span>
+    <span class="k">assert</span> <span class="n">norm</span> <span class="ow">in</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;ortho&#39;</span><span class="p">,</span> <span class="s1">&#39;sparse2d&#39;</span><span class="p">),</span> <span class="s2">&quot;Invalid norm.&quot;</span>
+
+    <span class="c1"># Determine output shape based on blocksize</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">blocksize</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">blocksize</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">blocksize</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="n">n</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">8</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warning: invalid blocksize --&gt; using </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+            <span class="n">blocksize</span> <span class="o">=</span> <span class="n">n</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">overlap</span><span class="p">:</span>
+                <span class="n">size</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">n</span> <span class="o">-</span> <span class="n">blocksize</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">size</span><span class="p">,</span> <span class="n">size</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">blocksize</span> <span class="o">=</span> <span class="n">n</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">blocksize</span><span class="p">)</span>
+
+    <span class="c1"># Compute DCT on sub blocks</span>
+    <span class="k">if</span> <span class="n">overlap</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">n</span> <span class="o">/</span> <span class="n">blocksize</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">jj</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">n</span> <span class="o">/</span> <span class="n">blocksize</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="n">i1</span> <span class="o">=</span> <span class="n">ii</span> <span class="o">*</span> <span class="n">blocksize</span>
+                <span class="n">i2</span> <span class="o">=</span> <span class="n">i1</span> <span class="o">+</span> <span class="n">blocksize</span>
+                <span class="n">j1</span> <span class="o">=</span> <span class="n">jj</span> <span class="o">*</span> <span class="n">blocksize</span>
+                <span class="n">j2</span> <span class="o">=</span> <span class="n">j1</span> <span class="o">+</span> <span class="n">blocksize</span>
+                <span class="n">imsub</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="n">i1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">:</span> <span class="n">i1</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">blocksize</span><span class="p">,</span>
+                              <span class="n">j1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">:</span> <span class="n">j1</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">blocksize</span><span class="p">]</span>
+                <span class="n">result</span><span class="p">[</span><span class="n">i1</span><span class="p">:</span><span class="n">i2</span><span class="p">,</span> <span class="n">j1</span><span class="p">:</span><span class="n">j2</span><span class="p">]</span> <span class="o">=</span> <span class="n">dct2d</span><span class="p">(</span><span class="n">imsub</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">blocksize</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">jj</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">blocksize</span><span class="p">):</span>
+                <span class="n">i1</span> <span class="o">=</span> <span class="n">ii</span>
+                <span class="n">i2</span> <span class="o">=</span> <span class="n">ii</span> <span class="o">+</span> <span class="n">blocksize</span>
+                <span class="n">j1</span> <span class="o">=</span> <span class="n">jj</span>
+                <span class="n">j2</span> <span class="o">=</span> <span class="n">jj</span> <span class="o">+</span> <span class="n">blocksize</span>
+                <span class="n">imsub</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="n">i1</span><span class="p">:</span><span class="n">i2</span><span class="p">,</span> <span class="n">j1</span><span class="p">:</span><span class="n">j2</span><span class="p">]</span>
+                <span class="n">result</span><span class="p">[</span><span class="n">i1</span><span class="p">:</span><span class="n">i2</span><span class="p">,</span> <span class="n">j1</span><span class="p">:</span><span class="n">j2</span><span class="p">]</span> <span class="o">=</span> <span class="n">dct2d</span><span class="p">(</span><span class="n">imsub</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="iblockdct2d"><a class="viewcode-back" href="../../../lenspack.image.transforms.html#lenspack.image.transforms.iblockdct2d">[docs]</a><span class="k">def</span> <span class="nf">iblockdct2d</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="s1">&#39;ortho&#39;</span><span class="p">,</span> <span class="n">blocksize</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overlap</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Compute the inverse block (local) discrete cosine transform of an image.</span>
+
+<span class="sd">    This is an extension of idct2d to perform the transform on sub-blocks</span>
+<span class="sd">    of the image.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    image : array_like, 2D</span>
+<span class="sd">        Input image.</span>
+<span class="sd">    norm : {None, &#39;ortho&#39;, &#39;sparse2d&#39;}, optional</span>
+<span class="sd">        Normalization option. See scipy.fftpack.dct documentation (Type II)</span>
+<span class="sd">        for a description of the None and &#39;ortho&#39; options. The &#39;sparse2d&#39;</span>
+<span class="sd">        option is available to match the output from the im_dct Sparse2D</span>
+<span class="sd">        binary, which involves an additional scaling of the zero-frequency</span>
+<span class="sd">        elements. Default is &#39;ortho&#39;.</span>
+<span class="sd">    blocksize : int, optional</span>
+<span class="sd">        Size of sub-blocks for a local inverse DCT.</span>
+<span class="sd">    overlap : bool, optional</span>
+<span class="sd">        Whether to overlap sub-blocks.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    2D numpy array</span>
+<span class="sd">        Local type 2 inverse DCT.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    ...</span>
+
+<span class="sd">    TODO</span>
+<span class="sd">    -----</span>
+<span class="sd">        This needs MORE TESTING before deployment !</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">norm</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;ortho&#39;</span><span class="p">,</span> <span class="s1">&#39;sparse2d&#39;</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warning: invalid norm --&gt; using sparse2d&quot;</span><span class="p">)</span>
+        <span class="n">norm</span> <span class="o">=</span> <span class="s1">&#39;sparse2d&#39;</span>
+
+    <span class="c1"># Determine output shape</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">blocksize</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">blocksize</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">overlap</span><span class="p">:</span>
+                <span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="n">blocksize</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">size</span><span class="p">,</span> <span class="n">size</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">blocksize</span> <span class="o">=</span> <span class="n">n</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+
+    <span class="c1"># Compute inverse DCT on sub blocks</span>
+    <span class="k">if</span> <span class="n">overlap</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">/</span> <span class="n">blocksize</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">jj</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">/</span> <span class="n">blocksize</span><span class="p">):</span>
+                <span class="n">i1</span> <span class="o">=</span> <span class="n">ii</span> <span class="o">*</span> <span class="n">blocksize</span>
+                <span class="n">i2</span> <span class="o">=</span> <span class="n">i1</span> <span class="o">+</span> <span class="n">blocksize</span>
+                <span class="n">j1</span> <span class="o">=</span> <span class="n">jj</span> <span class="o">*</span> <span class="n">blocksize</span>
+                <span class="n">j2</span> <span class="o">=</span> <span class="n">j1</span> <span class="o">+</span> <span class="n">blocksize</span>
+                <span class="n">i1r</span> <span class="o">=</span> <span class="n">i1</span> <span class="o">/</span> <span class="mi">2</span>
+                <span class="n">i2r</span> <span class="o">=</span> <span class="n">i1r</span> <span class="o">+</span> <span class="n">blocksize</span>
+                <span class="n">j1r</span> <span class="o">=</span> <span class="n">j1</span> <span class="o">/</span> <span class="mi">2</span>
+                <span class="n">j2r</span> <span class="o">=</span> <span class="n">j1r</span> <span class="o">+</span> <span class="n">blocksize</span>
+                <span class="n">imsub</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="n">i1</span><span class="p">:</span><span class="n">i2</span><span class="p">,</span> <span class="n">j1</span><span class="p">:</span><span class="n">j2</span><span class="p">]</span>
+                <span class="n">result</span><span class="p">[</span><span class="n">i1r</span><span class="p">:</span><span class="n">i2r</span><span class="p">,</span> <span class="n">j1r</span><span class="p">:</span><span class="n">j2r</span><span class="p">]</span> <span class="o">+=</span> <span class="n">idct</span><span class="p">(</span><span class="n">imsub</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">)</span>
+
+        <span class="c1"># Take averages</span>
+        <span class="n">step</span> <span class="o">=</span> <span class="n">blocksize</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="n">counts</span><span class="p">[</span><span class="n">step</span><span class="p">:</span><span class="o">-</span><span class="n">step</span><span class="p">,</span> <span class="p">:</span><span class="n">step</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="n">counts</span><span class="p">[</span><span class="n">step</span><span class="p">:</span><span class="o">-</span><span class="n">step</span><span class="p">,</span> <span class="o">-</span><span class="n">step</span><span class="p">:]</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="n">counts</span><span class="p">[:</span><span class="n">step</span><span class="p">,</span> <span class="n">step</span><span class="p">:</span><span class="o">-</span><span class="n">step</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="n">counts</span><span class="p">[</span><span class="o">-</span><span class="n">step</span><span class="p">:,</span> <span class="n">step</span><span class="p">:</span><span class="o">-</span><span class="n">step</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="n">counts</span><span class="p">[</span><span class="n">step</span><span class="p">:</span><span class="o">-</span><span class="n">step</span><span class="p">,</span> <span class="n">step</span><span class="p">:</span><span class="o">-</span><span class="n">step</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+        <span class="n">result</span> <span class="o">/=</span> <span class="n">counts</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">blocksize</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">jj</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">blocksize</span><span class="p">):</span>
+                <span class="n">i1</span> <span class="o">=</span> <span class="n">ii</span>
+                <span class="n">i2</span> <span class="o">=</span> <span class="n">ii</span> <span class="o">+</span> <span class="n">blocksize</span>
+                <span class="n">j1</span> <span class="o">=</span> <span class="n">jj</span>
+                <span class="n">j2</span> <span class="o">=</span> <span class="n">jj</span> <span class="o">+</span> <span class="n">blocksize</span>
+                <span class="n">imsub</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="n">i1</span><span class="p">:</span><span class="n">i2</span><span class="p">,</span> <span class="n">j1</span><span class="p">:</span><span class="n">j2</span><span class="p">]</span>
+                <span class="n">result</span><span class="p">[</span><span class="n">i1</span><span class="p">:</span><span class="n">i2</span><span class="p">,</span> <span class="n">j1</span><span class="p">:</span><span class="n">j2</span><span class="p">]</span> <span class="o">=</span> <span class="n">idct</span><span class="p">(</span><span class="n">imsub</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="mr_transform"><a class="viewcode-back" href="../../../lenspack.image.transforms.html#lenspack.image.transforms.mr_transform">[docs]</a><span class="k">def</span> <span class="nf">mr_transform</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">nscales</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Compute the multi-resolution wavelet transform of an image.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    image : array_like, 2D</span>
+<span class="sd">        Input image.</span>
+<span class="sd">    nscales : int, optional</span>
+<span class="sd">        Number of wavelet scales to compute. Default is 4.</span>
+<span class="sd">    type : int, optional</span>
+<span class="sd">        Type of the multiresolution transform. See the original mr_transform</span>
+<span class="sd">        documentation for details. Default is 2, which corresponds to the</span>
+<span class="sd">        &#39;bspline wavelet transform: a trous algorithm&#39;, i.e. the starlet.</span>
+<span class="sd">    verbose : bool, optional</span>
+<span class="sd">        If True, print details of the temporary file I/O process.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    3D numpy array</span>
+<span class="sd">        Result of the wavelet transform.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This function is a wrapper for the mr_transform C++ binary of the Sparse2D</span>
+<span class="sd">    code package (see References). The astropy package is necessary to write</span>
+<span class="sd">    out `image` as a temporary fits file on which mr_transform can act.</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    * Starck, Murtagh, Fadili, &#39;Sparse Image and Signal Processing: Wavelets</span>
+<span class="sd">      and Related Geometric Multiscale Analysis&#39;, Cambridge University Press,</span>
+<span class="sd">      Cambridge (GB), 2016.</span>
+<span class="sd">    * https://github.com/cosmostat/sparse2d</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    ...</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Verify that mr_transform is installed</span>
+    <span class="k">assert</span> <span class="n">which</span><span class="p">(</span><span class="s1">&#39;mr_transform&#39;</span><span class="p">),</span> <span class="s2">&quot;Cannot find mr_transform. Is it installed?&quot;</span>
+
+    <span class="c1"># Create a temporary directory to hold the image and its transform</span>
+    <span class="n">tmpdir</span> <span class="o">=</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">mkdtemp</span><span class="p">()</span>
+    <span class="n">saved_umask</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">umask</span><span class="p">(</span><span class="mo">0o077</span><span class="p">)</span>
+    <span class="n">image_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tmpdir</span><span class="p">,</span> <span class="s1">&#39;image.fits&#39;</span><span class="p">)</span>
+    <span class="n">mr_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tmpdir</span><span class="p">,</span> <span class="s1">&#39;image.mr&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Creating </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">image_path</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;         </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mr_path</span><span class="p">))</span>
+
+    <span class="c1"># Call mr_transform on the saved image</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Writing image to fits.&quot;</span><span class="p">)</span>
+        <span class="n">fits</span><span class="o">.</span><span class="n">writeto</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">image</span><span class="p">)</span>
+        <span class="n">callstr</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;mr_transform&#39;</span><span class="p">,</span> <span class="s1">&#39;-t&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">),</span> <span class="s1">&#39;-n&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">nscales</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+                   <span class="n">image_path</span><span class="p">,</span> <span class="n">mr_path</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Executing &quot;</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">callstr</span><span class="p">))</span>
+        <span class="n">call</span><span class="p">(</span><span class="n">callstr</span><span class="p">)</span>
+        <span class="n">mr</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">getdata</span><span class="p">(</span><span class="n">mr_path</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Something went wrong... trying again.&quot;</span><span class="p">)</span>
+        <span class="c1"># print(&quot;Removing {}&quot;.format(image_path))</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>
+        <span class="c1"># print(&quot;Unmasking {}&quot;.format(tmpdir))</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">umask</span><span class="p">(</span><span class="n">saved_umask</span><span class="p">)</span>
+        <span class="c1"># print(&quot;Removing {}&quot;.format(tmpdir))</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="n">tmpdir</span><span class="p">)</span>
+        <span class="c1"># print(&quot;Calling mr_transform.&quot;)</span>
+        <span class="k">return</span> <span class="n">mr_transform</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">nscales</span><span class="o">=</span><span class="n">nscales</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">type</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="n">verbose</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># If successful, remove file paths</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">mr_path</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Success.&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Removed </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">image_path</span><span class="p">))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;        </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mr_path</span><span class="p">))</span>
+        <span class="c1"># Remove temporary directory</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">umask</span><span class="p">(</span><span class="n">saved_umask</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="n">tmpdir</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;        </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tmpdir</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">tmpdir</span><span class="p">)</span> <span class="ow">or</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span> <span class="ow">or</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">mr_path</span><span class="p">)):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warning : not all files or directories were removed in&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">mr_path</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">mr</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Austin Peel.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

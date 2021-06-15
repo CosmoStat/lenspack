@@ -1,0 +1,602 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>lenspack.halo.profiles &mdash; lenspack 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> lenspack
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../lenspack.html">lenspack package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../lenspack.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.geometry.html">lenspack.geometry package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.halo.html">lenspack.halo package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.image.html">lenspack.image package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.tests.html">lenspack.tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.theory.html">lenspack.theory package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lenspack.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.info.html">lenspack.info module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.peaks.html">lenspack.peaks module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.shear.html">lenspack.shear module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.starlet_l1norm.html">lenspack.starlet_l1norm module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.stats.html">lenspack.stats module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.utils.html">lenspack.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lenspack.html#module-lenspack">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.html#id1">Subpackages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.html#id2">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">lenspack</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>lenspack.halo.profiles</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for lenspack.halo.profiles</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">astropy.cosmology</span>
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">quad</span>
+
+<span class="kn">from</span> <span class="nn">lenspack.utils</span> <span class="kn">import</span> <span class="n">convert_units</span> <span class="k">as</span> <span class="n">conv</span>
+<span class="kn">from</span> <span class="nn">lenspack.utils</span> <span class="kn">import</span> <span class="n">sigma_critical</span>
+
+
+<div class="viewcode-block" id="nfw_profile"><a class="viewcode-back" href="../../../lenspack.halo.profiles.html#lenspack.halo.profiles.nfw_profile">[docs]</a><span class="k">class</span> <span class="nc">nfw_profile</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">c200</span><span class="p">,</span> <span class="n">m200</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">r200</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cosmology</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Navarro, Frenk, &amp; White (1997) radial halo density profile.</span>
+
+<span class="sd">        rho(r; rho0, rs) = rho0 / [(r / rs) * (1 + r / rs)^2],</span>
+
+<span class="sd">        where rho0 can be written as the product delta_c * rho_crit. The more</span>
+<span class="sd">        common (and useful) parameterization is (c200, m200) instead of</span>
+<span class="sd">        (rho0, rs).</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        z : float</span>
+<span class="sd">            Halo redshift. [dimensionless]</span>
+<span class="sd">        c200 : float</span>
+<span class="sd">            Halo concentration. [dimensionless]</span>
+<span class="sd">        m200 : float, optional</span>
+<span class="sd">            Spherical mass contained within a radius `r200`. [solar mass]</span>
+<span class="sd">        r200 : float, optional</span>
+<span class="sd">            Characteristic halo radius. [Mpc]</span>
+<span class="sd">        cosmology : {&#39;default&#39;, instance of `astropy.cosmology`}</span>
+<span class="sd">            Cosmological model in which to calculate distances. The default</span>
+<span class="sd">            is a `FlatLambdaCDM` object with parameters H0=70, Om0=0.3,</span>
+<span class="sd">            Ob0=0.044, and Tcmb0=2.725. Alternatively, a custom cosmology can</span>
+<span class="sd">            be provided as an instance of `astropy.cosmology`.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        (1) Either `m200` or `r200` must be given to fully define the profile,</span>
+<span class="sd">            and `m200` takes precedence over `r200` if both are given.</span>
+<span class="sd">        (2) The reference background density implicitly used in the definition</span>
+<span class="sd">            of `c200`, `m200`, and `r200` is the critical density at the</span>
+<span class="sd">            redshift of the halo.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">z</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">c200</span> <span class="o">=</span> <span class="n">c200</span>
+
+        <span class="c1"># Background cosmological model</span>
+        <span class="k">if</span> <span class="n">cosmology</span> <span class="o">==</span> <span class="s1">&#39;default&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cosmo</span> <span class="o">=</span> <span class="n">astropy</span><span class="o">.</span><span class="n">cosmology</span><span class="o">.</span><span class="n">FlatLambdaCDM</span><span class="p">(</span><span class="n">H0</span><span class="o">=</span><span class="mi">70</span><span class="p">,</span> <span class="n">Om0</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
+                                                         <span class="n">Ob0</span><span class="o">=</span><span class="mf">0.044</span><span class="p">,</span>
+                                                         <span class="n">Tcmb0</span><span class="o">=</span><span class="mf">2.725</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cosmology</span><span class="p">,</span> <span class="n">astropy</span><span class="o">.</span><span class="n">cosmology</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">Cosmology</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid cosmology.&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cosmo</span> <span class="o">=</span> <span class="n">cosmology</span>
+
+        <span class="c1"># Reference background density</span>
+        <span class="n">rho_crit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cosmo</span><span class="o">.</span><span class="n">critical_density</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+
+        <span class="c1"># Either m200 or r200 must be provided</span>
+        <span class="k">assert</span> <span class="p">(</span><span class="n">m200</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">r200</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">m200</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># Compute r200</span>
+            <span class="n">m200</span> <span class="o">=</span> <span class="n">conv</span><span class="p">(</span><span class="n">m200</span><span class="p">,</span> <span class="s2">&quot;solMass&quot;</span><span class="p">)</span>
+            <span class="n">r200</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mf">3.</span> <span class="o">*</span> <span class="n">m200</span> <span class="o">/</span> <span class="p">(</span><span class="mi">800</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">rho_crit</span><span class="p">),</span> <span class="mf">1.</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span>
+            <span class="n">r200</span> <span class="o">=</span> <span class="n">conv</span><span class="p">(</span><span class="n">r200</span><span class="p">,</span> <span class="s2">&quot;Mpc&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Compute m200</span>
+            <span class="n">r200</span> <span class="o">=</span> <span class="n">conv</span><span class="p">(</span><span class="n">r200</span><span class="p">,</span> <span class="s2">&quot;Mpc&quot;</span><span class="p">)</span>
+            <span class="n">m200</span> <span class="o">=</span> <span class="mf">800.</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">rho_crit</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">r200</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span>
+            <span class="n">m200</span> <span class="o">=</span> <span class="n">conv</span><span class="p">(</span><span class="n">m200</span><span class="p">,</span> <span class="s2">&quot;solMass&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">m200</span> <span class="o">=</span> <span class="n">m200</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">r200</span> <span class="o">=</span> <span class="n">r200</span>
+
+        <span class="c1"># Standard NFW parameters</span>
+        <span class="n">fc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">1.</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">c200</span><span class="p">)</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">c200</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">c200</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">r200</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">c200</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delta_c</span> <span class="o">=</span> <span class="p">(</span><span class="mf">200.</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">c200</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="n">fc</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rho0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">delta_c</span> <span class="o">*</span> <span class="n">rho_crit</span>
+
+<div class="viewcode-block" id="nfw_profile.rho"><a class="viewcode-back" href="../../../lenspack.halo.profiles.html#lenspack.halo.profiles.nfw_profile.rho">[docs]</a>    <span class="k">def</span> <span class="nf">rho</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Density at a given distance from the halo center.&quot;&quot;&quot;</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">conv</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="s2">&quot;Mpc&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">rho0</span> <span class="o">/</span> <span class="p">(</span><span class="n">r</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">rs</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">r</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">rs</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="nfw_profile.mass_enclosed"><a class="viewcode-back" href="../../../lenspack.halo.profiles.html#lenspack.halo.profiles.nfw_profile.mass_enclosed">[docs]</a>    <span class="k">def</span> <span class="nf">mass_enclosed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Mass (3D) inside a sphere of a given radius.&quot;&quot;&quot;</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">conv</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="s2">&quot;Mpc&quot;</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">r</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">rs</span>
+        <span class="n">prefactor</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rs</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">rho0</span>
+        <span class="k">return</span> <span class="n">conv</span><span class="p">(</span><span class="n">prefactor</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">x</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">x</span><span class="p">)),</span> <span class="s2">&quot;g&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="nfw_profile.sigma_crit"><a class="viewcode-back" href="../../../lenspack.halo.profiles.html#lenspack.halo.profiles.nfw_profile.sigma_crit">[docs]</a>    <span class="k">def</span> <span class="nf">sigma_crit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">zs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Critical surface mass density for a given source redshift.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        zs : float or array_like</span>
+<span class="sd">            Redshift(s) of the source galaxies.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">sigma_critical</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">z</span><span class="p">,</span> <span class="n">zs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cosmo</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="nfw_profile.sigma"><a class="viewcode-back" href="../../../lenspack.halo.profiles.html#lenspack.halo.profiles.nfw_profile.sigma">[docs]</a>    <span class="k">def</span> <span class="nf">sigma</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">r_off</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Surface mass density (Sigma) at a given radial distance.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        r : float or array_like</span>
+<span class="sd">            Projected radial distance from the halo center.</span>
+<span class="sd">        r_off : float, optional</span>
+<span class="sd">            Projected radial offset of the halo center. If provided, the</span>
+<span class="sd">            computed Sigma is the mean over all azimuthal angles, i.e.,</span>
+<span class="sd">            averaged over the circle of radius r_off centered on the halo.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        The calculation is much slower when r_off is given due to the</span>
+<span class="sd">        numerical integration necessary.</span>
+
+<span class="sd">        Value(s) are returned in units of solar mass per square parsec.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">prefactor</span> <span class="o">=</span> <span class="n">conv</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">rs</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">rho0</span><span class="p">,</span> <span class="s2">&quot;solMass / pc2&quot;</span><span class="p">)</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+
+        <span class="c1"># Basic centered calculation (excluding the constant prefactor)</span>
+        <span class="k">def</span> <span class="nf">_sigma</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+            <span class="c1"># Recast radius in units of rs</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">conv</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rs</span><span class="o">.</span><span class="n">unit</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">rs</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_func1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="c1"># Off-centered Sigma as a function of angle and offset radius</span>
+        <span class="k">def</span> <span class="nf">_sigma_of_theta</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">r_off</span><span class="p">):</span>
+            <span class="n">term1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">r_off</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="n">term2</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">r</span> <span class="o">*</span> <span class="n">r_off</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">_sigma</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">term1</span> <span class="o">-</span> <span class="n">term2</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="n">r_off</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">r_off</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># Simple centered Sigma</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">_sigma</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Average over all azimuthal angles</span>
+            <span class="n">r_off</span> <span class="o">=</span> <span class="n">conv</span><span class="p">(</span><span class="n">r_off</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rs</span><span class="o">.</span><span class="n">unit</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
+            <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>  <span class="c1"># Integration limits</span>
+            <span class="n">integrals</span> <span class="o">=</span> <span class="p">[</span><span class="n">quad</span><span class="p">(</span><span class="n">_sigma_of_theta</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                         <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">rr</span><span class="p">,</span> <span class="n">r_off</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">rr</span> <span class="ow">in</span> <span class="n">r</span><span class="p">]</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">integrals</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span>
+
+        <span class="c1"># Clean up as necessary</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">prefactor</span> <span class="o">*</span> <span class="n">result</span></div>
+
+<div class="viewcode-block" id="nfw_profile.delta_sigma"><a class="viewcode-back" href="../../../lenspack.halo.profiles.html#lenspack.halo.profiles.nfw_profile.delta_sigma">[docs]</a>    <span class="k">def</span> <span class="nf">delta_sigma</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">r_off</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Difference between the mean Sigma within a disk and its boundary.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        r : float or array_like</span>
+<span class="sd">            Projected radial distance from the halo center.</span>
+<span class="sd">        r_off : float, optional</span>
+<span class="sd">            Projected radial offset of the halo center. If provided, the</span>
+<span class="sd">            computed Delta Sigma is the mean over all azimuthal angles, i.e.,</span>
+<span class="sd">            averaged over the circle of radius r_off centered on the halo.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        The calculation is much slower when r_off is given due to the</span>
+<span class="sd">        numerical integration necessary.</span>
+
+<span class="sd">        Value(s) are returned in units of solar mass per square parsec.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">prefactor</span> <span class="o">=</span> <span class="n">conv</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">rs</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">rho0</span><span class="p">,</span> <span class="s2">&quot;solMass / pc2&quot;</span><span class="p">)</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+
+        <span class="c1"># Basic centered calculation (excluding the constant prefactor)</span>
+        <span class="k">def</span> <span class="nf">_delta_sigma</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+            <span class="c1"># Recast radius in units of rs</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">conv</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rs</span><span class="o">.</span><span class="n">unit</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">rs</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_func2</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="c1"># Off-centered Delta Sigma as a function of angle and offset radius</span>
+        <span class="k">def</span> <span class="nf">_delta_sigma_of_theta</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">r_off</span><span class="p">):</span>
+            <span class="n">term1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">r_off</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="n">term2</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">r</span> <span class="o">*</span> <span class="n">r_off</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">_delta_sigma</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">term1</span> <span class="o">-</span> <span class="n">term2</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="n">r_off</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">r_off</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># Simple centered Delta Sigma</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">_delta_sigma</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Average over all azimuthal angles</span>
+            <span class="n">r_off</span> <span class="o">=</span> <span class="n">conv</span><span class="p">(</span><span class="n">r_off</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rs</span><span class="o">.</span><span class="n">unit</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
+            <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>  <span class="c1"># Integration limits</span>
+            <span class="n">integrals</span> <span class="o">=</span> <span class="p">[</span><span class="n">quad</span><span class="p">(</span><span class="n">_delta_sigma_of_theta</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+                         <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">rr</span><span class="p">,</span> <span class="n">r_off</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">rr</span> <span class="ow">in</span> <span class="n">r</span><span class="p">]</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">integrals</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span>
+
+        <span class="c1"># Clean up as necessary</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">prefactor</span> <span class="o">*</span> <span class="n">result</span></div>
+
+<div class="viewcode-block" id="nfw_profile.mean_sigma_enclosed"><a class="viewcode-back" href="../../../lenspack.halo.profiles.html#lenspack.halo.profiles.nfw_profile.mean_sigma_enclosed">[docs]</a>    <span class="k">def</span> <span class="nf">mean_sigma_enclosed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">r_off</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Mean surface mass density (Sigma) enclosed within a disk.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        r : float or array_like</span>
+<span class="sd">            Projected radial distance from the halo center.</span>
+<span class="sd">        r_off : float, optional</span>
+<span class="sd">            Projected radial offset of the halo center.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        The calculation is much slower when r_off is given due to the</span>
+<span class="sd">        numerical integration necessary.</span>
+
+<span class="sd">        Value(s) are returned in units of solar mass per square parsec.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">delta_sigma</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">r_off</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">sigma</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">r_off</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="nfw_profile.gamma_t"><a class="viewcode-back" href="../../../lenspack.halo.profiles.html#lenspack.halo.profiles.nfw_profile.gamma_t">[docs]</a>    <span class="k">def</span> <span class="nf">gamma_t</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">zs</span><span class="p">,</span> <span class="n">r_off</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Tangential shear magnitude experienced by a source object.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        r : float or array_like</span>
+<span class="sd">            Projected radial (proper) distance from the source to the halo</span>
+<span class="sd">            center. Units of Mpc are assumed if `r` is not given an astropy</span>
+<span class="sd">            quantity.</span>
+<span class="sd">        zs : float or array_like</span>
+<span class="sd">            Redshift of the source. If a single float is given, this value is</span>
+<span class="sd">            used for each `r`.</span>
+<span class="sd">        r_off : float, optional</span>
+<span class="sd">            Projected radial offset of the halo center.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+        <span class="n">zs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">zs</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">zs</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">zs</span> <span class="o">=</span> <span class="n">zs</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">r</span><span class="p">))</span>  <span class="c1"># Use the same zs for all r</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">zs</span><span class="p">),</span> <span class="s2">&quot;Inputs must have the same length.&quot;</span>
+
+        <span class="n">ratio</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">delta_sigma</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">r_off</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">sigma_crit</span><span class="p">(</span><span class="n">zs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ratio</span><span class="o">.</span><span class="n">decompose</span><span class="p">()</span><span class="o">.</span><span class="n">value</span></div>
+
+<div class="viewcode-block" id="nfw_profile.kappa"><a class="viewcode-back" href="../../../lenspack.halo.profiles.html#lenspack.halo.profiles.nfw_profile.kappa">[docs]</a>    <span class="k">def</span> <span class="nf">kappa</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">zs</span><span class="p">,</span> <span class="n">r_off</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Convergence experienced by a source object.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        r : float or array_like</span>
+<span class="sd">            Projected radial (proper) distance from the source to the halo</span>
+<span class="sd">            center. Units of Mpc are assumed if `r` is not given an astropy</span>
+<span class="sd">            quantity.</span>
+<span class="sd">        zs : float or array_like</span>
+<span class="sd">            Redshift of the source. If a single float is given, this value is</span>
+<span class="sd">            used for each `r`.</span>
+<span class="sd">        r_off : float, optional</span>
+<span class="sd">            Projected radial offset of the halo center.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+        <span class="n">zs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">zs</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">zs</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">zs</span> <span class="o">=</span> <span class="n">zs</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">r</span><span class="p">))</span>  <span class="c1"># Use the same zs for all r</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">zs</span><span class="p">),</span> <span class="s2">&quot;Inputs must have the same length.&quot;</span>
+
+        <span class="n">ratio</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sigma</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">r_off</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">sigma_crit</span><span class="p">(</span><span class="n">zs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ratio</span><span class="o">.</span><span class="n">decompose</span><span class="p">()</span><span class="o">.</span><span class="n">value</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_func1</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Dirty work function for calculating sigma (surface mass density).</span>
+
+<span class="sd">        See Eq. (11) in Wright &amp; Brainerd, ApJ 534, 34 (2000).</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        x : float or array_like</span>
+<span class="sd">            Dimensionless projected radial distance from the halo center.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        The function diverges as x -&gt; 0, and so we set it to np.inf by hand.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">(),</span> <span class="s2">&quot;x must be positive.&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="c1"># Case 0 : x == 0</span>
+        <span class="n">result</span><span class="p">[</span><span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+
+        <span class="c1"># Case 1 : 0 &lt; x &lt; 1</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">[(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)]</span>
+        <span class="n">term1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arccosh</span><span class="p">(</span><span class="mf">1.</span> <span class="o">/</span> <span class="n">y</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="mf">3.</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">term2</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+        <span class="n">result</span><span class="p">[(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)]</span> <span class="o">=</span> <span class="n">term1</span> <span class="o">-</span> <span class="n">term2</span>
+
+        <span class="c1"># Case 2 : x == 1</span>
+        <span class="n">result</span><span class="p">[</span><span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">/</span> <span class="mi">3</span>
+
+        <span class="c1"># Case 3 : x &gt; 1</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="n">term1</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">term2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="mf">1.</span> <span class="o">/</span> <span class="n">y</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">3.</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">result</span><span class="p">[</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">term1</span> <span class="o">-</span> <span class="n">term2</span>
+
+        <span class="c1"># Clean up</span>
+        <span class="c1"># if len(result) == 1: result = result[0]</span>
+
+        <span class="k">return</span> <span class="n">result</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_func2</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Dirty work function for calculating delta_sigma.</span>
+
+<span class="sd">        See Eqs. (12)-(14) in Wright &amp; Brainerd, ApJ 534, 34 (2000).</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        x : float or array_like</span>
+<span class="sd">            Dimensionless projected radial distance from the halo center.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        The function approaches 0.5 as x -&gt; 0, which we set by hand due to</span>
+<span class="sd">        numerical instability.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">(),</span> <span class="s2">&quot;x must be positive.&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="c1"># Case 0 : x == 0</span>
+        <span class="n">result</span><span class="p">[</span><span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>
+
+        <span class="c1"># Case 1 : 0 &lt; x &lt; 1</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">[(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)]</span>
+        <span class="n">term1</span> <span class="o">=</span> <span class="p">((</span><span class="mf">2.</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1.</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">/</span>
+                 <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+        <span class="n">ratio</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
+        <span class="n">term2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">ratio</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">ratio</span><span class="p">)))</span>
+        <span class="n">term3</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">y</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">term4</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">result</span><span class="p">[(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)]</span> <span class="o">=</span> <span class="n">term1</span> <span class="o">*</span> <span class="n">term2</span> <span class="o">+</span> <span class="n">term3</span> <span class="o">-</span> <span class="n">term4</span>
+
+        <span class="c1"># Case 2 : x == 1</span>
+        <span class="n">result</span><span class="p">[</span><span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">5.</span> <span class="o">/</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">1.</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+
+        <span class="c1"># Case 3 : x &gt; 1</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="n">term1</span> <span class="o">=</span> <span class="mf">4.</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">term2</span> <span class="o">=</span> <span class="mf">2.</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">3.</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">term3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="n">term4</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">y</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">term5</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">result</span><span class="p">[</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">term1</span> <span class="o">+</span> <span class="n">term2</span><span class="p">)</span> <span class="o">*</span> <span class="n">term3</span> <span class="o">+</span> <span class="n">term4</span> <span class="o">-</span> <span class="n">term5</span>
+
+        <span class="c1"># Clean up</span>
+        <span class="c1"># if len(result) == 1: result = result[0]</span>
+
+        <span class="k">return</span> <span class="n">result</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Austin Peel.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

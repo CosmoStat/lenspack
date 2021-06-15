@@ -1,0 +1,426 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>lenspack.geometry.measures &mdash; lenspack 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> lenspack
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../lenspack.html">lenspack package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../lenspack.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.geometry.html">lenspack.geometry package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.halo.html">lenspack.halo package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.image.html">lenspack.image package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.tests.html">lenspack.tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.theory.html">lenspack.theory package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lenspack.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.info.html">lenspack.info module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.peaks.html">lenspack.peaks module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.shear.html">lenspack.shear module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.starlet_l1norm.html">lenspack.starlet_l1norm module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.stats.html">lenspack.stats module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.utils.html">lenspack.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lenspack.html#module-lenspack">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.html#id1">Subpackages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../lenspack.html#id2">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">lenspack</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>lenspack.geometry.measures</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for lenspack.geometry.measures</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+
+<div class="viewcode-block" id="angular_distance"><a class="viewcode-back" href="../../../lenspack.geometry.measures.html#lenspack.geometry.measures.angular_distance">[docs]</a><span class="k">def</span> <span class="nf">angular_distance</span><span class="p">(</span><span class="n">ra1</span><span class="p">,</span> <span class="n">dec1</span><span class="p">,</span> <span class="n">ra2</span><span class="p">,</span> <span class="n">dec2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Determine the angular distance between points on the unit sphere.</span>
+
+<span class="sd">    This function is vectorized, so the inputs can be given as arrays (of</span>
+<span class="sd">    the same length), and the distances between each pair of corresponding</span>
+<span class="sd">    points is computed.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    ra[i], dec[i] : float or array_like</span>
+<span class="sd">        Coordinates of point [i] on the sphere, where ra[i] is the</span>
+<span class="sd">        longitudinal angle, and dec[i] is the latitudinal angle in degrees.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    float or numpy array</span>
+<span class="sd">        Central angle(s) between points [1] and [2] in degrees.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    Exception</span>
+<span class="sd">        For inputs of different length.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    The geodesic distance between points on a sphere of radius R can be</span>
+<span class="sd">    obtained by multiplying the result of `angular_distance` by R.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    ...</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Work in radians</span>
+    <span class="n">phi1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">ra1</span><span class="p">))</span>
+    <span class="n">theta1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">dec1</span><span class="p">))</span>
+    <span class="n">phi2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">ra2</span><span class="p">))</span>
+    <span class="n">theta2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">dec2</span><span class="p">))</span>
+
+    <span class="c1"># Check input lengths</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">phi1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">theta1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">phi2</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">theta2</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Input lengths must be the same.&quot;</span><span class="p">)</span>
+
+    <span class="n">numerator</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta2</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">phi2</span> <span class="o">-</span> <span class="n">phi1</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span>
+                        <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta1</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta2</span><span class="p">)</span> <span class="o">-</span>
+                         <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta1</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta2</span><span class="p">)</span> <span class="o">*</span>
+                         <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi2</span> <span class="o">-</span> <span class="n">phi1</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">denominator</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta1</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta2</span><span class="p">)</span> <span class="o">+</span>
+                   <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta1</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta2</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi2</span> <span class="o">-</span> <span class="n">phi1</span><span class="p">))</span>
+    <span class="n">central_angle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">numerator</span><span class="p">,</span> <span class="n">denominator</span><span class="p">))</span>
+
+    <span class="c1"># Potentially remove unnecessary array layers</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">central_angle</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">central_angle</span> <span class="o">=</span> <span class="n">central_angle</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">central_angle</span></div>
+
+
+<div class="viewcode-block" id="spherical_polar_angle"><a class="viewcode-back" href="../../../lenspack.geometry.measures.html#lenspack.geometry.measures.spherical_polar_angle">[docs]</a><span class="k">def</span> <span class="nf">spherical_polar_angle</span><span class="p">(</span><span class="n">ra1</span><span class="p">,</span> <span class="n">dec1</span><span class="p">,</span> <span class="n">ra2</span><span class="p">,</span> <span class="n">dec2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Determine the polar angle between two points on the sphere.</span>
+
+<span class="sd">    The angle returned is the one subtended between the great circle arc</span>
+<span class="sd">    joining the two points and the local &#39;horizontal&#39; axis through the first</span>
+<span class="sd">    point (ra1, dec1), i.e. dec = dec1.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    ra[i], dec[i] : float or array_like</span>
+<span class="sd">        Coordinates of point [i] on the sphere, where ra[i] is the</span>
+<span class="sd">        longitudinal angle, and dec[i] is the latitudinal angle in degrees.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    float or numpy array</span>
+<span class="sd">        Polar angle measured in radians between the dec = dec1 axis and the</span>
+<span class="sd">        great circle arc joining points [1] and [2].</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    Exception</span>
+<span class="sd">        For inputs of different length.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    The output angle lies within [0, 2 * pi). Multiple second points specified</span>
+<span class="sd">    by ra2 and dec2 arrays can be given. In that case, the angle of each</span>
+<span class="sd">    point 2 relative to the single reference point 1 is returned.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; ra1, dec1 = 0, 0  # [deg]</span>
+<span class="sd">    &gt;&gt;&gt; ra2, dec2 = -1, -1</span>
+<span class="sd">    &gt;&gt;&gt; angle = spherical_polar_angle(ra1, dec1, ra2, dec2)</span>
+<span class="sd">    &gt;&gt;&gt; print(np.rad2deg(angle))</span>
+<span class="sd">    225.00436354465515</span>
+
+<span class="sd">    # Deviations from the flat geometric result increase as the points move</span>
+<span class="sd">    # farther from the equator and their separation gets larger</span>
+<span class="sd">    &gt;&gt;&gt; ra1, dec1 = 0, 0  # [deg]</span>
+<span class="sd">    &gt;&gt;&gt; ra2, dec2 = -30, -30</span>
+<span class="sd">    &gt;&gt;&gt; angle = spherical_polar_angle(ra1, dec1, ra2, dec2)</span>
+<span class="sd">    &gt;&gt;&gt; print(np.rad2deg(angle))</span>
+<span class="sd">    229.10660535086907</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Work in radians</span>
+    <span class="n">phi1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">ra1</span><span class="p">))</span>
+    <span class="n">theta1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">dec1</span><span class="p">))</span>
+    <span class="n">phi2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">ra2</span><span class="p">))</span>
+    <span class="n">theta2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">dec2</span><span class="p">))</span>
+
+    <span class="c1"># Check input lengths</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">phi1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">theta1</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Point 1 array lengths must be the same.&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">phi2</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">theta2</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Point 2 array lengths must be the same.&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">phi1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">phi2</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">phi1</span> <span class="o">=</span> <span class="n">phi1</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">phi2</span><span class="p">))</span>
+        <span class="n">theta1</span> <span class="o">=</span> <span class="n">theta1</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">theta2</span><span class="p">))</span>
+
+    <span class="c1"># Compute angle</span>
+    <span class="n">numerator</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">theta2</span> <span class="o">-</span> <span class="n">theta1</span><span class="p">)</span>
+    <span class="n">denominator</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">((</span><span class="n">phi2</span> <span class="o">-</span> <span class="n">phi1</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta1</span><span class="p">))</span>
+    <span class="n">polar_angle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">numerator</span><span class="p">,</span> <span class="n">denominator</span><span class="p">)</span>
+
+    <span class="c1"># Ensure output range</span>
+    <span class="n">negative</span> <span class="o">=</span> <span class="n">polar_angle</span> <span class="o">&lt;</span> <span class="mi">0</span>
+    <span class="n">polar_angle</span><span class="p">[</span><span class="n">negative</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">+</span> <span class="n">polar_angle</span><span class="p">[</span><span class="n">negative</span><span class="p">]</span>
+
+    <span class="c1"># Clean up</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">polar_angle</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">polar_angle</span> <span class="o">=</span> <span class="n">polar_angle</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">polar_angle</span></div>
+
+
+<div class="viewcode-block" id="solid_angle"><a class="viewcode-back" href="../../../lenspack.geometry.measures.html#lenspack.geometry.measures.solid_angle">[docs]</a><span class="k">def</span> <span class="nf">solid_angle</span><span class="p">(</span><span class="n">extent</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Compute the solid angle subtended by a rectangle in RA/Dec space.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    extent : array_like</span>
+<span class="sd">        Field extent as [ra_min, ra_max, dec_min, dec_max] in degrees, where</span>
+<span class="sd">        ra_min &lt;= ra_max and dec_min &lt;= dec_max.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    float</span>
+<span class="sd">        Solid angle in square degrees.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    Exception</span>
+<span class="sd">        For inputs not in the correct format.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    ...</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Must have four input values</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">extent</span><span class="p">))</span> <span class="o">!=</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Input extent must be of the form &quot;</span> <span class="o">+</span>
+                        <span class="s2">&quot;[ra_min, ra_max, dec_min, dec_max].&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Unpack</span>
+    <span class="n">ramin</span><span class="p">,</span> <span class="n">ramax</span><span class="p">,</span> <span class="n">decmin</span><span class="p">,</span> <span class="n">decmax</span> <span class="o">=</span> <span class="n">extent</span>
+
+    <span class="c1"># Check validity of bounds</span>
+    <span class="k">if</span> <span class="n">ramax</span> <span class="o">&lt;=</span> <span class="n">ramin</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Must have ra_max &gt;= ra_min.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">decmax</span> <span class="o">&lt;=</span> <span class="n">decmin</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Must have dec_max &gt;= dec_min.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Work in radians</span>
+    <span class="n">alpha0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">ramin</span><span class="p">)</span>
+    <span class="n">alpha1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">ramax</span><span class="p">)</span>
+    <span class="n">delta0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">decmin</span><span class="p">)</span>
+    <span class="n">delta1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">decmax</span><span class="p">)</span>
+
+    <span class="c1"># Truncate if values are out of bounds</span>
+    <span class="c1"># alpha0 = max(0, alpha0)</span>
+    <span class="c1"># alpha1 = min(2 * np.pi, alpha1)</span>
+    <span class="c1"># delta0 = max(-np.pi / 2, delta0)</span>
+    <span class="c1"># delta1 = min(np.pi / 2, delta1)</span>
+
+    <span class="c1"># Compute solid angle</span>
+    <span class="n">sa</span> <span class="o">=</span> <span class="p">(</span><span class="n">alpha1</span> <span class="o">-</span> <span class="n">alpha0</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">delta1</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">delta0</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">sa</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">180</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Austin Peel.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

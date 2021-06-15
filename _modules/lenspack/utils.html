@@ -1,0 +1,505 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>lenspack.utils &mdash; lenspack 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> lenspack
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lenspack.html">lenspack package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../lenspack.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.geometry.html">lenspack.geometry package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.halo.html">lenspack.halo package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.image.html">lenspack.image package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.tests.html">lenspack.tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.theory.html">lenspack.theory package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../lenspack.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.info.html">lenspack.info module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.peaks.html">lenspack.peaks module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.shear.html">lenspack.shear module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.starlet_l1norm.html">lenspack.starlet_l1norm module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.stats.html">lenspack.stats module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.utils.html">lenspack.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../lenspack.html#module-lenspack">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.html#id1">Subpackages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.html#id2">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">lenspack</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>lenspack.utils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for lenspack.utils</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="sd">&quot;&quot;&quot;UTILS MODULE</span>
+
+<span class="sd">This module contains utility functions globally available to lenspack.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">astropy.units.core</span> <span class="kn">import</span> <span class="n">Unit</span>
+<span class="kn">from</span> <span class="nn">astropy.constants</span> <span class="kn">import</span> <span class="n">G</span> <span class="k">as</span> <span class="n">G_newton</span>
+<span class="kn">from</span> <span class="nn">astropy.constants</span> <span class="kn">import</span> <span class="n">c</span> <span class="k">as</span> <span class="n">c_light</span>
+
+
+<div class="viewcode-block" id="round_up_to_odd"><a class="viewcode-back" href="../../lenspack.utils.html#lenspack.utils.round_up_to_odd">[docs]</a><span class="k">def</span> <span class="nf">round_up_to_odd</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Round up to the nearest odd integer.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="convert_units"><a class="viewcode-back" href="../../lenspack.utils.html#lenspack.utils.convert_units">[docs]</a><span class="k">def</span> <span class="nf">convert_units</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Convert or attach units to a variable.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x : float</span>
+<span class="sd">        Quantity to convert.</span>
+<span class="sd">    target : str</span>
+<span class="sd">        Target units given as an acceptable astropy.units string (e.g. &#39;km&#39;).</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    Exception</span>
+<span class="sd">        If the conversion fails.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; conv(5, &#39;kpc&#39;)</span>
+<span class="sd">    &lt;Quantity 5. kpc&gt;</span>
+
+<span class="sd">    &gt;&gt;&gt; x = 4e14</span>
+<span class="sd">    &gt;&gt;&gt; x = conv(x, &#39;solMass&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; conv(x, &#39;kg&#39;)</span>
+<span class="sd">    &lt;Quantity 7.95390166e+44 kg&gt;</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">Unit</span><span class="p">(</span><span class="n">target</span><span class="p">))</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">Unit</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">raise</span>
+
+    <span class="k">return</span> <span class="n">x</span></div>
+
+
+<div class="viewcode-block" id="sigma_critical"><a class="viewcode-back" href="../../lenspack.utils.html#lenspack.utils.sigma_critical">[docs]</a><span class="k">def</span> <span class="nf">sigma_critical</span><span class="p">(</span><span class="n">zl</span><span class="p">,</span> <span class="n">zs</span><span class="p">,</span> <span class="n">cosmology</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Critical surface mass density between a lens and source galaxy(-ies).</span>
+
+<span class="sd">    Sigma_critical = [c^2 / (4 * pi * G)] * D_os / (D_ol * D_ls)</span>
+
+<span class="sd">    Angular diameter distances D are calculated in a universe specified by</span>
+<span class="sd">    an instance of astropy.cosmology.core.Cosmology.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    zl : float</span>
+<span class="sd">        Redshift of the lens.</span>
+<span class="sd">    zs : array_like</span>
+<span class="sd">        Redshift(s) of the source galaxies.</span>
+<span class="sd">    cosmology : astropy.cosmology.core.Cosmology</span>
+<span class="sd">        Cosmological model.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    astropy.units.quantity.Quantity</span>
+<span class="sd">        Critical surface mass density between a lens (i.e. cluster or DM halo)</span>
+<span class="sd">        and each source redshift in units of solar masses per square parsec.</span>
+<span class="sd">        For sources at the redshift of the halo and below, Sigma_critical is</span>
+<span class="sd">        set to np.inf.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    ...</span>
+
+<span class="sd">    TODO</span>
+<span class="sd">    ----</span>
+<span class="sd">    Include the option for source redshift probability distributions.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Ensure vectorization</span>
+    <span class="n">zs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">zs</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="p">(</span><span class="n">zs</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">(),</span> <span class="s2">&quot;Redshifts must be positive.&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">zs</span><span class="p">)</span>
+
+    <span class="c1"># Compute distances</span>
+    <span class="n">d_ol</span> <span class="o">=</span> <span class="n">cosmology</span><span class="o">.</span><span class="n">angular_diameter_distance</span><span class="p">(</span><span class="n">zl</span><span class="p">)</span>
+    <span class="n">d_os</span> <span class="o">=</span> <span class="n">cosmology</span><span class="o">.</span><span class="n">angular_diameter_distance</span><span class="p">(</span><span class="n">zs</span><span class="p">)</span>
+    <span class="n">d_ls</span> <span class="o">=</span> <span class="n">cosmology</span><span class="o">.</span><span class="n">angular_diameter_distance_z1z2</span><span class="p">(</span><span class="n">zl</span><span class="p">,</span> <span class="n">zs</span><span class="p">)</span>
+
+    <span class="c1"># Avoid division by zero</span>
+    <span class="n">d_ls</span><span class="p">[</span><span class="n">d_ls</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+
+    <span class="c1"># Compute Sigma_crit</span>
+    <span class="n">factor</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">c_light</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">G_newton</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">factor</span> <span class="o">*</span> <span class="n">d_os</span> <span class="o">/</span> <span class="p">(</span><span class="n">d_ol</span> <span class="o">*</span> <span class="n">d_ls</span><span class="p">)</span>
+
+    <span class="c1"># Sources at lower z than the halo are not lensed</span>
+    <span class="n">result</span><span class="p">[</span><span class="n">result</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+
+    <span class="c1"># Clean up</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">zs</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">convert_units</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="s2">&quot;solMass / pc2&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="bin2d"><a class="viewcode-back" href="../../lenspack.utils.html#lenspack.utils.bin2d">[docs]</a><span class="k">def</span> <span class="nf">bin2d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">npix</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">v</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Bin samples of a spatially varying quantity according to position.</span>
+
+<span class="sd">    The (weighted) average is taken of values falling into the same bin. This</span>
+<span class="sd">    function is relatively general, but it is mainly used within this package</span>
+<span class="sd">    to produce maps of the two components of shear from a galaxy catalog.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x, y : array_like</span>
+<span class="sd">        1D position arrays.</span>
+<span class="sd">    npix : int or list or tuple as (nx, ny), optional</span>
+<span class="sd">        Number of bins in the `x` and `y` directions. If an int N is given,</span>
+<span class="sd">        use (N, N). Binning defaults to (10, 10) if not provided.</span>
+<span class="sd">    v : array_like, optional</span>
+<span class="sd">        Values at positions (`x`, `y`). This can be given as many arrays</span>
+<span class="sd">        (v1, v2, ...) of len(`x`) to bin simultaneously. If None, the bin</span>
+<span class="sd">        count in each pixel is returned.</span>
+<span class="sd">    w : array_like, optional</span>
+<span class="sd">        Weights for `v` during averaging. If provided, the same weights are</span>
+<span class="sd">        applied to each input `v`.</span>
+<span class="sd">    extent : array_like, optional</span>
+<span class="sd">        Boundaries of the resulting grid, given as (xmin, xmax, ymin, ymax).</span>
+<span class="sd">        If None, bin edges are set as the min/max coordinate values of the</span>
+<span class="sd">        input position arrays.</span>
+<span class="sd">    verbose : boolean, optional</span>
+<span class="sd">        If True, print details of the binning.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    ndarray or tuple of ndarray</span>
+<span class="sd">        2D numpy arrays of values `v` binned into pixels. The number of</span>
+<span class="sd">        outputs matches the number of input `v` arrays.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; # 100 values at random positions within the ranges -0.5 &lt; x, y &lt; 0.5</span>
+<span class="sd">    &gt;&gt;&gt; # and binned within -1 &lt; x, y &lt; 1 to a (5, 5) grid.</span>
+<span class="sd">    &gt;&gt;&gt; x = np.random.random(100) - 0.5</span>
+<span class="sd">    &gt;&gt;&gt; y = np.random.random(100) - 0.5</span>
+<span class="sd">    &gt;&gt;&gt; v = np.random.randn(100) * 5</span>
+<span class="sd">    &gt;&gt;&gt; bin2d(x, y, v=v, npix=5, extent=(-1, 1, -1, 1))</span>
+<span class="sd">    array([[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ],</span>
+<span class="sd">           [ 0.        ,  4.43560619, -2.33308373,  0.48447844,  0.        ],</span>
+<span class="sd">           [ 0.        ,  1.94903524, -0.29253335,  1.3694618 ,  0.        ],</span>
+<span class="sd">           [ 0.        , -1.0202718 ,  0.37112266, -1.43062585,  0.        ],</span>
+<span class="sd">           [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ]])</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Regroup extent if necessary</span>
+    <span class="k">if</span> <span class="n">extent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">extent</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
+        <span class="n">extent</span> <span class="o">=</span> <span class="p">[</span><span class="n">extent</span><span class="p">[:</span><span class="mi">2</span><span class="p">],</span> <span class="n">extent</span><span class="p">[</span><span class="mi">2</span><span class="p">:]]</span>
+
+    <span class="k">if</span> <span class="n">v</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># Return the simple bin count map</span>
+        <span class="n">bincount</span><span class="p">,</span> <span class="n">xbins</span><span class="p">,</span> <span class="n">ybins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram2d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">npix</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="n">extent</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">bincount</span><span class="o">.</span><span class="n">T</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Prepare values to bin</span>
+        <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+
+        <span class="c1"># Prepare weights</span>
+        <span class="k">if</span> <span class="n">w</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+            <span class="n">has_weights</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">has_weights</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="c1"># Compute weighted bin count map</span>
+        <span class="n">wmap</span><span class="p">,</span> <span class="n">xbins</span><span class="p">,</span> <span class="n">ybins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram2d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">npix</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="n">extent</span><span class="p">,</span>
+                                            <span class="n">weights</span><span class="o">=</span><span class="n">w</span><span class="p">)</span>
+        <span class="c1"># Handle division by zero (i.e., empty pixels)</span>
+        <span class="n">wmap</span><span class="p">[</span><span class="n">wmap</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+        <span class="c1"># Compute mean values per pixel</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">histogram2d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">npix</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="n">extent</span><span class="p">,</span>
+                        <span class="n">weights</span><span class="o">=</span><span class="p">(</span><span class="n">vv</span> <span class="o">*</span> <span class="n">w</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">wmap</span><span class="p">)</span><span class="o">.</span><span class="n">T</span> <span class="k">for</span> <span class="n">vv</span> <span class="ow">in</span> <span class="n">v</span><span class="p">)</span>
+
+        <span class="c1"># Clean up</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">v</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Binning </span><span class="si">{}</span><span class="s2"> array</span><span class="si">{}</span><span class="s2"> with</span><span class="si">{}</span><span class="s2"> weights.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">),</span>
+                  <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">][(</span><span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)],</span> <span class="p">[</span><span class="s1">&#39;out&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">][</span><span class="n">has_weights</span><span class="p">]))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Returning bin count map.&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;npix : </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">npix</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;extent : </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">([</span><span class="n">xbins</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">xbins</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">ybins</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ybins</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(dx, dy) : (</span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">xbins</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">xbins</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                                           <span class="n">ybins</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">ybins</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="radius2d"><a class="viewcode-back" href="../../lenspack.utils.html#lenspack.utils.radius2d">[docs]</a><span class="k">def</span> <span class="nf">radius2d</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;exact&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Distances from every pixel to a fixed center in a square matrix.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    N : int</span>
+<span class="sd">        Number of pixels to a side.</span>
+<span class="sd">    center : array_like, optional</span>
+<span class="sd">        Incides of the central pixel, given as (x0, y0). If not given, the</span>
+<span class="sd">        center is taken to be (N / 2, N / 2) (though see `mode` description).</span>
+<span class="sd">    mode : {&#39;exact&#39;, &#39;fft&#39;}</span>
+<span class="sd">        How to treat the case when N is even. If &#39;exact&#39;, compute distances</span>
+<span class="sd">        from the true (fractional) central pixel location. If &#39;fft&#39;, use the</span>
+<span class="sd">        numpy.fft.fftfreq convention such that the central pixel location</span>
+<span class="sd">        is rounded up to the nearest integer.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    numpy array</span>
+<span class="sd">        2D matrix of distances.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Non-integer center coordinates are not supported. If a `center` is</span>
+<span class="sd">    provided, `mode` is ignored.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; radius2d(4, mode=&#39;exact&#39;)</span>
+<span class="sd">    array([[ 2.12132034,  1.58113883,  1.58113883,  2.12132034],</span>
+<span class="sd">           [ 1.58113883,  0.70710678,  0.70710678,  1.58113883],</span>
+<span class="sd">           [ 1.58113883,  0.70710678,  0.70710678,  1.58113883],</span>
+<span class="sd">           [ 2.12132034,  1.58113883,  1.58113883,  2.12132034]])</span>
+
+<span class="sd">    &gt;&gt;&gt; radius2d(4, mode=&#39;fft&#39;)</span>
+<span class="sd">    array([[ 2.82842712,  2.23606798,  2.        ,  2.23606798],</span>
+<span class="sd">           [ 2.23606798,  1.41421356,  1.        ,  1.41421356],</span>
+<span class="sd">           [ 2.        ,  1.        ,  0.        ,  1.        ],</span>
+<span class="sd">           [ 2.23606798,  1.41421356,  1.        ,  1.41421356]])</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Verify inputs</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">mode</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;exact&#39;</span><span class="p">,</span> <span class="s1">&#39;fft&#39;</span><span class="p">),</span> <span class="s2">&quot;Mode must be either &#39;exact&#39; or &#39;fft&#39;.&quot;</span>
+
+    <span class="c1"># Generate index grids</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">indices</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span>
+
+    <span class="c1"># Determine center</span>
+    <span class="k">if</span> <span class="n">center</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">center</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s1">&#39;fft&#39;</span> <span class="ow">and</span> <span class="n">N</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">x0</span> <span class="o">=</span> <span class="n">N</span> <span class="o">/</span> <span class="mf">2.</span>
+            <span class="n">y0</span> <span class="o">=</span> <span class="n">N</span> <span class="o">/</span> <span class="mf">2.</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x0</span> <span class="o">=</span> <span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.</span>
+            <span class="n">y0</span> <span class="o">=</span> <span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.</span>
+
+    <span class="c1"># Compute radii</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">hypot</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y</span> <span class="o">-</span> <span class="n">y0</span><span class="p">)</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Austin Peel.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

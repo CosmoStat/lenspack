@@ -1,0 +1,472 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>lenspack.image.transforms module &mdash; lenspack 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="lenspack.tests package" href="lenspack.tests.html" />
+    <link rel="prev" title="lenspack.image.inversion module" href="lenspack.image.inversion.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> lenspack
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="lenspack.html">lenspack package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="lenspack.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="lenspack.geometry.html">lenspack.geometry package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.halo.html">lenspack.halo package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="lenspack.image.html">lenspack.image package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.tests.html">lenspack.tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.theory.html">lenspack.theory package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lenspack.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.info.html">lenspack.info module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.peaks.html">lenspack.peaks module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.shear.html">lenspack.shear module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.starlet_l1norm.html">lenspack.starlet_l1norm module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.stats.html">lenspack.stats module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.utils.html">lenspack.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lenspack.html#module-lenspack">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.html#id1">Subpackages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.html#id2">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">lenspack</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="lenspack.html">lenspack package</a> &raquo;</li>
+        
+          <li><a href="lenspack.image.html">lenspack.image package</a> &raquo;</li>
+        
+      <li>lenspack.image.transforms module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/lenspack.image.transforms.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="module-lenspack.image.transforms">
+<span id="lenspack-image-transforms-module"></span><h1>lenspack.image.transforms module<a class="headerlink" href="#module-lenspack.image.transforms" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="lenspack.image.transforms.starlet2d">
+<span class="sig-prename descclassname"><span class="pre">lenspack.image.transforms.</span></span><span class="sig-name descname"><span class="pre">starlet2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nscales</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/image/transforms.html#starlet2d"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.image.transforms.starlet2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the multiscale 2D starlet transform of an image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>array_like</em><em> (</em><em>2D</em><em>)</em>) – Input image.</p></li>
+<li><p><strong>nscales</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – Number of wavelet scales to compute. Should not exceed log2(N), where
+N is the smaller of the two input dimensions.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Wavelet coefficients. An input <cite>image</cite> of shape (N, M) and <cite>nscales</cite>
+equal to n will produce an output of shape (n + 1, N, M). The first
+n maps are wavelet coefficients, while the final map is the coarse
+scale map.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>3D numpy array</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function produces the same output as the mr_transform binary of the
+Sparse2D C++ code package (see References) to high precision.</p>
+<p class="rubric">References</p>
+<ul class="simple">
+<li><p>Starck, Murtagh, Fadili, ‘Sparse Image and Signal Processing: Wavelets
+and Related Geometric Multiscale Analysis’, Cambridge University Press,
+Cambridge (GB), 2016.</p></li>
+<li><p><a class="reference external" href="https://github.com/cosmostat/sparse2d">https://github.com/cosmostat/sparse2d</a></p></li>
+</ul>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Transform a Gaussian random field of standard deviation 10.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wt</span> <span class="o">=</span> <span class="n">starlet2d</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wt</span><span class="o">.</span><span class="n">shape</span>
+<span class="go">(6, 64, 64)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Reconstruction</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">wt</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rec</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="n">img</span><span class="o">.</span><span class="n">shape</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">rec</span> <span class="o">-</span> <span class="n">img</span><span class="p">))</span>
+<span class="go">2.4814638191483773e-12</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lenspack.image.transforms.dct2d">
+<span class="sig-prename descclassname"><span class="pre">lenspack.image.transforms.</span></span><span class="sig-name descname"><span class="pre">dct2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ortho'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/image/transforms.html#dct2d"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.image.transforms.dct2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the discrete cosine transform (type 2) of an image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>array_like</em><em>, </em><em>2D</em>) – Input image.</p></li>
+<li><p><strong>norm</strong> (<em>{None</em><em>, </em><em>'ortho'</em><em>, </em><em>'sparse2d'}</em><em>, </em><em>optional</em>) – Normalization option. See scipy.fftpack.dct documentation (Type II)
+for a description of the None and ‘ortho’ options. The ‘sparse2d’
+option is available to match the output from the im_dct Sparse2D
+binary, which involves an additional scaling of the zero-frequency
+elements. Default is ‘ortho’.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Type 2 DCT.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>2D numpy array</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Using no normalization (i.e. norm=None) will not automatically
+recover the original image after performing the inverse transformation.
+Each transform brings an overall scaling factor of 2N.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#lenspack.image.transforms.idct2d" title="lenspack.image.transforms.idct2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">idct2d</span></code></a></dt><dd><p>Inverse 2D DCT.</p>
+</dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<p>…</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lenspack.image.transforms.idct2d">
+<span class="sig-prename descclassname"><span class="pre">lenspack.image.transforms.</span></span><span class="sig-name descname"><span class="pre">idct2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ortho'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/image/transforms.html#idct2d"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.image.transforms.idct2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the inverse discrete cosine transform (type 2) of an image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>array_like</em><em> (</em><em>2D</em><em>)</em>) – Input image.</p></li>
+<li><p><strong>norm</strong> (<em>{None</em><em>, </em><em>'ortho'</em><em>, </em><em>'sparse2d'}</em><em>, </em><em>optional</em>) – Normalization option. Default is ‘ortho’.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Inverse type 2 DCT.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>2D numpy array</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#lenspack.image.transforms.dct2d" title="lenspack.image.transforms.dct2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dct2d</span></code></a></dt><dd><p>Forward 2D DCT.</p>
+</dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<p>…</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lenspack.image.transforms.blockdct2d">
+<span class="sig-prename descclassname"><span class="pre">lenspack.image.transforms.</span></span><span class="sig-name descname"><span class="pre">blockdct2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ortho'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blocksize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/image/transforms.html#blockdct2d"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.image.transforms.blockdct2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute a block (local) discrete cosine transform of an image.</p>
+<p>This is an extension of dct2d to perform the transform on sub-blocks
+of the image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>array_like</em><em>, </em><em>2D</em>) – Input image.</p></li>
+<li><p><strong>norm</strong> (<em>{None</em><em>, </em><em>'ortho'</em><em>, </em><em>'sparse2d'}</em><em>, </em><em>optional</em>) – Normalization option. See scipy.fftpack.dct documentation (Type II)
+for a description of the None and ‘ortho’ options. The ‘sparse2d’
+option is available to match the output from the im_dct Sparse2D
+binary, which involves an additional scaling of the zero-frequency
+elements. Default is ‘ortho’.</p></li>
+<li><p><strong>blocksize</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – Size of sub-blocks for a local DCT.</p></li>
+<li><p><strong>overlap</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether to overlap sub-blocks.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Local type 2 DCT.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>2D numpy array</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#lenspack.image.transforms.iblockdct2d" title="lenspack.image.transforms.iblockdct2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iblockdct2d</span></code></a></dt><dd><p>Inverse local 2D DCT.</p>
+</dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<p>…</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>This needs MORE TESTING before deployment !</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lenspack.image.transforms.iblockdct2d">
+<span class="sig-prename descclassname"><span class="pre">lenspack.image.transforms.</span></span><span class="sig-name descname"><span class="pre">iblockdct2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ortho'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blocksize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/image/transforms.html#iblockdct2d"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.image.transforms.iblockdct2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the inverse block (local) discrete cosine transform of an image.</p>
+<p>This is an extension of idct2d to perform the transform on sub-blocks
+of the image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>array_like</em><em>, </em><em>2D</em>) – Input image.</p></li>
+<li><p><strong>norm</strong> (<em>{None</em><em>, </em><em>'ortho'</em><em>, </em><em>'sparse2d'}</em><em>, </em><em>optional</em>) – Normalization option. See scipy.fftpack.dct documentation (Type II)
+for a description of the None and ‘ortho’ options. The ‘sparse2d’
+option is available to match the output from the im_dct Sparse2D
+binary, which involves an additional scaling of the zero-frequency
+elements. Default is ‘ortho’.</p></li>
+<li><p><strong>blocksize</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – Size of sub-blocks for a local inverse DCT.</p></li>
+<li><p><strong>overlap</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether to overlap sub-blocks.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Local type 2 inverse DCT.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>2D numpy array</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>…</p>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>This needs MORE TESTING before deployment !</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lenspack.image.transforms.mr_transform">
+<span class="sig-prename descclassname"><span class="pre">lenspack.image.transforms.</span></span><span class="sig-name descname"><span class="pre">mr_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nscales</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/image/transforms.html#mr_transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.image.transforms.mr_transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the multi-resolution wavelet transform of an image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>array_like</em><em>, </em><em>2D</em>) – Input image.</p></li>
+<li><p><strong>nscales</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – Number of wavelet scales to compute. Default is 4.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – Type of the multiresolution transform. See the original mr_transform
+documentation for details. Default is 2, which corresponds to the
+‘bspline wavelet transform: a trous algorithm’, i.e. the starlet.</p></li>
+<li><p><strong>verbose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – If True, print details of the temporary file I/O process.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Result of the wavelet transform.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>3D numpy array</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function is a wrapper for the mr_transform C++ binary of the Sparse2D
+code package (see References). The astropy package is necessary to write
+out <cite>image</cite> as a temporary fits file on which mr_transform can act.</p>
+<p class="rubric">References</p>
+<ul class="simple">
+<li><p>Starck, Murtagh, Fadili, ‘Sparse Image and Signal Processing: Wavelets
+and Related Geometric Multiscale Analysis’, Cambridge University Press,
+Cambridge (GB), 2016.</p></li>
+<li><p><a class="reference external" href="https://github.com/cosmostat/sparse2d">https://github.com/cosmostat/sparse2d</a></p></li>
+</ul>
+<p class="rubric">Examples</p>
+<p>…</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="lenspack.tests.html" class="btn btn-neutral float-right" title="lenspack.tests package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="lenspack.image.inversion.html" class="btn btn-neutral float-left" title="lenspack.image.inversion module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Austin Peel.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

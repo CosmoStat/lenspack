@@ -1,0 +1,395 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>lenspack.peaks &mdash; lenspack 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> lenspack
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lenspack.html">lenspack package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../lenspack.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.geometry.html">lenspack.geometry package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.halo.html">lenspack.halo package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.image.html">lenspack.image package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.tests.html">lenspack.tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.theory.html">lenspack.theory package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../lenspack.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.info.html">lenspack.info module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.peaks.html">lenspack.peaks module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.shear.html">lenspack.shear module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.starlet_l1norm.html">lenspack.starlet_l1norm module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.stats.html">lenspack.stats module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.utils.html">lenspack.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../lenspack.html#module-lenspack">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.html#id1">Subpackages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lenspack.html#id2">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">lenspack</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>lenspack.peaks</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for lenspack.peaks</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="sd">&quot;&quot;&quot;PEAKS MODULE</span>
+
+<span class="sd">This module contains functions for detecting and counting peaks (local maxima)</span>
+<span class="sd">in images. Peak counts in weak-lensing maps are a useful statistic for</span>
+<span class="sd">constraining cosmological models.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+
+<div class="viewcode-block" id="find_peaks2d"><a class="viewcode-back" href="../../lenspack.peaks.html#lenspack.peaks.find_peaks2d">[docs]</a><span class="k">def</span> <span class="nf">find_peaks2d</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">include_border</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Identify peaks in an image (2D array) above a given threshold.</span>
+
+<span class="sd">    A peak, or local maximum, is defined as a pixel of larger value than its</span>
+<span class="sd">    eight neighbors. A mask may be provided to exclude certain regions from</span>
+<span class="sd">    the search. The border is excluded by default.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    image : array_like</span>
+<span class="sd">        Two-dimensional input image.</span>
+<span class="sd">    threshold : float, optional</span>
+<span class="sd">        Minimum pixel amplitude to be considered as a peak. If not provided,</span>
+<span class="sd">        the default value is set to the minimum of `image`.</span>
+<span class="sd">    ordered : bool, optional</span>
+<span class="sd">        If True, return peaks in decreasing order according to height.</span>
+<span class="sd">    mask : array_like (same shape as `image`), optional</span>
+<span class="sd">        Boolean array identifying which pixels of `image` to consider/exclude</span>
+<span class="sd">        in finding peaks. A numerical array will be converted to binary, where</span>
+<span class="sd">        only zero values are considered masked.</span>
+<span class="sd">    include_border : bool, optional</span>
+<span class="sd">        If True, include peaks found on the border of the image. Default is</span>
+<span class="sd">        False.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    X, Y, heights : tuple of 1D numpy arrays</span>
+<span class="sd">        Pixel indices of peak positions and their associated heights.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    The basic idea for this algorithm was provided by Chieh-An Lin.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    ...</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_2d</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+
+    <span class="c1"># Deal with the mask first</span>
+    <span class="k">if</span> <span class="n">mask</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_2d</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">mask</span><span class="o">.</span><span class="n">shape</span> <span class="o">!=</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warning: mask not compatible with image -&gt; ignoring.&quot;</span><span class="p">)</span>
+            <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Make sure mask is binary, i.e. turn nonzero values into ones</span>
+            <span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">bool</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+    <span class="c1"># Add 1 pixel padding if including border peaks</span>
+    <span class="k">if</span> <span class="n">include_border</span><span class="p">:</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pad_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;constant&#39;</span><span class="p">,</span>
+                       <span class="n">constant_values</span><span class="o">=</span><span class="n">image</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span> <span class="n">pad_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">constant_values</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># Determine threshold level</span>
+    <span class="k">if</span> <span class="n">threshold</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># threshold = image[mask.astype(&#39;bool&#39;)].min()</span>
+        <span class="n">threshold</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">threshold</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">threshold</span><span class="p">,</span> <span class="n">image</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+
+    <span class="c1"># Shift everything to be positive to properly handle negative peaks</span>
+    <span class="n">offset</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+    <span class="n">threshold</span> <span class="o">=</span> <span class="n">threshold</span> <span class="o">-</span> <span class="n">offset</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">image</span> <span class="o">-</span> <span class="n">offset</span>
+
+    <span class="c1"># Extract the center map</span>
+    <span class="n">map0</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1"># Extract shifted maps</span>
+    <span class="n">map1</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">map2</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">map3</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="mi">2</span><span class="p">:,</span> <span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">map4</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">map5</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="mi">2</span><span class="p">:,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">map6</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span>
+    <span class="n">map7</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span>
+    <span class="n">map8</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="mi">2</span><span class="p">:,</span> <span class="mi">2</span><span class="p">:]</span>
+
+    <span class="c1"># Compare center map with shifted maps</span>
+    <span class="n">merge</span> <span class="o">=</span> <span class="p">((</span><span class="n">map0</span> <span class="o">&gt;</span> <span class="n">map1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">map0</span> <span class="o">&gt;</span> <span class="n">map2</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">map0</span> <span class="o">&gt;</span> <span class="n">map3</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">map0</span> <span class="o">&gt;</span> <span class="n">map4</span><span class="p">)</span> <span class="o">&amp;</span>
+             <span class="p">(</span><span class="n">map0</span> <span class="o">&gt;</span> <span class="n">map5</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">map0</span> <span class="o">&gt;</span> <span class="n">map6</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">map0</span> <span class="o">&gt;</span> <span class="n">map7</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">map0</span> <span class="o">&gt;</span> <span class="n">map8</span><span class="p">))</span>
+
+    <span class="n">bordered</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">merge</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">constant_values</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="n">peaksmap</span> <span class="o">=</span> <span class="n">image</span> <span class="o">*</span> <span class="n">bordered</span> <span class="o">*</span> <span class="n">mask</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="n">peaksmap</span> <span class="o">&gt;</span> <span class="n">threshold</span><span class="p">)</span>
+
+    <span class="c1"># Extract peak heights</span>
+    <span class="n">heights</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">]</span> <span class="o">+</span> <span class="n">offset</span>
+
+    <span class="c1"># Compensate for border padding</span>
+    <span class="k">if</span> <span class="n">include_border</span><span class="p">:</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">X</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="n">Y</span> <span class="o">=</span> <span class="n">Y</span> <span class="o">-</span> <span class="mi">1</span>
+
+    <span class="c1"># Sort peaks according to height</span>
+    <span class="k">if</span> <span class="n">ordered</span><span class="p">:</span>
+        <span class="n">inds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">heights</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">X</span><span class="p">[</span><span class="n">inds</span><span class="p">],</span> <span class="n">Y</span><span class="p">[</span><span class="n">inds</span><span class="p">],</span> <span class="n">heights</span><span class="p">[</span><span class="n">inds</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">heights</span></div>
+
+
+<div class="viewcode-block" id="peaks_histogram"><a class="viewcode-back" href="../../lenspack.peaks.html#lenspack.peaks.peaks_histogram">[docs]</a><span class="k">def</span> <span class="nf">peaks_histogram</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Compute a histogram of peaks in an image.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    image : array_like</span>
+<span class="sd">        Two-dimensional input image.</span>
+<span class="sd">    bins : int or array_like (1D), optional</span>
+<span class="sd">        Specification of bin edges or the number of bins to use for the</span>
+<span class="sd">        histogram. If not provided, a default of 10 bins linearly spaced</span>
+<span class="sd">        between the image minimum and maximum (inclusive) is used.</span>
+<span class="sd">    mask : array_like (same shape as `image`), optional</span>
+<span class="sd">        Boolean array identifying which pixels of `image` to consider/exclude</span>
+<span class="sd">        in finding peaks. A numerical array will be converted to binary, where</span>
+<span class="sd">        only zero values are considered masked.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    counts, bin_edges : tuple of 1D numpy arrays</span>
+<span class="sd">        Histogram and bin boundary values.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This function calls `find_peaks2d` and then uses `numpy` to compute the</span>
+<span class="sd">    histogram. If the returned `counts` has N values, `bin_edges` will have</span>
+<span class="sd">    N + 1 values.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    ...</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Define bin edges</span>
+    <span class="k">if</span> <span class="n">bins</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">image</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">bins</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="n">bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">image</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">bins</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">bins</span><span class="p">)</span>
+
+    <span class="c1"># Compute peaks and histogram</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">heights</span> <span class="o">=</span> <span class="n">find_peaks2d</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">)</span>
+    <span class="n">counts</span><span class="p">,</span> <span class="n">bin_edges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">heights</span><span class="p">,</span> <span class="n">bins</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">counts</span><span class="p">,</span> <span class="n">bin_edges</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Austin Peel.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

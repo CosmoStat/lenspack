@@ -1,0 +1,7 @@
+lenspack.image.filters module
+=============================
+
+.. automodule:: lenspack.image.filters
+   :members:
+   :undoc-members:
+   :show-inheritance:

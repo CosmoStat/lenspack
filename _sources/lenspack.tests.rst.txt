@@ -1,0 +1,20 @@
+lenspack.tests package
+======================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   lenspack.tests.test_geometry
+   lenspack.tests.test_image
+   lenspack.tests.test_stats
+
+Module contents
+---------------
+
+.. automodule:: lenspack.tests
+   :members:
+   :undoc-members:
+   :show-inheritance:

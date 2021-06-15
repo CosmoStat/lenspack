@@ -1,0 +1,401 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>lenspack.utils module &mdash; lenspack 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="lenspack.stats module" href="lenspack.stats.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> lenspack
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="lenspack.html">lenspack package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="lenspack.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.geometry.html">lenspack.geometry package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.halo.html">lenspack.halo package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.image.html">lenspack.image package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.tests.html">lenspack.tests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.theory.html">lenspack.theory package</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="lenspack.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="lenspack.info.html">lenspack.info module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.peaks.html">lenspack.peaks module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.shear.html">lenspack.shear module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.starlet_l1norm.html">lenspack.starlet_l1norm module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.stats.html">lenspack.stats module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">lenspack.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lenspack.html#module-lenspack">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.html#id1">Subpackages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lenspack.html#id2">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">lenspack</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="lenspack.html">lenspack package</a> &raquo;</li>
+        
+      <li>lenspack.utils module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/lenspack.utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="module-lenspack.utils">
+<span id="lenspack-utils-module"></span><h1>lenspack.utils module<a class="headerlink" href="#module-lenspack.utils" title="Permalink to this headline">¶</a></h1>
+<p>UTILS MODULE</p>
+<p>This module contains utility functions globally available to lenspack.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="lenspack.utils.round_up_to_odd">
+<span class="sig-prename descclassname"><span class="pre">lenspack.utils.</span></span><span class="sig-name descname"><span class="pre">round_up_to_odd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/utils.html#round_up_to_odd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.utils.round_up_to_odd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Round up to the nearest odd integer.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lenspack.utils.convert_units">
+<span class="sig-prename descclassname"><span class="pre">lenspack.utils.</span></span><span class="sig-name descname"><span class="pre">convert_units</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/utils.html#convert_units"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.utils.convert_units" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert or attach units to a variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – Quantity to convert.</p></li>
+<li><p><strong>target</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Target units given as an acceptable astropy.units string (e.g. ‘km’).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.9)"><strong>Exception</strong></a> – If the conversion fails.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">conv</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;kpc&#39;</span><span class="p">)</span>
+<span class="go">&lt;Quantity 5. kpc&gt;</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">4e14</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">conv</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;solMass&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conv</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;kg&#39;</span><span class="p">)</span>
+<span class="go">&lt;Quantity 7.95390166e+44 kg&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lenspack.utils.sigma_critical">
+<span class="sig-prename descclassname"><span class="pre">lenspack.utils.</span></span><span class="sig-name descname"><span class="pre">sigma_critical</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cosmology</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/utils.html#sigma_critical"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.utils.sigma_critical" title="Permalink to this definition">¶</a></dt>
+<dd><p>Critical surface mass density between a lens and source galaxy(-ies).</p>
+<p>Sigma_critical = [c^2 / (4 * pi * G)] * D_os / (D_ol * D_ls)</p>
+<p>Angular diameter distances D are calculated in a universe specified by
+an instance of astropy.cosmology.core.Cosmology.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>zl</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – Redshift of the lens.</p></li>
+<li><p><strong>zs</strong> (<em>array_like</em>) – Redshift(s) of the source galaxies.</p></li>
+<li><p><strong>cosmology</strong> (<em>astropy.cosmology.core.Cosmology</em>) – Cosmological model.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Critical surface mass density between a lens (i.e. cluster or DM halo)
+and each source redshift in units of solar masses per square parsec.
+For sources at the redshift of the halo and below, Sigma_critical is
+set to np.inf.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>astropy.units.quantity.Quantity</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>…</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Include the option for source redshift probability distributions.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lenspack.utils.bin2d">
+<span class="sig-prename descclassname"><span class="pre">lenspack.utils.</span></span><span class="sig-name descname"><span class="pre">bin2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">npix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/utils.html#bin2d"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.utils.bin2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bin samples of a spatially varying quantity according to position.</p>
+<p>The (weighted) average is taken of values falling into the same bin. This
+function is relatively general, but it is mainly used within this package
+to produce maps of the two components of shear from a galaxy catalog.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array_like</em>) – 1D position arrays.</p></li>
+<li><p><strong>y</strong> (<em>array_like</em>) – 1D position arrays.</p></li>
+<li><p><strong>npix</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a><em> or </em><em>tuple as</em><em> (</em><em>nx</em><em>, </em><em>ny</em><em>)</em><em>, </em><em>optional</em>) – Number of bins in the <cite>x</cite> and <cite>y</cite> directions. If an int N is given,
+use (N, N). Binning defaults to (10, 10) if not provided.</p></li>
+<li><p><strong>v</strong> (<em>array_like</em><em>, </em><em>optional</em>) – Values at positions (<cite>x</cite>, <cite>y</cite>). This can be given as many arrays
+(v1, v2, …) of len(<cite>x</cite>) to bin simultaneously. If None, the bin
+count in each pixel is returned.</p></li>
+<li><p><strong>w</strong> (<em>array_like</em><em>, </em><em>optional</em>) – Weights for <cite>v</cite> during averaging. If provided, the same weights are
+applied to each input <cite>v</cite>.</p></li>
+<li><p><strong>extent</strong> (<em>array_like</em><em>, </em><em>optional</em>) – Boundaries of the resulting grid, given as (xmin, xmax, ymin, ymax).
+If None, bin edges are set as the min/max coordinate values of the
+input position arrays.</p></li>
+<li><p><strong>verbose</strong> (<em>boolean</em><em>, </em><em>optional</em>) – If True, print details of the binning.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>2D numpy arrays of values <cite>v</cite> binned into pixels. The number of
+outputs matches the number of input <cite>v</cite> arrays.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ndarray or tuple of ndarray</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># 100 values at random positions within the ranges -0.5 &lt; x, y &lt; 0.5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># and binned within -1 &lt; x, y &lt; 1 to a (5, 5) grid.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bin2d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">v</span><span class="o">=</span><span class="n">v</span><span class="p">,</span> <span class="n">npix</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="go">array([[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ],</span>
+<span class="go">       [ 0.        ,  4.43560619, -2.33308373,  0.48447844,  0.        ],</span>
+<span class="go">       [ 0.        ,  1.94903524, -0.29253335,  1.3694618 ,  0.        ],</span>
+<span class="go">       [ 0.        , -1.0202718 ,  0.37112266, -1.43062585,  0.        ],</span>
+<span class="go">       [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ]])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lenspack.utils.radius2d">
+<span class="sig-prename descclassname"><span class="pre">lenspack.utils.</span></span><span class="sig-name descname"><span class="pre">radius2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'exact'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/lenspack/utils.html#radius2d"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lenspack.utils.radius2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Distances from every pixel to a fixed center in a square matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>N</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – Number of pixels to a side.</p></li>
+<li><p><strong>center</strong> (<em>array_like</em><em>, </em><em>optional</em>) – Incides of the central pixel, given as (x0, y0). If not given, the
+center is taken to be (N / 2, N / 2) (though see <cite>mode</cite> description).</p></li>
+<li><p><strong>mode</strong> (<em>{'exact'</em><em>, </em><em>'fft'}</em>) – How to treat the case when N is even. If ‘exact’, compute distances
+from the true (fractional) central pixel location. If ‘fft’, use the
+numpy.fft.fftfreq convention such that the central pixel location
+is rounded up to the nearest integer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>2D matrix of distances.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Non-integer center coordinates are not supported. If a <cite>center</cite> is
+provided, <cite>mode</cite> is ignored.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">radius2d</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;exact&#39;</span><span class="p">)</span>
+<span class="go">array([[ 2.12132034,  1.58113883,  1.58113883,  2.12132034],</span>
+<span class="go">       [ 1.58113883,  0.70710678,  0.70710678,  1.58113883],</span>
+<span class="go">       [ 1.58113883,  0.70710678,  0.70710678,  1.58113883],</span>
+<span class="go">       [ 2.12132034,  1.58113883,  1.58113883,  2.12132034]])</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">radius2d</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;fft&#39;</span><span class="p">)</span>
+<span class="go">array([[ 2.82842712,  2.23606798,  2.        ,  2.23606798],</span>
+<span class="go">       [ 2.23606798,  1.41421356,  1.        ,  1.41421356],</span>
+<span class="go">       [ 2.        ,  1.        ,  0.        ,  1.        ],</span>
+<span class="go">       [ 2.23606798,  1.41421356,  1.        ,  1.41421356]])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="lenspack.stats.html" class="btn btn-neutral float-left" title="lenspack.stats module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Austin Peel.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

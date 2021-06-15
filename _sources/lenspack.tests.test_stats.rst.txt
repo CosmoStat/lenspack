@@ -1,0 +1,7 @@
+lenspack.tests.test\_stats module
+=================================
+
+.. automodule:: lenspack.tests.test_stats
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+lenspack.theory.cosmology module
+================================
+
+.. automodule:: lenspack.theory.cosmology
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+lenspack.tests.test\_image module
+=================================
+
+.. automodule:: lenspack.tests.test_image
+   :members:
+   :undoc-members:
+   :show-inheritance:

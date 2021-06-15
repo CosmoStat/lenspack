@@ -1,0 +1,7 @@
+lenspack.halo.profiles module
+=============================
+
+.. automodule:: lenspack.halo.profiles
+   :members:
+   :undoc-members:
+   :show-inheritance:
