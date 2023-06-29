@@ -18,12 +18,13 @@ Submodules
 * ``shear`` : tangential and cross components of shear
 * ``stats`` : second- and higher-order statistics
 * ``utils`` : general utility functions
+* ``starlet_l1norm`` : functions to compute the starlet l1norm 
 
 """
 
 # List of submodules
 __all__ = ['geometry', 'halo', 'image', 'theory', 'peaks', 'shear', 'stats',
-           'utils']
+           'utils','starlet_l1norm']
 
 from . import *
 from .info import __version__, __about__
