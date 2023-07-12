@@ -24,7 +24,7 @@ Submodules
 
 # List of submodules
 __all__ = ['geometry', 'halo', 'image', 'theory', 'peaks', 'shear', 'stats',
-           'utils','starlet_l1norm']
+           'utils', 'starlet_l1norm']
 
 from . import *
 from .info import __version__, __about__
