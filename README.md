@@ -7,7 +7,7 @@
 > Year: 2019  
 ---
 
-This repository is a collection of python codes useful for the weak-lensing analysis of galaxy catalogs and shear/convergence maps. The full documentation can be found [here](https://austinpeel.github.io/lenspack/index.html "lenspack documentation").
+This repository is a collection of python codes useful for the weak-lensing analysis of galaxy catalogs and shear/convergence maps. The full documentation can be found [here](https://cosmostat.github.io/lenspack "lenspack documentation").
 
 ## Dependencies
 
